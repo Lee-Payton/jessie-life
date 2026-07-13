@@ -45,8 +45,9 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${fraunces.variable} ${openSans.variable} ${caveat.variable}`}
+      suppressHydrationWarning
     >
-      <body className="font-body">
+      <body className="font-body" suppressHydrationWarning>
         <Header />
         <main>{children}</main>
         <Footer />
