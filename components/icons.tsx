@@ -35,6 +35,26 @@ export function LungsIcon({ className = 'h-6 w-6' }: { className?: string }) {
   );
 }
 
+// Circular rotating-text badge echoing the mockup's "SCIENCE · STRATEGY · FREEDOM" seal.
+export function CircleBadge({ className = 'h-28 w-28' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 120 120" aria-hidden>
+      <defs>
+        <path id="badge-circle" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+      </defs>
+      <text fontSize="9" letterSpacing="1.5" fill="currentColor" className="font-body font-bold uppercase">
+        <textPath href="#badge-circle" startOffset="0">
+          {'SCIENCE · STRATEGY · FREEDOM · '}
+        </textPath>
+      </text>
+      <g transform="translate(60,60)" stroke="currentColor" strokeWidth="1" fill="none">
+        <path d="M0,-16 C6,-8 6,8 0,16 C-6,8 -6,-8 0,-16 Z" />
+        <path d="M0,-16 L0,16" opacity="0.6" />
+      </g>
+    </svg>
+  );
+}
+
 export function VanSketch({ className = 'h-16 w-32' }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 160 80" {...base} aria-hidden>
