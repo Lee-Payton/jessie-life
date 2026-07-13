@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --coral: #ff5758;
-  --ink: #313131;
+  --cream: #f6f3ec;
+  --terracotta: #d3553e;
+  --forest: #3d4935;
+  --ink: #2b2620;
 }
 
 html {
@@ -13,35 +15,58 @@ html {
 
 body {
   color: var(--ink);
-  background: #ffffff;
+  background: var(--cream);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 @layer base {
   h1, h2, h3, h4 {
-    @apply font-heading text-ink;
-    letter-spacing: -0.01em;
+    @apply font-display text-ink;
+    letter-spacing: -0.015em;
+    line-height: 1.08;
   }
-  p {
-    @apply font-body leading-relaxed;
-  }
+  h1 { font-weight: 400; }
+  h2, h3 { font-weight: 500; }
+  p { @apply font-body leading-relaxed; }
+  em { font-style: italic; }
 }
 
 @layer components {
   .container-content {
     @apply mx-auto w-full max-w-content px-6 md:px-10;
   }
+  .eyebrow {
+    @apply font-body text-xs font-bold uppercase tracking-[0.18em] text-forest;
+  }
+  /* Emphasis underline for italic display words, echoing the mockup */
+  .accent-underline {
+    @apply relative italic;
+  }
+  .accent-underline::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 h-[3px] w-full rounded-full bg-terracotta/70;
+  }
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-coral px-7 py-3.5
-           font-heading text-sm font-semibold uppercase tracking-wide text-white
-           transition-colors hover:bg-coral-600 focus:outline-none focus-visible:ring-2
-           focus-visible:ring-coral focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-md bg-terracotta px-7 py-3.5
+           font-body text-sm font-bold uppercase tracking-wider text-white
+           transition-colors hover:bg-terracotta-600 focus:outline-none
+           focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border-2 border-ink px-7 py-3
-           font-heading text-sm font-semibold uppercase tracking-wide text-ink
-           transition-colors hover:bg-ink hover:text-white focus:outline-none
+    @apply inline-flex items-center justify-center rounded-md border border-ink/30 bg-transparent px-7 py-3.5
+           font-body text-sm font-bold uppercase tracking-wider text-ink
+           transition-colors hover:border-ink hover:bg-ink hover:text-white focus:outline-none
            focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2;
+  }
+  .btn-forest {
+    @apply inline-flex items-center justify-center rounded-md bg-forest px-7 py-3.5
+           font-body text-sm font-bold uppercase tracking-wider text-white
+           transition-colors hover:bg-forest-600 focus:outline-none
+           focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2;
+  }
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-body text-sm font-bold uppercase tracking-wider
+           text-terracotta transition-colors hover:text-terracotta-700;
   }
 }

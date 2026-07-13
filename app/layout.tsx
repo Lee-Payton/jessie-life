@@ -1,23 +1,18 @@
 import type { Metadata } from 'next';
-import { Montserrat, Open_Sans, Bellefair, Caveat } from 'next/font/google';
+import { Fraunces, Open_Sans, Caveat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const montserrat = Montserrat({
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-montserrat',
+  variable: '--font-fraunces',
   display: 'swap',
+  axes: ['opsz'],
 });
 const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
-  display: 'swap',
-});
-const bellefair = Bellefair({
-  subsets: ['latin'],
-  weight: '400',
-  variable: '--font-bellefair',
   display: 'swap',
 });
 const caveat = Caveat({
@@ -49,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${openSans.variable} ${bellefair.variable} ${caveat.variable}`}
+      className={`${fraunces.variable} ${openSans.variable} ${caveat.variable}`}
     >
       <body className="font-body">
         <Header />

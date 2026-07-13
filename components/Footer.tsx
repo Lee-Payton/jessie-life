@@ -1,26 +1,32 @@
 import Link from 'next/link';
 import { footerNav } from '@/lib/site';
+import EmailSignup from '@/components/EmailSignup';
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-neutral-200 bg-ink text-white">
-      <div className="container-content grid gap-10 py-14 md:grid-cols-3">
+    <footer className="border-t border-ink/10 bg-cream-dark">
+      <div className="container-content grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+        {/* Brand */}
         <div>
-          <span className="font-serif text-2xl">Jessie Faber</span>
-          <p className="mt-3 max-w-xs font-body text-sm text-white/70">
-            Functional health strategy, metabolic testing, and education for women
-            navigating perimenopause and menopause.
+          <span className="font-display text-2xl font-medium text-ink">
+            jessie<span className="text-terracotta">.life</span>
+          </span>
+          <p className="mt-1 font-body text-[10px] font-bold uppercase tracking-[0.2em] text-ink/60">
+            Science. Strategy. Freedom.
+          </p>
+          <p className="mt-5 max-w-xs font-body text-sm text-ink/70">
+            Empowering women in midlife with the data, strategy, and support to feel like
+            themselves again — and build a life they love.
           </p>
         </div>
 
-        <nav aria-label="Footer" className="md:col-span-1">
-          <ul className="grid grid-cols-2 gap-x-6 gap-y-2">
-            {footerNav.map((item) => (
+        {/* Navigation */}
+        <nav aria-label="Footer navigation">
+          <h3 className="eyebrow mb-4">Navigation</h3>
+          <ul className="space-y-2.5">
+            {footerNav.navigation.map((item) => (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="font-body text-sm text-white/80 transition-colors hover:text-coral"
-                >
+                <Link href={item.href} className="font-body text-sm text-ink/80 transition-colors hover:text-terracotta">
                   {item.label}
                 </Link>
               </li>
@@ -28,25 +34,36 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <div className="font-body text-sm text-white/70">
-          <p className="mb-2">
-            <Link href="/contact" className="hover:text-coral">Contact</Link>
+        {/* More */}
+        <nav aria-label="Footer more">
+          <h3 className="eyebrow mb-4">More</h3>
+          <ul className="space-y-2.5">
+            {footerNav.more.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className="font-body text-sm text-ink/80 transition-colors hover:text-terracotta">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Stay connected */}
+        <div>
+          <h3 className="eyebrow mb-4">Stay Connected</h3>
+          <p className="mb-4 font-body text-sm text-ink/70">
+            Get free resources, education, and testing updates.
           </p>
-          <p className="mb-2">
-            <Link href="/privacy" className="hover:text-coral">Privacy Policy</Link>
-          </p>
-          <p>
-            <Link href="/terms" className="hover:text-coral">Terms / Disclaimer</Link>
-          </p>
+          <EmailSignup source="footer" />
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-content flex flex-col items-center justify-between gap-2 py-6 text-xs text-white/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Jessie Faber. All rights reserved.</p>
+      <div className="border-t border-ink/10">
+        <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-ink/50 md:flex-row">
+          <p>© {new Date().getFullYear()} Jessie.life. All rights reserved.</p>
           <p className="max-w-xl text-center md:text-right">
-            Educational and health-strategy services only. Not medical diagnosis,
-            treatment, or prescribing. Consult your licensed clinician.
+            Educational and health-strategy services only. Not medical diagnosis, treatment, or
+            prescribing. Consult your licensed clinician.
           </p>
         </div>
       </div>

@@ -8,23 +8,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Jessie.life brand — captured from live site
-        coral: {
-          DEFAULT: '#ff5758',
-          600: '#f24344',
-          700: '#d93536',
+        // Jessie.life brand — sampled from Jessie's design direction (July 2026)
+        cream: {
+          DEFAULT: '#f6f3ec', // page background / bone
+          light: '#fbf9f4',
+          dark: '#ece7db',
         },
-        ink: '#313131',
-        cream: '#fafae1',
+        terracotta: {
+          DEFAULT: '#d3553e', // primary accent / buttons / ".life"
+          600: '#c34c38',
+          700: '#a93f2e',
+        },
+        forest: {
+          DEFAULT: '#3d4935', // deep green — secondary buttons, eyebrows, ink accents
+          600: '#334029',
+          700: '#2a3423',
+        },
+        ink: '#2b2620', // warm near-black for headings/body
+        sand: '#d8d4c6', // muted band / borders
       },
       fontFamily: {
-        heading: ['var(--font-montserrat)', 'sans-serif'],
-        body: ['var(--font-open-sans)', 'sans-serif'],
-        serif: ['var(--font-bellefair)', 'serif'],
+        display: ['var(--font-fraunces)', 'Georgia', 'serif'], // serif display headlines
+        body: ['var(--font-open-sans)', 'system-ui', 'sans-serif'],
         script: ['var(--font-caveat)', 'cursive'],
       },
       maxWidth: {
-        content: '72rem',
+        content: '75rem',
       },
     },
   },

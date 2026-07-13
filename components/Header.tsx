@@ -3,39 +3,46 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { mainNav } from '@/lib/site';
+import { mainNav, links } from '@/lib/site';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-100 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-ink/10 bg-cream/95 backdrop-blur">
       <div className="container-content flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Jessie.Life home">
           <Image
             src="/brand/jf-icon.png"
-            alt="Jessie Faber"
-            width={44}
-            height={44}
+            alt=""
+            width={40}
+            height={40}
             priority
-            className="h-11 w-11"
+            className="h-10 w-10 rounded"
           />
-          <span className="hidden font-serif text-xl text-ink sm:block">Jessie Faber</span>
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-2xl font-medium tracking-tight text-ink">
+              jessie<span className="text-terracotta">.life</span>
+            </span>
+            <span className="mt-0.5 font-body text-[9px] font-bold uppercase tracking-[0.2em] text-ink/60">
+              Science. Strategy. Freedom.
+            </span>
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {mainNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="font-heading text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:text-coral"
+              className="font-body text-xs font-bold uppercase tracking-wider text-ink transition-colors hover:text-terracotta"
             >
               {item.label}
             </Link>
           ))}
-          <Link href="/reboot" className="btn-primary">
-            Get Started
+          <Link href={links.bookTesting} className="btn-primary py-3">
+            Book Testing
           </Link>
         </nav>
 
@@ -43,7 +50,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center rounded-md md:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -58,20 +65,20 @@ export default function Header() {
 
       {/* Mobile menu */}
       {open && (
-        <nav className="border-t border-neutral-100 bg-white md:hidden" aria-label="Mobile">
+        <nav className="border-t border-ink/10 bg-cream lg:hidden" aria-label="Mobile">
           <div className="container-content flex flex-col gap-1 py-4">
             {mainNav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 font-heading text-sm font-semibold uppercase tracking-wide text-ink hover:bg-neutral-50 hover:text-coral"
+                className="rounded-md px-2 py-3 font-body text-sm font-bold uppercase tracking-wider text-ink hover:bg-cream-dark hover:text-terracotta"
               >
                 {item.label}
               </Link>
             ))}
-            <Link href="/reboot" onClick={() => setOpen(false)} className="btn-primary mt-2">
-              Get Started
+            <Link href={links.bookTesting} onClick={() => setOpen(false)} className="btn-primary mt-2">
+              Book Testing
             </Link>
           </div>
         </nav>
