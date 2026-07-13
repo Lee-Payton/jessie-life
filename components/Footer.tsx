@@ -60,7 +60,7 @@ export default function Footer() {
 
       <div className="border-t border-ink/10">
         <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-ink/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Jessie.life. All rights reserved.</p>
+          <p suppressHydrationWarning>© {new Date().getFullYear()} Jessie.life. All rights reserved.</p>
           <p className="max-w-xl text-center md:text-right">
             Educational and health-strategy services only. Not medical diagnosis, treatment, or
             prescribing. Consult your licensed clinician.

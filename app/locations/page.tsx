@@ -51,12 +51,12 @@ export default function LocationsPage() {
               {testingLocations.map((loc) => (
                 <div key={loc.name + loc.date} className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
                   <h3 className="font-display text-2xl">{loc.name}</h3>
-                  <dl className="mt-4 grid gap-2 font-body text-ink/80 sm:grid-cols-2">
+                  <div className="mt-4 grid gap-2 font-body text-ink/80 sm:grid-cols-2">
                     <p><span className="font-bold">City, State:</span> {loc.cityState}</p>
                     <p><span className="font-bold">Date:</span> {loc.date}</p>
                     <p><span className="font-bold">Testing available:</span> {loc.testing}</p>
                     <p><span className="font-bold">Appointment type:</span> {loc.appointmentType}</p>
-                  </dl>
+                  </div>
                   {loc.notes && <p className="mt-3 font-body text-sm text-ink/60">{loc.notes}</p>}
                   <div className="mt-6">
                     <a href={loc.bookingUrl} className="btn-primary">Book This Location</a>
