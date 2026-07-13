@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { footerNav } from '@/lib/site';
 import EmailSignup from '@/components/EmailSignup';
 
+// Computed once at module load so the server and client render the same value.
+const currentYear = new Date().getFullYear();
+
 export default function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-cream-dark">
@@ -60,7 +63,7 @@ export default function Footer() {
 
       <div className="border-t border-ink/10">
         <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-ink/50 md:flex-row">
-          <p>© {new Date().getFullYear()} Jessie.life. All rights reserved.</p>
+          <p>© {currentYear} Jessie.life. All rights reserved.</p>
           <p className="max-w-xl text-center md:text-right">
             Educational and health-strategy services only. Not medical diagnosis, treatment, or
             prescribing. Consult your licensed clinician.
