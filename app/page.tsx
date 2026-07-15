@@ -77,9 +77,9 @@ export default function HomePage() {
       <Section bg="cream">
         <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
           <div className="relative order-2 md:order-1">
-            <span className="absolute -left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 whitespace-nowrap font-script text-2xl text-terracotta/80 lg:block">
-              been there, figured it out
-            </span>
+            <p className="mb-3 font-body text-sm font-semibold text-terracotta">
+              Been there, figured it out
+            </p>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
                 src="/brand/about-jessie.jpg"

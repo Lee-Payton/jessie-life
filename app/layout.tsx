@@ -1,23 +1,18 @@
 import type { Metadata } from 'next';
-import { Fraunces, Open_Sans, Caveat } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const fraunces = Fraunces({
+const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
-  variable: '--font-fraunces',
+  variable: '--font-playfair-display',
   display: 'swap',
-  axes: ['opsz'],
+  style: ['normal', 'italic'],
 });
-const openSans = Open_Sans({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-open-sans',
-  display: 'swap',
-});
-const caveat = Caveat({
-  subsets: ['latin'],
-  variable: '--font-caveat',
+  variable: '--font-inter',
   display: 'swap',
 });
 
@@ -44,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${openSans.variable} ${caveat.variable}`}
+      className={`bg-cream ${playfairDisplay.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <body className="font-body" suppressHydrationWarning>

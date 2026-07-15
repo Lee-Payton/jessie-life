@@ -28,9 +28,8 @@ const config: Config = {
         sand: '#d8d4c6', // muted band / borders
       },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'Georgia', 'serif'], // serif display headlines
-        body: ['var(--font-open-sans)', 'system-ui', 'sans-serif'],
-        script: ['var(--font-caveat)', 'cursive'],
+        display: ['var(--font-playfair-display)', 'Georgia', 'serif'],
+        body: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
         content: '75rem',
