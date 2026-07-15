@@ -10,7 +10,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.05fr]">
           <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-24 md:pl-10 md:pr-14">
-            <p className="eyebrow">For the woman who knows</p>
+            <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
             <h1 className="mt-4 font-display text-5xl leading-[1.02] md:text-6xl lg:text-[4.25rem]">
               There has to be a{' '}
               <span className="accent-underline">better</span> way.
