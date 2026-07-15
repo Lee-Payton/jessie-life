@@ -12,10 +12,10 @@ export default function Header() {
       <div className="container-content flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center" aria-label="Jessie.Life home">
           <span className="flex flex-col leading-none">
-            <span className="font-display text-2xl font-medium tracking-tight text-ink">
-              jessie<span className="text-terracotta">.life</span>
+            <span className="font-display text-2xl font-semibold tracking-tight text-ink">
+              <span className="not-italic">jessie</span><span className="italic text-terracotta">.life</span>
             </span>
-            <span className="mt-0.5 font-body text-[9px] font-bold uppercase tracking-[0.2em] text-ink/60">
+            <span className="mt-0.5 font-body text-[9px] font-medium uppercase tracking-[0.24em] text-ink/60">
               Science. Strategy. Freedom.
             </span>
           </span>

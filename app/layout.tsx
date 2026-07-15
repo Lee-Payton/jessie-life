@@ -1,19 +1,22 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const playfairDisplay = Playfair_Display({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair-display',
+  variable: '--font-cormorant-garamond',
   display: 'swap',
+  weight: ['500', '600'],
   style: ['normal', 'italic'],
 });
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-dm-sans',
   display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal'],
 });
 
 export const metadata: Metadata = {
@@ -39,10 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-cream ${playfairDisplay.variable} ${inter.variable}`}
-      suppressHydrationWarning
+      className={`bg-cream ${cormorantGaramond.variable} ${dmSans.variable}`}
     >
-      <body className="font-body" suppressHydrationWarning>
+      <body className="font-body">
         <Header />
         <main>{children}</main>
         <Footer />
