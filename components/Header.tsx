@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 import { mainNav, links } from '@/lib/site';
 
@@ -11,15 +10,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-cream/95 backdrop-blur">
       <div className="container-content flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Jessie.Life home">
-          <Image
-            src="/brand/jf-icon.png"
-            alt=""
-            width={40}
-            height={40}
-            priority
-            className="h-10 w-10 rounded"
-          />
+        <Link href="/" className="flex items-center" aria-label="Jessie.Life home">
           <span className="flex flex-col leading-none">
             <span className="font-display text-2xl font-medium tracking-tight text-ink">
               jessie<span className="text-terracotta">.life</span>
