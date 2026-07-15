@@ -12,8 +12,7 @@ export default function HomePage() {
           <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-24 md:pl-10 md:pr-14">
             <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
             <h1 className="mt-4 font-display text-5xl leading-[1.02] md:text-6xl lg:text-[4.25rem]">
-              There has to be a{' '}
-              <span className="accent-underline">better</span> way.
+              Stop guessing what happened to your body.
             </h1>
             <p className="mt-6 max-w-md font-body text-lg text-ink/75">
               Personalized midlife health strategy and metabolic testing for women who are
