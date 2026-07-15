@@ -19,8 +19,10 @@ export default function HomePage() {
               ready to stop guessing and start getting answers.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <CtaButton href="/reboot">Explore the Reboot</CtaButton>
-              <CtaButton href="/locations" variant="secondary">Book Testing</CtaButton>
+              <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
+              <CtaButton href="/audit" variant="secondary">
+                Start With a Midlife Metabolism Audit
+              </CtaButton>
             </div>
             <Link href="/locations" className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta">
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
