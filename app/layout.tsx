@@ -1,24 +1,22 @@
 import type { Metadata } from 'next';
-import { Fraunces, Open_Sans, Caveat } from 'next/font/google';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const fraunces = Fraunces({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-fraunces',
+  variable: '--font-cormorant-garamond',
   display: 'swap',
-  axes: ['opsz'],
+  weight: ['500', '600'],
+  style: ['normal', 'italic'],
 });
-const openSans = Open_Sans({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-open-sans',
+  variable: '--font-dm-sans',
   display: 'swap',
-});
-const caveat = Caveat({
-  subsets: ['latin'],
-  variable: '--font-caveat',
-  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal'],
 });
 
 export const metadata: Metadata = {
@@ -44,10 +42,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${openSans.variable} ${caveat.variable}`}
-      suppressHydrationWarning
+      className={`bg-cream ${cormorantGaramond.variable} ${dmSans.variable}`}
     >
-      <body className="font-body" suppressHydrationWarning>
+      <body className="font-body">
         <Header />
         <main>{children}</main>
         <Footer />

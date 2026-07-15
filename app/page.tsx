@@ -10,18 +10,19 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.05fr]">
           <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-24 md:pl-10 md:pr-14">
-            <p className="eyebrow">For the woman who knows</p>
+            <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
             <h1 className="mt-4 font-display text-5xl leading-[1.02] md:text-6xl lg:text-[4.25rem]">
-              There has to be a{' '}
-              <span className="accent-underline">better</span> way.
+              Stop guessing what happened to your body.
             </h1>
             <p className="mt-6 max-w-md font-body text-lg text-ink/75">
               Personalized midlife health strategy and metabolic testing for women who are
               ready to stop guessing and start getting answers.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <CtaButton href="/reboot">Explore the Reboot</CtaButton>
-              <CtaButton href="/locations" variant="secondary">Book Testing</CtaButton>
+              <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
+              <CtaButton href="/audit" variant="secondary">
+                Start With a Midlife Metabolism Audit
+              </CtaButton>
             </div>
             <Link href="/locations" className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta">
               <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
@@ -76,9 +77,9 @@ export default function HomePage() {
       <Section bg="cream">
         <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
           <div className="relative order-2 md:order-1">
-            <span className="absolute -left-5 top-1/2 hidden -translate-y-1/2 -rotate-90 whitespace-nowrap font-script text-2xl text-terracotta/80 lg:block">
-              been there, figured it out
-            </span>
+            <p className="mb-3 font-body text-sm font-semibold text-terracotta">
+              Been there, figured it out
+            </p>
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
                 src="/brand/about-jessie.jpg"
