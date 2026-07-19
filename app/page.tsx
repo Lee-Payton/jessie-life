@@ -67,6 +67,7 @@ export default function HomePage() {
               'A six-month, lab-guided health strategy for women navigating perimenopause, menopause, hormone therapy, metabolism changes, burnout, and \u201cwhat the hell happened to my body?\u201d',
               'For women who want the full picture, a personalized strategy, and the support to troubleshoot and adjust that strategy until it actually works in real life.',
             ]}
+            note="Six months of personalized strategy, support, and follow-through"
             href="/reboot"
             linkLabel="Explore the Midlife Reboot"
           />
