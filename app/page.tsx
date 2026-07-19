@@ -14,10 +14,18 @@ export default function HomePage() {
             <h1 className="mt-4 font-display text-5xl leading-[1.02] md:text-6xl lg:text-[4.25rem]">
               Stop guessing what happened to your body.
             </h1>
-            <p className="mt-6 max-w-md font-body text-lg text-ink/75">
-              Personalized midlife health strategy and metabolic testing for women who are
-              ready to stop guessing and start getting answers.
-            </p>
+            <div className="mt-6 max-w-md space-y-4 font-body text-lg text-ink/75">
+              <p>
+                If your energy, sleep, weight, strength, mood, recovery, or hormones feel
+                like they changed the rules without warning, you do not need another generic
+                plan telling you to eat less, push harder, or &ldquo;just be consistent.&rdquo;
+              </p>
+              <p>
+                You need a better way to understand what is actually happening in your body
+                — and a realistic strategy for hormones, metabolism, strength, energy, and
+                long-term resilience that fits the life you are actually living.
+              </p>
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
               <CtaButton href="/audit" variant="secondary">
@@ -54,21 +62,35 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">
           <OfferCard
             icon={<LeafIcon />}
-            title="Midlife Reboot"
-            body="A comprehensive, personalized health strategy that connects your labs, metabolism, hormones, and lifestyle into one clear plan."
+            title="The Midlife Reboot"
+            paragraphs={[
+              'A six-month, lab-guided health strategy for women navigating perimenopause, menopause, hormone therapy, metabolism changes, burnout, and \u201cwhat the hell happened to my body?\u201d',
+              'For women who want the full picture, a personalized strategy, and the support to troubleshoot and adjust that strategy until it actually works in real life.',
+            ]}
             href="/reboot"
+            linkLabel="Explore the Midlife Reboot"
           />
           <OfferCard
             icon={<PulseIcon />}
-            title="Midlife Metabolism Audit"
-            body="A 45-minute private consultation that starts with your resting metabolic test and ends with a personalized roadmap."
+            title="The Midlife Metabolism Audit"
+            paragraphs={[
+              'A focused whole-health consultation built around measured resting metabolism, your symptom picture, and the real-life factors that influence how your body is functioning right now.',
+              'For women who want clarity, context, and a practical next step without committing to six months of support.',
+            ]}
+            note="$295 • Apply the full fee to the Midlife Reboot when you enroll within 14 days"
             href="/audit"
+            linkLabel="Start With an Audit"
           />
           <OfferCard
             icon={<LungsIcon />}
-            title="Metabolic Testing"
-            body="Resting metabolic rate and VO₂ max testing that reveal the data your body has been trying to tell you."
+            title="Metabolic & Fitness Testing"
+            paragraphs={[
+              'Measure your resting metabolism or cardiovascular fitness instead of relying on generic formulas, wearable estimates, or \u201ccalories burned\u201d guesses that may or may not have anything to do with your actual body.',
+              'Standalone testing is available for women, athletes, gym members, and anyone who wants objective information about how their body uses energy and oxygen.',
+            ]}
+            note="RMR and VO₂ testing available separately or as part of select offers"
             href="/metabolism"
+            linkLabel="View Metabolic & VO₂ Testing"
           />
         </div>
       </Section>
@@ -256,13 +278,17 @@ export default function HomePage() {
 function OfferCard({
   icon,
   title,
-  body,
+  paragraphs,
+  note,
   href,
+  linkLabel,
 }: {
   icon: React.ReactNode;
   title: string;
-  body: string;
+  paragraphs: string[];
+  note?: string;
   href: string;
+  linkLabel: string;
 }) {
   return (
     <div className="flex flex-col rounded-lg bg-cream p-8 ring-1 ring-ink/5">
@@ -270,10 +296,15 @@ function OfferCard({
         {icon}
       </span>
       <h3 className="mt-6 font-display text-2xl">{title}</h3>
-      <p className="mt-3 font-body text-sm text-ink/70">{body}</p>
+      <div className="mt-3 space-y-3 font-body text-sm text-ink/70">
+        {paragraphs.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      </div>
+      {note && <p className="mt-4 font-body text-sm font-semibold text-forest">{note}</p>}
       <div className="mt-6 flex-1" />
       <Link href={href} className="link-arrow">
-        Learn More →
+        {linkLabel}&nbsp;→
       </Link>
     </div>
   );
