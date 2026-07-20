@@ -46,11 +46,11 @@ export default function Header() {
           aria-expanded={open}
         >
           <span className="sr-only">Menu</span>
-          <div className="space-y-1.5">
+          <span className="flex flex-col gap-1.5" aria-hidden="true">
             <span className={`block h-0.5 w-6 bg-ink transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`} />
             <span className={`block h-0.5 w-6 bg-ink transition-opacity ${open ? 'opacity-0' : ''}`} />
             <span className={`block h-0.5 w-6 bg-ink transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`} />
-          </div>
+          </span>
         </button>
       </div>
 
