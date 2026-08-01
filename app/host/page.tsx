@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import HostForm from '@/components/HostForm';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function HostPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-24">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>For Organizations</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
@@ -167,16 +167,15 @@ export default function HostPage() {
       </Section>
 
       {/* Section 9 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">
-            Give people more than advice. Give them a measurement they can act on.
-          </h2>
-          <div className="mt-8">
-            <a href="#host-form" className="btn-primary">Request a Testing Event</a>
-          </div>
-        </div>
-      </Section>
+      <FinalCta
+        title="Give people more than advice. Give them a measurement they can act on."
+        texture="tr"
+        actions={
+          <a href="#host-form" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+            Request a Testing Event
+          </a>
+        }
+      />
     </>
   );
 }

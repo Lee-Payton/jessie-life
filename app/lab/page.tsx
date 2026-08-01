@@ -13,7 +13,7 @@ export default function LabPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-24">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>Education Library</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Resource Lab</h1>

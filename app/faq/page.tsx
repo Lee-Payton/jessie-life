@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CtaButton } from '@/components/ui';
+import { Section, Eyebrow, CtaButton, FinalCta } from '@/components/ui';
 import Accordion from '@/components/Accordion';
 import { rebootFaqs, testingFaqs } from '@/lib/faq';
 
@@ -13,7 +13,7 @@ export default function FaqPage() {
   return (
     <>
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-20">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>FAQ</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">Frequently Asked Questions</h1>
@@ -46,20 +46,22 @@ export default function FaqPage() {
         </div>
       </Section>
 
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Still have questions?</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            Start with the level of support that fits where you are now.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="/reboot" className="btn-primary">Explore the Midlife Reboot</a>
-            <a href="/audit" className="inline-flex items-center justify-center rounded-md border border-white/60 px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-forest">
+      <FinalCta
+        title="Still have questions?"
+        texture="tl"
+        actions={
+          <>
+            <a href="/reboot" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+              Explore the Midlife Reboot
+            </a>
+            <a href="/audit" className="btn-forest-outline w-full whitespace-nowrap sm:w-auto">
               Start With an Audit
             </a>
-          </div>
-        </div>
-      </Section>
+          </>
+        }
+      >
+        <p>Start with the level of support that fits where you are now.</p>
+      </FinalCta>
     </>
   );
 }

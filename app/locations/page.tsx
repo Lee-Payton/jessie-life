@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import EmailSignup from '@/components/EmailSignup';
 import { testingLocations } from '@/lib/locations';
 
@@ -14,7 +14,7 @@ export default function LocationsPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-24">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>Mobile Testing</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
@@ -159,22 +159,26 @@ export default function LocationsPage() {
       </Section>
 
       {/* Section 6 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Ready to stop guessing?</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            If you want better data about your resting metabolism, cardiorespiratory fitness,
-            training zones, or baseline health and fitness trends, check the current testing schedule
-            or join the notification list for future dates.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="#schedule" className="btn-primary">View Upcoming Testing Dates</a>
-            <a href="/host" className="inline-flex items-center justify-center rounded-md border border-white/60 px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-forest">
+      <FinalCta
+        title="Ready to stop guessing?"
+        texture="bl"
+        actions={
+          <>
+            <a href="#schedule" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+              View Upcoming Testing Dates
+            </a>
+            <a href="/host" className="btn-forest-outline w-full whitespace-nowrap sm:w-auto">
               Request Testing at Your Location
             </a>
-          </div>
-        </div>
-      </Section>
+          </>
+        }
+      >
+        <p>
+          If you want better data about your resting metabolism, cardiorespiratory fitness,
+          training zones, or baseline health and fitness trends, check the current testing schedule
+          or join the notification list for future dates.
+        </p>
+      </FinalCta>
     </>
   );
 }
