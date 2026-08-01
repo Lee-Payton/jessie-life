@@ -5,7 +5,7 @@ import EmailSignup from '@/components/EmailSignup';
 export default function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-cream-dark">
-      <div className="container-content grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-content grid gap-10 py-14 md:grid-cols-2 md:py-16 lg:grid-cols-4">
         {/* Brand */}
         <div>
           <span className="font-display text-2xl font-medium text-ink">

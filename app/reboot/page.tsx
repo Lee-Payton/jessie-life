@@ -13,7 +13,7 @@ export default function RebootPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content grid items-center gap-12 py-20 md:grid-cols-2 md:py-24">
+        <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>The Flagship Program</Eyebrow>
             <h1 className="mt-4 text-4xl leading-[1.1] md:text-5xl">The Midlife Reboot</h1>

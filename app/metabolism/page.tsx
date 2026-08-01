@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Metabolism + VO₂ Testing — Jessie.Life',
@@ -12,7 +12,7 @@ export default function MetabolismPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+        <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>Metabolic & Fitness Testing</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
@@ -319,26 +319,30 @@ export default function MetabolismPage() {
       </Section>
 
       {/* Section 9 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Better data makes better decisions easier.</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            Whether you want to understand your resting metabolism, measure your cardiorespiratory
-            fitness, dial in your training zones, or get a clearer baseline before your next health
-            or fitness phase, metabolism and VO₂ testing can help you stop guessing.
-          </p>
-          <p className="mt-4 font-body text-lg text-white/80">
-            Book a standalone test, find an upcoming testing location, or bring testing to your gym,
-            studio, clinic, office, retreat, or event.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="/locations" className="btn-primary">See Upcoming Testing Locations</a>
-            <a href="/host" className="inline-flex items-center justify-center rounded-md border border-white/60 px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-forest">
+      <FinalCta
+        title="Better data makes better decisions easier."
+        texture="tr"
+        actions={
+          <>
+            <a href="/locations" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+              See Upcoming Testing Locations
+            </a>
+            <a href="/host" className="btn-forest-outline w-full whitespace-nowrap sm:w-auto">
               Bring Testing to Your Location
             </a>
-          </div>
-        </div>
-      </Section>
+          </>
+        }
+      >
+        <p>
+          Whether you want to understand your resting metabolism, measure your cardiorespiratory
+          fitness, dial in your training zones, or get a clearer baseline before your next health
+          or fitness phase, metabolism and VO₂ testing can help you stop guessing.
+        </p>
+        <p>
+          Book a standalone test, find an upcoming testing location, or bring testing to your gym,
+          studio, clinic, office, retreat, or event.
+        </p>
+      </FinalCta>
     </>
   );
 }

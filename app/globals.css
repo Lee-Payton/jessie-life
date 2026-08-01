@@ -64,6 +64,14 @@ body {
            transition-colors hover:bg-forest-600 focus:outline-none
            focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2;
   }
+  /* Outline sibling to .btn-forest — used for the secondary action on light
+     (cream / sage) CTA bands, mirroring the approved homepage + About treatment. */
+  .btn-forest-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-forest/40 bg-transparent px-7 py-3.5
+           font-body text-sm font-bold uppercase tracking-wider text-forest
+           transition-colors hover:bg-forest hover:text-white focus:outline-none
+           focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2;
+  }
   .link-arrow {
     @apply inline-flex items-center gap-1.5 font-body text-sm font-bold uppercase tracking-wider
            text-terracotta transition-colors hover:text-terracotta-700;

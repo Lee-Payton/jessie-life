@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import { links } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function AuditPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+        <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>$295 Assessment</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism Audit</h1>
@@ -217,21 +217,23 @@ export default function AuditPage() {
       </Section>
 
       {/* Section 9 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Before you cut more, measure more.</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            Find out how much energy your body actually uses, what may be influencing that number,
-            and which next steps make sense for the body you are living in now.
-          </p>
-          <p className="mt-6 font-body text-sm font-bold text-white/90">
-            Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
-          </p>
-          <div className="mt-8">
-            <a href={links.practiceBetter} className="btn-primary">Book the Midlife Metabolism Audit</a>
-          </div>
-        </div>
-      </Section>
+      <FinalCta
+        title="Before you cut more, measure more."
+        texture="br"
+        actions={
+          <a href={links.practiceBetter} className="btn-forest w-full whitespace-nowrap sm:w-auto">
+            Book the Midlife Metabolism Audit
+          </a>
+        }
+      >
+        <p>
+          Find out how much energy your body actually uses, what may be influencing that number,
+          and which next steps make sense for the body you are living in now.
+        </p>
+        <p className="text-base font-bold text-forest">
+          Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
+        </p>
+      </FinalCta>
     </>
   );
 }

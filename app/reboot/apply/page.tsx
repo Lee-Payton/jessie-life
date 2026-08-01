@@ -12,7 +12,7 @@ export default function RebootApplyPage() {
   return (
     <>
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-20">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>Application</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">Apply for the Midlife Reboot</h1>
