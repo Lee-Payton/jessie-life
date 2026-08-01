@@ -27,8 +27,8 @@ const config: Config = {
         ink: '#2b2620', // warm near-black for headings/body
         sand: '#d8d4c6', // muted band / borders
         sage: {
-          DEFAULT: '#e0dcc8', // warm soft green-beige — light CTA band
-          dark: '#d5cdb8',
+          DEFAULT: '#d7dbc9', // soft warm sage with beige undertone — light CTA band
+          dark: '#cdd1ba',
         },
       },
       fontFamily: {
