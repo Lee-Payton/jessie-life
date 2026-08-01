@@ -127,9 +127,8 @@ export default function HomePage() {
                   can influence how you sleep, think, recover, build muscle, regulate blood sugar,
                   respond to stress, use energy, store fat, maintain bone, and feel in your own body.
                 </p>
-                <p>That does not mean every symptom is &ldquo;just menopause.&rdquo;</p>
                 <p>
-                  It means midlife deserves a wider lens — especially if you already have a history
+                  It means Midlife deserves a wider lens — especially if you already have a history
                   of chronic illness, autoimmune issues, thyroid changes, reproductive disorders,
                   pain, burnout, dieting, or old problems that suddenly start making noise again.
                 </p>
