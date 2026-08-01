@@ -55,58 +55,72 @@ export function CircleBadge({ className = 'h-28 w-28' }: { className?: string })
   );
 }
 
-// Clean Class C motorhome line silhouette (signature over-cab bunk + box body).
+// Hand-drawn Class C motorhome doodle, facing left: cab-over sleeping bunk
+// projecting over the front cab, a visible windshield, a compact body, two
+// wheels, plus a short road line and small motion marks. Intentionally a
+// charming editorial sketch — slightly imperfect linework, not a diagram.
 export function VanSketch({ className = 'h-16 w-32' }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 220 104"
+      viewBox="0 0 220 130"
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={2.2}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden
     >
-      {/* soft horizon line */}
-      <path d="M6 94 H214" opacity="0.35" strokeWidth={1.5} />
+      {/* road line */}
+      <path d="M10 112c40 3 96 3 150 1" opacity="0.4" strokeDasharray="1 9" />
 
-      {/* body outline: cab front, over-cab bunk, box */}
-      <path d="M28 82 L28 52 L22 46 L24 32 Q25 26 32 26 L196 26 Q204 26 204 34 L204 74 Q204 82 196 82 Z" />
+      {/* motion marks trailing behind (right) */}
+      <path d="M196 52h18M200 66h20M198 80h15" opacity="0.4" strokeWidth={1.8} />
 
-      {/* cab back / roof divider (box front) */}
-      <path d="M66 82 L66 46 L28 46" />
+      {/* main body box (rear) with slightly wavy roof */}
+      <path d="M80 104V44c0-3 2-5 5-5 34-2 71-2 102 0 3 0 5 2 5 5v60" />
+
+      {/* cab-over bunk projecting forward over the cab + down the front */}
+      <path d="M85 40c-9-1-18 1-26 6-4 3-9 6-15 7-4 1-6 3-6 7v10" />
+
+      {/* cab lower front + floor line under the body */}
+      <path d="M32 76v24M32 104h160" />
 
       {/* windshield */}
-      <path d="M31 52 L46 46" />
+      <path d="M38 78c8-1 16-1 24 0 0 6 0 12-1 18-8 1-16 1-24 0 0-6 0-12 1-18Z" />
 
-      {/* box windows + door */}
-      <rect x="80" y="40" width="26" height="18" rx="2" />
-      <rect x="120" y="40" width="34" height="18" rx="2" />
-      <rect x="168" y="40" width="24" height="30" rx="2" />
+      {/* door / cab-box seam */}
+      <path d="M80 60v44" opacity="0.7" />
+
+      {/* box side windows */}
+      <path d="M96 56h30v18H96zM140 56h34v18h-34z" opacity="0.85" />
 
       {/* wheels */}
-      <circle cx="56" cy="82" r="10" />
-      <circle cx="172" cy="82" r="10" />
+      <circle cx="58" cy="104" r="11" />
+      <circle cx="160" cy="104" r="11" />
+      <circle cx="58" cy="104" r="3.5" opacity="0.6" />
+      <circle cx="160" cy="104" r="3.5" opacity="0.6" />
     </svg>
   );
 }
 
-// Hand-drawn coral emphasis underline (stretches to fit the word above it).
+// Hand-drawn coral emphasis swoosh (stretches under the word without crossing
+// letterforms). Slightly irregular, with a small upward flick at the end.
 export function HandUnderline({ className = '' }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 200 12"
+      viewBox="0 0 200 16"
       fill="none"
       preserveAspectRatio="none"
       aria-hidden
     >
       <path
-        d="M3 7.5 C40 3.5, 74 3, 108 5.5 C140 7.5, 168 5, 197 3.5"
+        d="M4 9C34 4 66 3.5 98 6c28 2.2 52 4.5 96 1.5"
         stroke="currentColor"
-        strokeWidth={3}
+        strokeWidth={3.2}
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

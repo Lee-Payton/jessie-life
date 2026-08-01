@@ -7,9 +7,11 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
 export default function EmailSignup({
   source = 'site',
   buttonLabel = 'Join the List',
+  layout = 'row',
 }: {
   source?: string;
   buttonLabel?: string;
+  layout?: 'row' | 'stack';
 }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
@@ -48,10 +50,15 @@ export default function EmailSignup({
     );
   }
 
+  const isStack = layout === 'stack';
+
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+    <form
+      onSubmit={handleSubmit}
+      className={isStack ? 'flex flex-col gap-3' : 'flex flex-col gap-3 sm:flex-row'}
+    >
       <label className="sr-only" htmlFor={`email-${source}`}>
-        Your email address
+        Email address
       </label>
       <input
         id={`email-${source}`}
@@ -59,15 +66,21 @@ export default function EmailSignup({
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Your email address"
-        className="min-w-0 flex-1 rounded-md border border-ink/20 bg-cream-light px-4 py-3 font-body text-sm text-ink placeholder:text-ink/40 focus:border-terracotta focus:outline-none focus:ring-1 focus:ring-terracotta"
+        placeholder="Email address"
+        className={`h-12 min-w-0 rounded-md border border-ink/20 bg-cream-light px-4 font-body text-sm text-ink placeholder:text-ink/40 focus:border-terracotta focus:outline-none focus:ring-1 focus:ring-terracotta ${
+          isStack ? 'w-full' : 'flex-1'
+        }`}
         disabled={status === 'submitting'}
       />
-      <button type="submit" className="btn-primary shrink-0 py-3" disabled={status === 'submitting'}>
+      <button
+        type="submit"
+        className={`btn-primary h-12 shrink-0 py-0 ${isStack ? 'w-full' : ''}`}
+        disabled={status === 'submitting'}
+      >
         {status === 'submitting' ? 'Joining…' : buttonLabel}
       </button>
       {status === 'error' && (
-        <p className="font-body text-sm text-terracotta sm:sr-only" role="alert">
+        <p className={`font-body text-sm text-terracotta ${isStack ? '' : 'sm:sr-only'}`} role="alert">
           {message}
         </p>
       )}

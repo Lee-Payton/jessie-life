@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { CtaButton, TopoSwirl } from '@/components/ui';
+import { CtaButton } from '@/components/ui';
+import { LeafIcon, PulseIcon, LungsIcon, VanSketch, CircleBadge, HandUnderline } from '@/components/icons';
 import {
-  LeafIcon,
-  PulseIcon,
-  LungsIcon,
-  VanSketch,
-  CircleBadge,
-  HandUnderline,
-} from '@/components/icons';
+  ContourLines,
+  LoopDoodle,
+  SprigDoodle,
+  MoleculeDoodle,
+  SunDoodle,
+} from '@/components/decor';
 
 export default function HomePage() {
   return (
@@ -17,52 +17,54 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.05fr]">
           <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-20 md:pl-10 md:pr-14">
-            <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
-            <h1 className="mt-4 font-display text-[2.4rem] leading-[1.07] md:text-5xl lg:text-[3.75rem] lg:leading-[1.04]">
-              Stop{' '}
-              <span className="relative inline-block italic">
-                guessing
-                <HandUnderline className="absolute -bottom-1 left-0 h-2 w-full text-terracotta md:-bottom-1.5 md:h-3" />
-              </span>{' '}
-              what happened to your body.
-            </h1>
-            <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
-              <p>
-                If your energy, sleep, weight, strength, mood, recovery, or hormones feel
-                like they changed the rules without warning, you do not need another generic
-                plan telling you to eat less, push harder, or &ldquo;just be consistent.&rdquo;
-              </p>
-              <p>
-                You need a better way to understand what is actually happening in your body
-                — and a realistic strategy for hormones, metabolism, strength, energy, and
-                long-term resilience that fits the life you are actually living.
-              </p>
+            <ContourLines className="pointer-events-none absolute -left-24 top-1/2 hidden h-72 w-72 -translate-y-1/2 text-forest/[0.07] md:block" />
+            <div className="relative">
+              <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
+              <h1 className="mt-4 font-display text-[2.4rem] leading-[1.07] md:text-5xl lg:text-[3.75rem] lg:leading-[1.04]">
+                Stop{' '}
+                <span className="relative inline-block italic">
+                  guessing
+                  <HandUnderline className="absolute -bottom-1.5 left-0 h-2.5 w-full text-terracotta md:-bottom-2 md:h-3" />
+                </span>{' '}
+                what happened to your body.
+              </h1>
+              <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
+                <p>
+                  If your energy, sleep, weight, strength, mood, recovery, or hormones feel
+                  like they changed the rules without warning, you do not need another generic
+                  plan telling you to eat less, push harder, or &ldquo;just be consistent.&rdquo;
+                </p>
+                <p>
+                  You need a better way to understand what is actually happening in your body
+                  — and a realistic strategy for hormones, metabolism, strength, energy, and
+                  long-term resilience that fits the life you are actually living.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
+                <CtaButton href="/audit" variant="secondary">
+                  Start With a Midlife Metabolism Audit
+                </CtaButton>
+              </div>
+              <Link
+                href="/locations"
+                className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                    <path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z" />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </svg>
+                </span>
+                <span className="font-body text-sm leading-tight">
+                  <span className="block text-[10px] font-bold uppercase tracking-widest text-forest">Testing Locations</span>
+                  See where I&rsquo;m testing next →
+                </span>
+              </Link>
             </div>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
-              <CtaButton href="/audit" variant="secondary">
-                Start With a Midlife Metabolism Audit
-              </CtaButton>
-            </div>
-            <Link
-              href="/locations"
-              className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta"
-            >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                  <path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z" />
-                  <circle cx="12" cy="10" r="2.5" />
-                </svg>
-              </span>
-              <span className="font-body text-sm leading-tight">
-                <span className="block text-[10px] font-bold uppercase tracking-widest text-forest">Testing Locations</span>
-                See where I&rsquo;m testing next →
-              </span>
-            </Link>
           </div>
 
           <div className="relative min-h-[420px] md:min-h-full">
-            <TopoSwirl className="absolute -left-16 top-1/2 z-10 hidden h-64 w-64 -translate-y-1/2 text-forest/30 md:block" />
             <Image
               src="/brand/hero-jessie.jpg"
               alt="Jessie Faber"
@@ -76,38 +78,45 @@ export default function HomePage() {
       </section>
 
       {/* ============ 2 · EVERY WOMAN'S MENOPAUSE IS DIFFERENT ============ */}
-      <section className="relative overflow-hidden bg-cream-light py-16 md:py-20">
-        <TopoSwirl className="pointer-events-none absolute -right-20 top-6 h-72 w-72 text-forest/10" />
-        <div className="container-content">
-          <div className="mx-auto max-w-3xl rounded-2xl border-l-[3px] border-terracotta/70 bg-cream/70 p-8 ring-1 ring-ink/5 md:p-10">
-            <div className="space-y-4 font-body text-lg text-ink/80">
-              <p>
-                Every woman&rsquo;s menopause is different. Your symptoms, hormones, metabolism,
-                nervous system, history, personality, stress load, and lifestyle all matter. You
-                don&rsquo;t need more generic advice. You need a better way to understand what&rsquo;s
-                happening in your body, identify relevant patterns, and take the next right step.
-              </p>
-              <p>
-                Midlife has a way of making old strategies stop working — sometimes quietly,
-                sometimes like your body staged a full internal coup. The things you carried into
-                this transition, like poor sleep, chronic stress, under-recovery, blood-sugar
-                swings, pain, nutrient gaps, dieting history, or a complicated health story, can
-                become harder to ignore.
-              </p>
-              <p>That does not mean everything is &ldquo;just menopause.&rdquo;</p>
-              <p>
-                It means this is the time to stop treating your symptoms, labs, metabolism,
-                hormones, and lifestyle like they are all separate conversations.
-              </p>
+      <section className="relative overflow-hidden bg-cream-light py-14 md:py-20">
+        <ContourLines className="pointer-events-none absolute -left-28 top-4 h-80 w-80 rotate-6 text-forest/[0.08]" />
+        <ContourLines className="pointer-events-none absolute -right-32 -bottom-16 h-96 w-96 -rotate-12 text-terracotta/[0.07]" />
+        <div className="container-content relative">
+          <div className="mx-auto max-w-3xl">
+            <div className="relative overflow-hidden rounded-2xl border-l-[3px] border-terracotta bg-cream p-8 shadow-sm ring-1 ring-ink/5 md:p-10">
+              <SprigDoodle className="pointer-events-none absolute -right-2 -top-2 h-20 w-16 text-forest/10" />
+              <h2 className="relative font-display text-2xl leading-tight md:text-[2rem]">
+                Every woman&rsquo;s menopause is different.
+              </h2>
+              <div className="relative mt-5 space-y-4 font-body text-lg text-ink/80">
+                <p>
+                  Your symptoms, hormones, metabolism, nervous system, history, personality,
+                  stress load, and lifestyle all matter. You don&rsquo;t need more generic advice.
+                  You need a better way to understand what&rsquo;s happening in your body, identify
+                  relevant patterns, and take the next right step.
+                </p>
+                <p>
+                  Midlife has a way of making old strategies stop working — sometimes quietly,
+                  sometimes like your body staged a full internal coup. The things you carried into
+                  this transition, like poor sleep, chronic stress, under-recovery, blood-sugar
+                  swings, pain, nutrient gaps, dieting history, or a complicated health story, can
+                  become harder to ignore.
+                </p>
+                <p>That does not mean everything is &ldquo;just menopause.&rdquo;</p>
+                <p>
+                  It means this is the time to stop treating your symptoms, labs, metabolism,
+                  hormones, and lifestyle like they are all separate conversations.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============ 3 · THIS IS NOT JUST ABOUT HOT FLASHES ============ */}
-      <section className="relative overflow-hidden bg-cream-dark py-16 md:py-20">
-        <TopoSwirl className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 text-forest/10" />
-        <div className="container-content">
+      <section className="relative overflow-hidden bg-cream-dark py-14 md:py-20">
+        <ContourLines className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 text-forest/[0.08]" />
+        <div className="container-content relative">
           <div className="mx-auto grid max-w-5xl items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div>
               <h2 className="text-3xl md:text-4xl">This is not just about hot flashes.</h2>
@@ -129,21 +138,29 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <ul className="grid content-start gap-0 divide-y divide-ink/5 rounded-2xl bg-cream-light p-8 font-body text-ink/80 shadow-sm ring-1 ring-ink/5">
-              {[
-                'Hormones, symptoms, and hormone-therapy questions',
-                'Metabolism, blood sugar, body composition, and cardiovascular risk',
-                'Energy, sleep, recovery, and nervous-system load',
-                'Strength, muscle, bone, mobility, and long-term independence',
-                'Nutrition, nutrient status, digestion, and the practical realities of your life',
-                'Chronic illness history, autoimmune patterns, thyroid changes, reproductive disorders, pain, and unresolved health stressors',
-              ].map((item) => (
-                <li key={item} className="flex gap-3 py-3 first:pt-0 last:pb-0">
-                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-terracotta" aria-hidden />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="relative">
+              <ContourLines className="pointer-events-none absolute -right-16 -top-12 h-56 w-56 text-terracotta/[0.09]" />
+              <ul className="relative overflow-hidden rounded-2xl bg-cream-light p-8 font-body text-ink/80 shadow-sm ring-1 ring-ink/5">
+                {[
+                  'Hormones, symptoms, and hormone-therapy questions',
+                  'Metabolism, blood sugar, body composition, and cardiovascular risk',
+                  'Energy, sleep, recovery, and nervous-system load',
+                  'Strength, muscle, bone, mobility, and long-term independence',
+                  'Nutrition, nutrient status, digestion, and the practical realities of your life',
+                  'Chronic illness history, autoimmune patterns, thyroid changes, reproductive disorders, pain, and unresolved health stressors',
+                ].map((item, i) => (
+                  <li
+                    key={item}
+                    className={`flex gap-3 py-3.5 first:pt-0 last:pb-0 ${
+                      i === 5 ? '' : 'border-b border-dashed'
+                    } ${i % 2 === 0 ? 'border-ink/[0.12]' : 'border-ink/[0.06]'}`}
+                  >
+                    <BulletMark index={i} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -156,7 +173,10 @@ export default function HomePage() {
               icon={<LeafIcon />}
               title="The Midlife Reboot"
               tint="bg-cream-light"
-              pattern
+              accent
+              decor={
+                <ContourLines className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 text-forest/[0.10]" />
+              }
               paragraphs={[
                 'A six-month, lab-guided health strategy for women navigating perimenopause, menopause, hormone therapy, metabolism changes, burnout, and \u201cwhat the hell happened to my body?\u201d',
                 'For women who want the full picture, a personalized strategy, and the support to troubleshoot and adjust that strategy until it actually works in real life.',
@@ -169,6 +189,9 @@ export default function HomePage() {
               icon={<PulseIcon />}
               title="The Midlife Metabolism Audit"
               tint="bg-[#f1e2da]"
+              decor={
+                <MoleculeDoodle className="pointer-events-none absolute right-5 top-6 h-16 w-16 text-terracotta/15" />
+              }
               paragraphs={[
                 'A focused whole-health consultation built around measured resting metabolism, your symptom picture, and the real-life factors that influence how your body is functioning right now.',
                 'For women who want clarity, context, and a practical next step without committing to six months of support.',
@@ -181,7 +204,9 @@ export default function HomePage() {
               icon={<LungsIcon />}
               title="Metabolic & Fitness Testing"
               tint="bg-[#e5e9de]"
-              pattern
+              decor={
+                <ContourLines className="pointer-events-none absolute -left-16 -bottom-16 h-52 w-52 text-forest/[0.11]" />
+              }
               paragraphs={[
                 'Measure your resting metabolism or cardiovascular fitness instead of relying on generic formulas, wearable estimates, or \u201ccalories burned\u201d guesses that may or may not have anything to do with your actual body.',
                 'Standalone testing is available for women, athletes, gym members, and anyone who wants objective information about how their body uses energy and oxygen.',
@@ -195,11 +220,11 @@ export default function HomePage() {
       </section>
 
       {/* ===================== 5 · RESOURCE LAB ===================== */}
-      <section className="bg-cream-light py-16 md:py-20">
+      <section className="bg-cream-light py-14 md:py-20">
         <div className="container-content">
           <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-cream-dark p-10 text-center ring-1 ring-ink/5 md:p-14">
-            <TopoSwirl className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 text-forest/10" />
-            <TopoSwirl className="pointer-events-none absolute -left-16 -bottom-16 h-64 w-64 text-terracotta/10" />
+            <ContourLines className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 text-forest/[0.09]" />
+            <LoopDoodle className="pointer-events-none absolute -left-6 bottom-6 h-16 w-56 text-terracotta/15" />
             <div className="relative">
               <h2 className="text-3xl md:text-4xl">
                 Complicated science. Useful explanations. No 47-tab spiral required.
@@ -229,16 +254,24 @@ export default function HomePage() {
       </section>
 
       {/* ===================== 6 · ABOUT JESSIE ===================== */}
-      <section className="bg-cream py-16 md:py-20">
+      <section className="bg-cream py-14 md:py-20">
         <div className="container-content">
           <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
             <div className="relative order-2 md:order-1">
-              <span className="pointer-events-none absolute -left-3 top-1/2 hidden -translate-y-1/2 -rotate-90 md:block">
+              {/* Vertical phrase beside the image on desktop */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 -rotate-90 md:block"
+              >
                 <span className="whitespace-nowrap font-body text-[11px] font-bold uppercase tracking-[0.3em] text-terracotta">
                   Been there, figured it out
                 </span>
               </span>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-10">
+              {/* Horizontal phrase above the image on mobile */}
+              <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.28em] text-terracotta md:hidden">
+                Been there, figured it out
+              </p>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-8">
                 <Image
                   src="/brand/about-jessie.jpg"
                   alt="Jessie Faber working"
@@ -247,28 +280,36 @@ export default function HomePage() {
                   className="object-cover"
                 />
               </div>
+              {/* Science · Strategy · Freedom seal overlapping the image corner */}
+              <span className="absolute -bottom-6 right-2 flex h-24 w-24 items-center justify-center rounded-full bg-cream p-2 shadow-md ring-1 ring-ink/5 md:-right-6 md:h-28 md:w-28">
+                <CircleBadge className="h-full w-full text-forest/80" />
+              </span>
             </div>
             <div className="order-1 md:order-2">
-              <p className="eyebrow">Hi, I&rsquo;m Jessie</p>
-              <h2 className="mt-3 font-display text-3xl md:text-4xl">
-                I&rsquo;ve lived the chaos.
-                <br />
-                Now I help women find <em className="text-terracotta">clarity.</em>
+              <p className="eyebrow">About Jessie</p>
+              <h2 className="mt-3 font-display text-2xl leading-snug md:text-[1.9rem]">
+                I&rsquo;m Jessie Faber — a functional health practitioner, researcher, educator, and
+                full-time nomad.
               </h2>
               <div className="mt-5 space-y-4 font-body text-ink/80">
                 <p>
-                  After my own health fell apart in my late 30s, I refused to accept
-                  &ldquo;normal.&rdquo; I dug deep, questioned everything, and rebuilt my health
-                  using the right data and a whole-body approach.
+                  I help women in perimenopause and menopause connect the dots between their
+                  hormones, symptoms, labs, metabolism, strength, energy, health history, and the
+                  life they are actually trying to live.
                 </p>
                 <p>
-                  Now I help midlife women do the same — without the years of trial, error, and
-                  second-guessing.
+                  My approach is science-heavy and human-centered. I want to know what the research
+                  says, what your data shows, and whether the plan has any chance of surviving your
+                  schedule, nervous system, personality, budget, responsibilities, and tolerance for
+                  nonsense.
+                </p>
+                <p>
+                  Because the most scientifically perfect plan in the world is useless if it does
+                  not work for the person who has to live it.
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-6">
-                <CtaButton href="/about" variant="forest">Meet Jessie</CtaButton>
-                <CircleBadge className="hidden h-20 w-20 text-forest/70 sm:block" />
+              <div className="mt-8">
+                <CtaButton href="/about" variant="forest">Read My Story</CtaButton>
               </div>
             </div>
           </div>
@@ -276,21 +317,28 @@ export default function HomePage() {
       </section>
 
       {/* ===================== 7 · I BRING THE LAB TO YOU ===================== */}
-      <section className="bg-sand">
-        <div className="container-content grid items-center gap-8 py-14 md:grid-cols-[auto_1fr_auto] md:gap-10">
-          <VanSketch className="h-24 w-48 text-ink/65 md:h-24 md:w-52" />
+      <section className="relative overflow-hidden bg-sand py-10 md:py-14">
+        <SunDoodle className="pointer-events-none absolute right-8 top-6 hidden h-14 w-14 text-terracotta/25 md:block" />
+        <div className="container-content relative grid items-center gap-6 text-center md:grid-cols-[auto_1fr_auto] md:gap-10 md:text-left">
+          <VanSketch className="mx-auto h-28 w-52 text-ink/70 md:mx-0" />
           <div>
             <h2 className="text-2xl md:text-3xl">I bring the lab to you.</h2>
-            <p className="mt-2 max-w-lg font-body text-ink/75">
+            <p className="mx-auto mt-2 max-w-lg font-body text-ink/75 md:mx-0">
               See where I&rsquo;m testing next and book your metabolic test in a city near you.
             </p>
           </div>
-          <CtaButton href="/locations" variant="secondary">View Testing Locations</CtaButton>
+          <Link
+            href="/locations"
+            className="mx-auto inline-flex items-center justify-center gap-2 rounded-md border border-terracotta bg-cream px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-terracotta transition-colors hover:bg-terracotta hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 md:mx-0"
+          >
+            View Testing Locations
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </section>
 
       {/* ===================== 8 · FINAL CTA ===================== */}
-      <section className="bg-sage py-16 text-center md:py-20">
+      <section className="bg-sage py-14 text-center md:py-16">
         <div className="container-content">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl text-forest md:text-4xl">
@@ -320,6 +368,30 @@ export default function HomePage() {
   );
 }
 
+// Small hand-drawn coral bullet marks; alternate an imperfect ring and a short
+// stroke so the list feels drawn rather than templated.
+function BulletMark({ index }: { index: number }) {
+  const isRing = index % 2 === 0;
+  return (
+    <svg
+      className="mt-1 h-4 w-4 flex-shrink-0 text-terracotta"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {isRing ? (
+        <path d="M8 3.2c3 .2 5 2.3 4.7 4.9-.3 2.6-2.7 4.2-5.3 3.7C4.9 11.4 3.2 9 3.8 6.6 4.2 4.6 5.8 3.3 8 3.2Z" />
+      ) : (
+        <path d="M4 10c2.2-1.4 4.4-3.2 8-6" />
+      )}
+    </svg>
+  );
+}
+
 function OfferCard({
   icon,
   title,
@@ -328,7 +400,8 @@ function OfferCard({
   href,
   linkLabel,
   tint,
-  pattern = false,
+  decor,
+  accent = false,
 }: {
   icon: React.ReactNode;
   title: string;
@@ -337,16 +410,18 @@ function OfferCard({
   href: string;
   linkLabel: string;
   tint: string;
-  pattern?: boolean;
+  decor?: React.ReactNode;
+  accent?: boolean;
 }) {
   return (
     <div className={`relative flex flex-col overflow-hidden rounded-2xl p-8 ring-1 ring-ink/5 ${tint}`}>
-      {pattern && (
-        <TopoSwirl className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 text-forest/10" />
-      )}
+      {decor}
       <div className="relative flex flex-1 flex-col">
-        <span className="flex h-14 w-14 items-center justify-center rounded-full border border-ink/15 bg-cream/60 text-forest">
+        <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-ink/15 bg-cream/60 text-forest">
           {icon}
+          {accent && (
+            <SprigDoodle className="pointer-events-none absolute -right-5 -top-4 h-9 w-7 text-forest/30" />
+          )}
         </span>
         <h3 className="mt-6 font-display text-2xl">{title}</h3>
         <div className="mt-3 space-y-3 font-body text-sm text-ink/70">

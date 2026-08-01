@@ -49,12 +49,14 @@ export default function Footer() {
         </nav>
 
         {/* Resource Lab opt-in */}
-        <div>
-          <h3 className="eyebrow mb-4">Get access to the Resource Lab</h3>
+        <div className="text-center md:text-left lg:text-center">
+          <h3 className="eyebrow mb-2">Get access to the Resource Lab</h3>
           <p className="mb-4 font-body text-sm text-ink/70">
             Practical resources, explanations, and education for women in midlife.
           </p>
-          <EmailSignup source="footer" buttonLabel="Get Free Access" />
+          <div className="mx-auto max-w-sm">
+            <EmailSignup source="footer" buttonLabel="Get Free Access" layout="stack" />
+          </div>
         </div>
       </div>
 
