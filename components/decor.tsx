@@ -67,6 +67,30 @@ export function MoleculeDoodle({ className = '' }: { className?: string }) {
   );
 }
 
+// A simple folded travel map with two location dots. Three panels created by
+// two fold creases, a subtly wavy top/bottom edge to read as "folded," a light
+// route line, and two pin dots marking locations.
+export function FoldedMap({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 120 96" aria-hidden {...stroke} strokeWidth={2}>
+      {/* outer map outline with gently folded top and bottom edges */}
+      <path d="M8 20 40 14 80 20 112 14 112 76 80 82 40 76 8 82Z" />
+      {/* vertical fold creases */}
+      <path d="M40 14 40 76M80 20 80 82" opacity="0.5" />
+      {/* light meandering route */}
+      <path
+        d="M26 60C36 44 52 52 60 40 68 28 84 34 96 30"
+        opacity="0.45"
+        strokeWidth={1.5}
+        strokeDasharray="1 6"
+      />
+      {/* two location dots */}
+      <circle cx="26" cy="60" r="4.5" fill="currentColor" stroke="none" />
+      <circle cx="96" cy="30" r="4.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 // A loose sun doodle for the mobile-testing band.
 export function SunDoodle({ className = '' }: { className?: string }) {
   return (

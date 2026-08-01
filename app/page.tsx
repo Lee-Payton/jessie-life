@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { CtaButton } from '@/components/ui';
-import { LeafIcon, PulseIcon, LungsIcon, VanSketch, CircleBadge, HandUnderline } from '@/components/icons';
+import { LeafIcon, PulseIcon, LungsIcon, CircleBadge, HandUnderline } from '@/components/icons';
 import {
   ContourLines,
   LoopDoodle,
   SprigDoodle,
   MoleculeDoodle,
   SunDoodle,
+  FoldedMap,
 } from '@/components/decor';
 
 export default function HomePage() {
@@ -320,7 +321,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-sand py-10 md:py-14">
         <SunDoodle className="pointer-events-none absolute right-8 top-6 hidden h-14 w-14 text-terracotta/25 md:block" />
         <div className="container-content relative grid items-center gap-6 text-center md:grid-cols-[auto_1fr_auto] md:gap-10 md:text-left">
-          <VanSketch className="mx-auto h-28 w-52 text-ink/70 md:mx-0" />
+          <FoldedMap className="mx-auto h-28 w-40 text-ink/70 md:mx-0" />
           <div>
             <h2 className="text-2xl md:text-3xl">I bring the lab to you.</h2>
             <p className="mx-auto mt-2 max-w-lg font-body text-ink/75 md:mx-0">
