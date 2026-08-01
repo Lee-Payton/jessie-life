@@ -55,18 +55,59 @@ export function CircleBadge({ className = 'h-28 w-28' }: { className?: string })
   );
 }
 
+// Clean Class C motorhome line silhouette (signature over-cab bunk + box body).
 export function VanSketch({ className = 'h-16 w-32' }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 160 80" {...base} aria-hidden>
-      {/* mountains */}
-      <path d="M2 46 L28 20 L44 40 L64 14 L92 46" opacity="0.5" />
-      {/* van body */}
-      <path d="M20 60 h84 a6 6 0 0 0 6-6 v-16 a4 4 0 0 0-4-4 H84 l-8-10 H26 a6 6 0 0 0-6 6 z" />
-      <path d="M26 30 h40 v12 H24" />
-      <path d="M84 30 l6 8 h16" />
-      <circle cx="40" cy="62" r="7" />
-      <circle cx="92" cy="62" r="7" />
-      <path d="M110 54 h44" opacity="0.6" />
+    <svg
+      className={className}
+      viewBox="0 0 220 104"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      {/* soft horizon line */}
+      <path d="M6 94 H214" opacity="0.35" strokeWidth={1.5} />
+
+      {/* body outline: cab front, over-cab bunk, box */}
+      <path d="M28 82 L28 52 L22 46 L24 32 Q25 26 32 26 L196 26 Q204 26 204 34 L204 74 Q204 82 196 82 Z" />
+
+      {/* cab back / roof divider (box front) */}
+      <path d="M66 82 L66 46 L28 46" />
+
+      {/* windshield */}
+      <path d="M31 52 L46 46" />
+
+      {/* box windows + door */}
+      <rect x="80" y="40" width="26" height="18" rx="2" />
+      <rect x="120" y="40" width="34" height="18" rx="2" />
+      <rect x="168" y="40" width="24" height="30" rx="2" />
+
+      {/* wheels */}
+      <circle cx="56" cy="82" r="10" />
+      <circle cx="172" cy="82" r="10" />
+    </svg>
+  );
+}
+
+// Hand-drawn coral emphasis underline (stretches to fit the word above it).
+export function HandUnderline({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 200 12"
+      fill="none"
+      preserveAspectRatio="none"
+      aria-hidden
+    >
+      <path
+        d="M3 7.5 C40 3.5, 74 3, 108 5.5 C140 7.5, 168 5, 197 3.5"
+        stroke="currentColor"
+        strokeWidth={3}
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

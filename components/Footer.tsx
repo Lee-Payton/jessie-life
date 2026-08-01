@@ -48,13 +48,13 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* Stay connected */}
+        {/* Resource Lab opt-in */}
         <div>
-          <h3 className="eyebrow mb-4">Stay Connected</h3>
+          <h3 className="eyebrow mb-4">Get access to the Resource Lab</h3>
           <p className="mb-4 font-body text-sm text-ink/70">
-            Get free resources, education, and testing updates.
+            Practical resources, explanations, and education for women in midlife.
           </p>
-          <EmailSignup source="footer" />
+          <EmailSignup source="footer" buttonLabel="Get Free Access" />
         </div>
       </div>
 
