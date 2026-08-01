@@ -24,7 +24,7 @@ export default function HomePage() {
                 Stop{' '}
                 <span className="relative inline-block italic">
                   guessing
-                  <HandUnderline className="absolute -bottom-1.5 left-0 h-2.5 w-full text-terracotta md:-bottom-2 md:h-3" />
+                  <HandUnderline className="absolute -bottom-1.5 left-1/2 h-2.5 w-[72%] -translate-x-1/2 text-terracotta md:-bottom-2 md:h-3" />
                 </span>{' '}
                 what happened to your body.
               </h1>
@@ -261,7 +261,7 @@ export default function HomePage() {
               {/* Vertical phrase beside the image on desktop */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 -rotate-90 md:block"
+                className="pointer-events-none absolute -left-10 top-1/2 z-10 hidden -translate-y-1/2 -rotate-90 lg:-left-12 md:block"
               >
                 <span className="whitespace-nowrap font-body text-[11px] font-bold uppercase tracking-[0.3em] text-terracotta">
                   Been there, figured it out

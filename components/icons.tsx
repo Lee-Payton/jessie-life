@@ -47,9 +47,17 @@ export function CircleBadge({ className = 'h-28 w-28' }: { className?: string })
           {'SCIENCE · STRATEGY · FREEDOM · '}
         </textPath>
       </text>
-      <g transform="translate(60,60)" stroke="currentColor" strokeWidth="1" fill="none">
-        <path d="M0,-16 C6,-8 6,8 0,16 C-6,8 -6,-8 0,-16 Z" />
-        <path d="M0,-16 L0,16" opacity="0.6" />
+      {/* imperfect hand-drawn four-point compass star */}
+      <g
+        transform="translate(60,60)"
+        stroke="currentColor"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      >
+        <path d="M0,-16 Q2.5,-3 15,-0.5 Q3,3 0.5,15.5 Q-3,2.5 -15.5,0 Q-2.5,-3 0,-16 Z" />
+        <circle cx="0" cy="0" r="1.4" fill="currentColor" stroke="none" />
       </g>
     </svg>
   );
