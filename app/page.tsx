@@ -128,7 +128,7 @@ export default function HomePage() {
                   respond to stress, use energy, store fat, maintain bone, and feel in your own body.
                 </p>
                 <p>
-                  It means Midlife deserves a wider lens — especially if you already have a history
+                  Midlife deserves a wider lens — especially if you already have a history
                   of chronic illness, autoimmune issues, thyroid changes, reproductive disorders,
                   pain, burnout, dieting, or old problems that suddenly start making noise again.
                 </p>
