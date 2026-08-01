@@ -315,7 +315,7 @@ export default function AboutPage() {
                   <SprigDoodle className="pointer-events-none absolute -right-2 -top-2 h-20 w-16 text-forest/10" />
                 )}
                 {i === 3 && (
-                  <LoopDoodle className="pointer-events-none absolute -left-4 bottom-4 h-12 w-44 text-terracotta/12" />
+                  <LoopDoodle className="pointer-events-none absolute -right-6 -bottom-2 h-12 w-44 text-terracotta/8" />
                 )}
                 <h3 className="relative font-display text-2xl">{opt.title}</h3>
                 <p className="relative mt-3 font-body text-ink/75">{opt.body}</p>
