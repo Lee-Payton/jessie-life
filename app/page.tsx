@@ -118,7 +118,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-cream-dark py-14 md:py-20">
         <ContourLines className="pointer-events-none absolute -left-24 bottom-0 h-80 w-80 text-forest/[0.08]" />
         <div className="container-content relative">
-          <div className="mx-auto grid max-w-5xl items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
+          <div className="mx-auto grid max-w-5xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div>
               <h2 className="text-3xl md:text-4xl">This is not just about hot flashes.</h2>
               <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
@@ -127,9 +127,8 @@ export default function HomePage() {
                   can influence how you sleep, think, recover, build muscle, regulate blood sugar,
                   respond to stress, use energy, store fat, maintain bone, and feel in your own body.
                 </p>
-                <p>That does not mean every symptom is &ldquo;just menopause.&rdquo;</p>
                 <p>
-                  It means midlife deserves a wider lens — especially if you already have a history
+                  Midlife deserves a wider lens — especially if you already have a history
                   of chronic illness, autoimmune issues, thyroid changes, reproductive disorders,
                   pain, burnout, dieting, or old problems that suddenly start making noise again.
                 </p>
