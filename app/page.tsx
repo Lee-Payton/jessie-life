@@ -261,17 +261,17 @@ export default function HomePage() {
               {/* Vertical phrase beside the image on desktop */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute left-0 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 md:block"
+                className="pointer-events-none absolute left-5 top-1/2 z-10 hidden -translate-x-1/2 -translate-y-1/2 -rotate-90 md:block"
               >
                 <span className="whitespace-nowrap font-body text-[11px] font-bold uppercase tracking-[0.3em] text-terracotta">
-                  Been there, figured it out
+                  Science that works in real life
                 </span>
               </span>
               {/* Horizontal phrase above the image on mobile */}
               <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.28em] text-terracotta md:hidden">
-                Been there, figured it out
+                Science that works in real life
               </p>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-14">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-8">
                 <Image
                   src="/brand/about-jessie.jpg"
                   alt="Jessie Faber working"
