@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { ContourLines } from '@/components/decor';
 import { links } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -13,8 +14,9 @@ export default function RebootPage() {
   return (
     <>
       {/* Section 1 — Hero */}
-      <section className="bg-cream">
-        <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
+      <section className="relative overflow-hidden bg-cream">
+        <ContourLines className="pointer-events-none absolute -right-24 -top-24 hidden h-96 w-96 text-forest/[0.05] lg:block" />
+        <div className="container-content relative grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>The Flagship Program</Eyebrow>
             <h1 className="mt-4 text-4xl leading-[1.1] md:text-5xl">The Midlife Reboot</h1>
@@ -75,6 +77,29 @@ export default function RebootPage() {
         </div>
       </Section>
 
+      {/* What Changes — moved up to surface the program's outcomes earlier */}
+      <Section bg="creamLight">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl">What changes</h2>
+          <p className="mt-4 font-body text-lg text-ink/80">
+            The Reboot is designed to help you move from scattered effort to a more connected,
+            prioritized strategy.
+          </p>
+          <div className="mt-6">
+            <CheckList
+              items={[
+                'From chasing symptoms one at a time to understanding the larger pattern',
+                'From "normal labs" and unanswered questions to a clearer picture of what has and has not been measured',
+                'From random experiments to a strategy based on your body, history, goals, and capacity',
+                'From pushing harder to using effort where it is most likely to pay off',
+                'From feeling stuck or disconnected from your body to rebuilding strength, confidence, and resilience',
+                'From trying to do everything at once to knowing what deserves attention now and what can wait',
+              ]}
+            />
+          </div>
+        </div>
+      </Section>
+
       {/* Section 3 — A Strategy for the Whole Picture */}
       <Section bg="creamDark">
         <div className="mx-auto max-w-3xl">
@@ -107,7 +132,7 @@ export default function RebootPage() {
             The Reboot looks at the pieces that influence how you feel, function, recover, and
             age — not just one symptom or one lab marker.
           </p>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
+          <div className="mt-8 grid gap-x-10 gap-y-9 md:grid-cols-2">
             {[
               ['Hormones and symptoms', 'Perimenopause, menopause, hysterectomy, hormone therapy, symptom patterns, and the questions to discuss with the clinician who manages your care.'],
               ['Metabolism and cardiovascular health', 'Blood sugar, insulin, lipids, body composition, resting metabolism, cardiorespiratory fitness, and risk factors easy to miss when the conversation is reduced to weight.'],
@@ -116,8 +141,8 @@ export default function RebootPage() {
               ['Energy, sleep, and nervous-system load', 'The factors that determine whether your plan is restorative and sustainable — or one more demand on an already overloaded system.'],
               ['Your real life', 'Work, travel, caregiving, relationships, schedule, personality, executive function, and the things no generic protocol bothers to ask about.'],
             ].map(([title, body]) => (
-              <div key={title}>
-                <h3 className="text-lg">{title}</h3>
+              <div key={title} className="border-t border-terracotta/25 pt-4">
+                <h3 className="font-display text-xl font-semibold text-terracotta">{title}</h3>
                 <p className="mt-2 font-body text-ink/70">{body}</p>
               </div>
             ))}
@@ -141,7 +166,7 @@ export default function RebootPage() {
             </p>
           </div>
 
-          <h3 className="mt-10 text-xl">The process</h3>
+          <p className="eyebrow mt-10 text-sm text-terracotta">The Process</p>
           <div className="mt-4 space-y-4 font-body text-lg text-ink/80">
             <p>
               First, we gather the right information: your symptoms, history, current labs,
@@ -169,7 +194,7 @@ export default function RebootPage() {
             </p>
           </div>
 
-          <h3 className="mt-10 text-xl">What is included</h3>
+          <p className="eyebrow mt-10 text-sm text-terracotta">What Is Included</p>
           <div className="mt-4">
             <CheckList
               items={[
@@ -185,29 +210,6 @@ export default function RebootPage() {
                 'Chat support for troubleshooting, friction, questions, and real-life obstacles during the six-month program',
                 'Follow-up / next-steps consultation later in the program to review progress, adjust the strategy, and decide whether follow-up labs or next-level changes make sense',
                 'Practice Better client portal access for forms, scheduling, resources, communication, and program materials',
-              ]}
-            />
-          </div>
-        </div>
-      </Section>
-
-      {/* Section 6 — What Changes */}
-      <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">What changes</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
-            The Reboot is designed to help you move from scattered effort to a more connected,
-            prioritized strategy.
-          </p>
-          <div className="mt-6">
-            <CheckList
-              items={[
-                'From chasing symptoms one at a time to understanding the larger pattern',
-                'From "normal labs" and unanswered questions to a clearer picture of what has and has not been measured',
-                'From random experiments to a strategy based on your body, history, goals, and capacity',
-                'From pushing harder to using effort where it is most likely to pay off',
-                'From feeling stuck or disconnected from your body to rebuilding strength, confidence, and resilience',
-                'From trying to do everything at once to knowing what deserves attention now and what can wait',
               ]}
             />
           </div>
