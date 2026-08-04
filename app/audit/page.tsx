@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import { links } from '@/lib/site';
 
@@ -45,9 +46,14 @@ export default function AuditPage() {
               <CtaButton href={links.practiceBetter}>Book Your Midlife Metabolism Audit</CtaButton>
             </div>
           </div>
-          <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-cream-dark text-center font-body text-sm text-ink/40">
-            {/* PHOTO DIRECTION: Jessie performing the resting breath test or reviewing report with a client */}
-            Jessie performing the RMR breath test
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+            <Image
+              src="/images/PNOE.png"
+              alt="Resting metabolic rate breath test with a PNOĒ mask"
+              fill
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover object-top"
+            />
           </div>
         </div>
       </section>
@@ -148,7 +154,7 @@ export default function AuditPage() {
               hormone-related questions with their medical provider.
             </p>
             <p>
-              And sometimes the biggest win is realizing your body is not broken — it has been
+              And sometimes the biggest win is realizing your body is not broken ��� it has been
               adapting to the inputs, stressors, and hormone shifts it has been dealing with.
             </p>
           </div>

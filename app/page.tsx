@@ -17,7 +17,7 @@ export default function HomePage() {
       {/* ===================== 1 · HERO ===================== */}
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.05fr]">
-          <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-20 md:pl-10 md:pr-14">
+          <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:justify-end md:pb-6 md:pt-20 md:pl-10 md:pr-14">
             <ContourLines className="pointer-events-none absolute -left-24 top-1/2 hidden h-72 w-72 -translate-y-1/2 text-forest/[0.07] md:block" />
             <div className="relative">
               <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
@@ -41,39 +41,39 @@ export default function HomePage() {
                   long-term resilience that fits the life you are actually living.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
-                <CtaButton href="/audit" variant="secondary">
-                  Start With a Midlife Metabolism Audit
-                </CtaButton>
-              </div>
-              <Link
-                href="/locations"
-                className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z" />
-                    <circle cx="12" cy="10" r="2.5" />
-                  </svg>
-                </span>
-                <span className="font-body text-sm leading-tight">
-                  <span className="block text-[10px] font-bold uppercase tracking-widest text-forest">Testing Locations</span>
-                  See where I&rsquo;m testing next →
-                </span>
-              </Link>
             </div>
           </div>
 
-          <div className="relative min-h-[420px] md:min-h-full">
-            <Image
-              src="/brand/hero-jessie.jpg"
-              alt="Jessie Faber"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 55vw"
-              className="object-cover"
-            />
+          <div className="relative flex items-end justify-center px-6 pb-4 md:px-0 md:pb-6 md:pt-20 md:pr-10">
+            <div className="relative aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-lg">
+              <Image
+                src="/images/home-hero.png"
+                alt="Jessie Faber sitting with a warm mug of coffee"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 46vw"
+                className="object-cover object-[58%_26%]"
+              />
+              {/* subtle ivory fade on the left edge so the hero copy and image feel connected */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/5 bg-gradient-to-r from-cream/70 to-transparent md:block" />
+            </div>
+          </div>
+        </div>
+
+        {/* Hero CTA row — spans the full content width across the lower hero to
+            balance the visual weight of the image; stacks on small screens. */}
+        <div className="mx-auto w-full max-w-content px-6 pb-14 md:px-10 md:pb-16">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
+            <CtaButton href="/audit" variant="secondary">
+              Start With the Midlife Metabolism Audit
+            </CtaButton>
+            <Link
+              href="/locations"
+              className="btn-forest-outline w-full whitespace-nowrap sm:w-auto"
+            >
+              Testing Locations
+            </Link>
           </div>
         </div>
       </section>
@@ -271,13 +271,13 @@ export default function HomePage() {
               <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.28em] text-terracotta md:hidden">
                 Science that works in real life
               </p>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-8">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg md:ml-8">
                 <Image
-                  src="/brand/about-jessie.jpg"
-                  alt="Jessie Faber working"
+                  src="/images/home-about-cafe.jpg"
+                  alt="Jessie Faber working from a café with a coffee"
                   fill
                   sizes="(max-width: 768px) 100vw, 45vw"
-                  className="object-cover"
+                  className="object-cover object-[58%_32%]"
                 />
               </div>
               {/* Science · Strategy · Freedom seal overlapping the image corner */}

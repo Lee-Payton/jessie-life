@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -36,9 +37,14 @@ export default function MetabolismPage() {
               <CtaButton href="/host" variant="secondary">Bring Testing to Your Location</CtaButton>
             </div>
           </div>
-          <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-cream-dark text-center font-body text-sm text-ink/40">
-            {/* PHOTO DIRECTION: real photos of Jessie performing a PNOĒ test — show the mask honestly */}
-            Jessie performing a PNOĒ test
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+            <Image
+              src="/images/PNOE.png"
+              alt="Metabolic breath testing with a PNOĒ mask, seated and on a treadmill"
+              fill
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
