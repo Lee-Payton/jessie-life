@@ -251,8 +251,8 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-cream-light py-14 md:py-20">
         <div className="container-content relative">
           <div className="mx-auto grid max-w-5xl items-center gap-12 md:grid-cols-2">
-            <div className="relative order-2 md:order-1">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+            <div className="order-2 flex flex-col items-center md:order-1">
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg">
                 <Image
                   src="/images/about-life.jpg"
                   alt="Jessie with arms raised at the end of an ocean pier"
@@ -261,7 +261,7 @@ export default function AboutPage() {
                   className="object-cover object-[center_32%]"
                 />
               </div>
-              <span className="absolute -bottom-7 left-1/2 flex h-24 w-24 -translate-x-1/2 items-center justify-center rounded-full bg-cream-light p-2 shadow-md ring-1 ring-ink/5 md:h-28 md:w-28">
+              <span className="mt-6 flex h-24 w-24 items-center justify-center rounded-full bg-cream-light p-2 shadow-md ring-1 ring-ink/5 md:h-28 md:w-28">
                 <CircleBadge className="h-full w-full text-forest/80" />
               </span>
             </div>
