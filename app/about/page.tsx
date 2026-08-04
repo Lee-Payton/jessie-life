@@ -117,13 +117,13 @@ export default function AboutPage() {
       {/* ===================== 1 · HERO ===================== */}
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.02fr]">
-          <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-20 md:pl-10 md:pr-14">
+          <div className="relative z-10 flex flex-col justify-start px-6 py-14 md:py-20 md:pl-10 md:pr-14">
             <ContourLines className="pointer-events-none absolute -left-24 top-1/2 hidden h-72 w-72 -translate-y-1/2 text-forest/[0.07] md:block" />
             <div className="relative">
               <p className="eyebrow text-terracotta">About Jessie</p>
               <h1 className="mt-4 font-display text-[2.2rem] leading-[1.08] md:text-4xl lg:text-[3rem] lg:leading-[1.05]">
                 I help women understand what&rsquo;s happening in their bodies during midlife so they
-                can feel and function better now, and <em>for the rest of their lives.</em>
+                can feel and function better now, <em>and for the rest of their lives.</em>
               </h1>
               <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
                 <p>
@@ -146,13 +146,10 @@ export default function AboutPage() {
                   work for the person who has to live it.
                 </p>
               </div>
-              <div className="mt-8 flex md:justify-end">
-                <CtaButton href="#work-with-jessie">Explore Ways to Work Together</CtaButton>
-              </div>
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center px-6 pb-14 md:px-0 md:py-16 md:pr-10">
+          <div className="relative flex flex-col items-center px-6 pb-14 md:px-0 md:pb-16 md:pr-10 md:pt-20">
             <div className="relative aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-lg">
               <Image
                 src="/images/about-portrait.jpg"
@@ -163,6 +160,9 @@ export default function AboutPage() {
                 className="object-cover object-[55%_28%]"
               />
             </div>
+            <div className="mt-8 flex w-full max-w-[520px] justify-center">
+              <CtaButton href="#work-with-jessie">Explore Ways to Work Together</CtaButton>
+            </div>
           </div>
         </div>
       </section>
@@ -172,7 +172,7 @@ export default function AboutPage() {
         <ContourLines className="pointer-events-none absolute -right-32 -top-16 h-96 w-96 -rotate-12 text-terracotta/[0.06]" />
         <div className="container-content relative">
           <div className="mx-auto max-w-3xl">
-            <p className="eyebrow">Why this work is personal</p>
+              <p className="eyebrow text-terracotta">Why this work is personal</p>
             <div className="mt-5 space-y-4 font-body text-lg text-ink/80">
               {personalParagraphs.map((p) => (
                 <p key={p}>{p}</p>
