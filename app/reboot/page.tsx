@@ -16,7 +16,7 @@ export default function RebootPage() {
       {/* Section 1 — Hero */}
       <section className="relative overflow-hidden bg-cream">
         <ContourLines className="pointer-events-none absolute -right-24 -top-24 hidden h-96 w-96 text-forest/[0.05] lg:block" />
-        <div className="container-content relative grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
+        <div className="container-content relative grid items-center gap-12 pb-4 pt-14 md:grid-cols-2 md:pb-6 md:pt-20">
           <div>
             <Eyebrow>The Flagship Program</Eyebrow>
             <h1 className="mt-4 text-4xl leading-[1.1] md:text-5xl">The Midlife Reboot</h1>
