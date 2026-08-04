@@ -7,6 +7,7 @@ export function Section({
   bg = 'cream',
   id,
   decor,
+  spacing = 'default',
 }: {
   children: React.ReactNode;
   className?: string;
@@ -15,6 +16,7 @@ export function Section({
   /* Optional low-opacity decorative texture rendered behind the content.
      Provide varied glyphs/positions per call site so it never looks stamped. */
   decor?: React.ReactNode;
+  spacing?: 'default' | 'compact';
 }) {
   const bgClass = {
     cream: 'bg-cream',
@@ -24,8 +26,9 @@ export function Section({
     sand: 'bg-sand',
     sage: 'bg-sage',
   }[bg];
+  const spacingClass = spacing === 'compact' ? 'py-10 md:py-14' : 'py-14 md:py-20';
   return (
-    <section id={id} className={`relative overflow-hidden ${bgClass} scroll-mt-24 py-14 md:py-20`}>
+    <section id={id} className={`relative overflow-hidden ${bgClass} ${spacingClass} scroll-mt-24`}>
       {decor}
       <div className={`container-content relative ${className}`}>{children}</div>
     </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
+import { Section, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Metabolism + VO₂ Testing — Jessie.Life',
@@ -15,9 +15,9 @@ export default function MetabolismPage() {
       <section className="bg-cream">
         <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
-            <Eyebrow>Metabolic & Fitness Testing</Eyebrow>
+            <p className="eyebrow text-terracotta">Metabolic & Fitness Testing</p>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
-              Stop estimating. Measure how your body actually uses energy and oxygen.
+              <em>Stop estimating.</em> Measure how your body actually uses energy and oxygen.
             </h1>
             <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
               <p>
@@ -93,23 +93,24 @@ export default function MetabolismPage() {
             </div>
           </div>
           <div className="mt-8 rounded-lg bg-cream p-6 ring-1 ring-ink/5">
-            <p className="eyebrow mb-2">The Science</p>
+            <p className="eyebrow mb-2 text-terracotta">The Science</p>
             <p className="font-body text-ink/80">
-              PNOĒ measures VO₂, VCO₂, ventilation, and respiratory quotient breath by breath using
-              open-circuit indirect calorimetry. A peer-reviewed comparison with a COSMED Quark CPET
-              found strong agreement and repeatability in healthy, recreationally active adults under
-              controlled laboratory cycling conditions. This is validated portable metabolic
-              analysis — not a replacement for diagnostic hospital CPET.
+              The mask measures the oxygen you breathe in and the carbon dioxide you breathe out. From
+              that, the system can estimate how your body is producing and using energy. At rest, that
+              can help show your resting metabolic rate and fuel use. During exercise, it can help show
+              your cardiorespiratory fitness, training zones, and how your body responds as intensity
+              increases. In plain English: instead of relying on formulas or wearable estimates, you
+              get data based on your actual breathing.
             </p>
           </div>
         </div>
       </Section>
 
       {/* Section 3 — Choose Your Test */}
-      <Section>
+      <Section spacing="compact">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl">Choose your test</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-6 grid gap-5 md:grid-cols-3">
             {[
               ['Resting Metabolic Rate', 'Choose RMR testing if you want to understand how much energy your body uses at rest and how that compares with an estimated metabolism. This is a good starting point if you are working on nutrition, body composition, under-fueling, weight-management, metabolic health, or a baseline before making changes.'],
               ['VO₂ Max Testing', 'Choose VO₂ testing if you want to understand your cardiorespiratory fitness, aerobic capacity, training zones, and how your body uses oxygen during exercise. This is a good fit if you are training for performance, rebuilding fitness, tracking healthy aging, or want more precise information than a wearable or age-based formula can provide.'],
