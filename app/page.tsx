@@ -65,15 +65,19 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative min-h-[420px] md:min-h-full">
-            <Image
-              src="/brand/hero-jessie.jpg"
-              alt="Jessie Faber"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 55vw"
-              className="object-cover"
-            />
+          <div className="relative flex items-center justify-center px-6 pb-14 md:px-0 md:py-16 md:pr-10">
+            <div className="relative aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-lg">
+              <Image
+                src="/images/home-hero.png"
+                alt="Jessie Faber sitting with a warm mug of coffee"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 46vw"
+                className="object-cover object-[58%_28%]"
+              />
+              {/* subtle ivory fade on the left edge so the hero copy and image feel connected */}
+              <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/5 bg-gradient-to-r from-cream/70 to-transparent md:block" />
+            </div>
           </div>
         </div>
       </section>
@@ -271,13 +275,13 @@ export default function HomePage() {
               <p className="mb-3 font-body text-xs font-bold uppercase tracking-[0.28em] text-terracotta md:hidden">
                 Science that works in real life
               </p>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:ml-8">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-lg md:ml-8">
                 <Image
-                  src="/brand/about-jessie.jpg"
-                  alt="Jessie Faber working"
+                  src="/images/home-about-cafe.jpg"
+                  alt="Jessie Faber working from a café with a coffee"
                   fill
                   sizes="(max-width: 768px) 100vw, 45vw"
-                  className="object-cover"
+                  className="object-cover object-[58%_32%]"
                 />
               </div>
               {/* Science · Strategy · Freedom seal overlapping the image corner */}

@@ -152,15 +152,17 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[420px] md:min-h-full">
-            <Image
-              src="/brand/hero-jessie.jpg"
-              alt="Jessie Faber"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
+          <div className="relative flex items-center justify-center px-6 pb-14 md:px-0 md:py-16 md:pr-10">
+            <div className="relative aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-lg">
+              <Image
+                src="/images/about-portrait.jpg"
+                alt="Jessie Faber seated against a sunlit wall"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 46vw"
+                className="object-cover object-[55%_40%]"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -252,11 +254,11 @@ export default function AboutPage() {
             <div className="relative order-2 md:order-1">
               <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
                 <Image
-                  src="/brand/about-jessie.jpg"
-                  alt="Jessie Faber working from the road"
+                  src="/images/about-life.jpg"
+                  alt="Jessie with arms raised at the end of an ocean pier"
                   fill
                   sizes="(max-width: 768px) 100vw, 45vw"
-                  className="object-cover"
+                  className="object-cover object-[center_45%]"
                 />
               </div>
               <span className="absolute -bottom-6 right-2 flex h-24 w-24 items-center justify-center rounded-full bg-cream-light p-2 shadow-md ring-1 ring-ink/5 md:-right-6 md:h-28 md:w-28">

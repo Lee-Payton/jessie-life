@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
 import { links } from '@/lib/site';
 
@@ -34,9 +35,15 @@ export default function RebootPage() {
               <CtaButton href={links.rebootApply}>Apply for the Midlife Reboot</CtaButton>
             </div>
           </div>
-          <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-cream-dark text-center font-body text-sm text-ink/40">
-            Jessie — lab review / consultation
-            <br />(warm, human, not stock)
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+            <Image
+              src="/images/reboot-freedom.jpg"
+              alt="Jessie on a palm-lined promenade"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover object-[center_35%]"
+            />
           </div>
         </div>
       </section>
