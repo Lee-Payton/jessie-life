@@ -17,7 +17,7 @@ export default function HomePage() {
       {/* ===================== 1 · HERO ===================== */}
       <section className="relative overflow-hidden bg-cream">
         <div className="mx-auto grid w-full max-w-content items-stretch md:grid-cols-[1fr_1.05fr]">
-          <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-20 md:pl-10 md:pr-14">
+          <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:justify-end md:pb-6 md:pt-20 md:pl-10 md:pr-14">
             <ContourLines className="pointer-events-none absolute -left-24 top-1/2 hidden h-72 w-72 -translate-y-1/2 text-forest/[0.07] md:block" />
             <div className="relative">
               <p className="eyebrow">FOR WOMEN IN MIDLIFE</p>
@@ -44,7 +44,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center px-6 pb-4 md:px-0 md:pb-4 md:pt-16 md:pr-10">
+          <div className="relative flex items-end justify-center px-6 pb-4 md:px-0 md:pb-6 md:pt-20 md:pr-10">
             <div className="relative aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-lg">
               <Image
                 src="/images/home-hero.png"
