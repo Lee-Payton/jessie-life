@@ -6,11 +6,15 @@ export function Section({
   className = '',
   bg = 'cream',
   id,
+  decor,
 }: {
   children: React.ReactNode;
   className?: string;
   bg?: 'cream' | 'creamLight' | 'creamDark' | 'forest' | 'sand' | 'sage';
   id?: string;
+  /* Optional low-opacity decorative texture rendered behind the content.
+     Provide varied glyphs/positions per call site so it never looks stamped. */
+  decor?: React.ReactNode;
 }) {
   const bgClass = {
     cream: 'bg-cream',
@@ -21,8 +25,9 @@ export function Section({
     sage: 'bg-sage',
   }[bg];
   return (
-    <section id={id} className={`${bgClass} scroll-mt-24 py-14 md:py-20`}>
-      <div className={`container-content ${className}`}>{children}</div>
+    <section id={id} className={`relative overflow-hidden ${bgClass} scroll-mt-24 py-14 md:py-20`}>
+      {decor}
+      <div className={`container-content relative ${className}`}>{children}</div>
     </section>
   );
 }
