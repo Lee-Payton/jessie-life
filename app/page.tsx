@@ -44,7 +44,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center px-6 pb-8 md:px-0 md:py-16 md:pr-10">
+          <div className="relative flex items-center justify-center px-6 pb-4 md:px-0 md:pb-4 md:pt-16 md:pr-10">
             <div className="relative aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-lg">
               <Image
                 src="/images/home-hero.png"
@@ -52,7 +52,7 @@ export default function HomePage() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 46vw"
-                className="object-cover object-[58%_18%]"
+                className="object-cover object-[58%_26%]"
               />
               {/* subtle ivory fade on the left edge so the hero copy and image feel connected */}
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/5 bg-gradient-to-r from-cream/70 to-transparent md:block" />
