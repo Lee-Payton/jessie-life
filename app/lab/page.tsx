@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
+import { Section, CheckList, CtaButton } from '@/components/ui';
 import EmailSignup from '@/components/EmailSignup';
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function LabPage() {
       <section className="bg-cream">
         <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
-            <Eyebrow>Education Library</Eyebrow>
+            <p className="eyebrow text-terracotta">Education Library</p>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Resource Lab</h1>
             <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
               <p>
