@@ -120,10 +120,10 @@ export default function AboutPage() {
           <div className="relative z-10 flex flex-col justify-center px-6 py-14 md:py-20 md:pl-10 md:pr-14">
             <ContourLines className="pointer-events-none absolute -left-24 top-1/2 hidden h-72 w-72 -translate-y-1/2 text-forest/[0.07] md:block" />
             <div className="relative">
-              <p className="eyebrow">About Jessie</p>
+              <p className="eyebrow text-terracotta">About Jessie</p>
               <h1 className="mt-4 font-display text-[2.2rem] leading-[1.08] md:text-4xl lg:text-[3rem] lg:leading-[1.05]">
                 I help women understand what&rsquo;s happening in their bodies during midlife so they
-                can feel and function better now, and for the rest of their lives.
+                can feel and function better now, and <em>for the rest of their lives.</em>
               </h1>
               <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
                 <p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                   work for the person who has to live it.
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-8 flex md:justify-end">
                 <CtaButton href="#work-with-jessie">Explore Ways to Work Together</CtaButton>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function AboutPage() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 46vw"
-                className="object-cover object-[55%_40%]"
+                className="object-cover object-[55%_28%]"
               />
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function AboutPage() {
         <ContourLines className="pointer-events-none absolute -left-28 bottom-0 h-80 w-80 text-forest/[0.07]" />
         <div className="container-content relative">
           <div className="mx-auto max-w-3xl">
-            <p className="eyebrow">My professional background</p>
+            <p className="eyebrow text-terracotta">My professional background</p>
             <h2 className="mt-4 font-display text-2xl leading-snug md:text-[2rem]">
               My work blends functional health, lab strategy, research, education, and real-life
               implementation.
@@ -258,15 +258,15 @@ export default function AboutPage() {
                   alt="Jessie with arms raised at the end of an ocean pier"
                   fill
                   sizes="(max-width: 768px) 100vw, 45vw"
-                  className="object-cover object-[center_45%]"
+                  className="object-cover object-[center_32%]"
                 />
               </div>
-              <span className="absolute -bottom-6 right-2 flex h-24 w-24 items-center justify-center rounded-full bg-cream-light p-2 shadow-md ring-1 ring-ink/5 md:-right-6 md:h-28 md:w-28">
+              <span className="absolute -bottom-7 left-1/2 flex h-24 w-24 -translate-x-1/2 items-center justify-center rounded-full bg-cream-light p-2 shadow-md ring-1 ring-ink/5 md:h-28 md:w-28">
                 <CircleBadge className="h-full w-full text-forest/80" />
               </span>
             </div>
             <div className="order-1 md:order-2">
-              <p className="eyebrow">The life I fought to get back</p>
+              <p className="eyebrow text-terracotta">The life I fought to get back</p>
               <div className="mt-5 space-y-4 font-body text-lg text-ink/80">
                 {lifeParagraphs.map((p) => (
                   <p key={p}>{p}</p>
@@ -282,7 +282,7 @@ export default function AboutPage() {
         <ContourLines className="pointer-events-none absolute -right-24 -bottom-16 h-80 w-80 -rotate-6 text-forest/[0.08]" />
         <div className="container-content relative">
           <div className="mx-auto max-w-3xl">
-            <p className="eyebrow">Who I work with</p>
+            <p className="eyebrow text-terracotta">Who I work with</p>
             <h2 className="mt-4 font-display text-2xl leading-snug md:text-[2rem]">
               Your health story may be complicated. Your next steps should still be clear.
             </h2>
