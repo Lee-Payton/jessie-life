@@ -41,31 +41,10 @@ export default function HomePage() {
                   long-term resilience that fits the life you are actually living.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
-                <CtaButton href="/audit" variant="secondary">
-                  Start With a Midlife Metabolism Audit
-                </CtaButton>
-              </div>
-              <Link
-                href="/locations"
-                className="mt-8 inline-flex items-center gap-3 text-ink/70 transition-colors hover:text-terracotta"
-              >
-                <span className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/25">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z" />
-                    <circle cx="12" cy="10" r="2.5" />
-                  </svg>
-                </span>
-                <span className="font-body text-sm leading-tight">
-                  <span className="block text-[10px] font-bold uppercase tracking-widest text-forest">Testing Locations</span>
-                  See where I&rsquo;m testing next →
-                </span>
-              </Link>
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center px-6 pb-14 md:px-0 md:py-16 md:pr-10">
+          <div className="relative flex items-center justify-center px-6 pb-8 md:px-0 md:py-16 md:pr-10">
             <div className="relative aspect-[4/3] w-full max-w-[720px] overflow-hidden rounded-lg">
               <Image
                 src="/images/home-hero.png"
@@ -73,11 +52,28 @@ export default function HomePage() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 46vw"
-                className="object-cover object-[58%_28%]"
+                className="object-cover object-[58%_18%]"
               />
               {/* subtle ivory fade on the left edge so the hero copy and image feel connected */}
               <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/5 bg-gradient-to-r from-cream/70 to-transparent md:block" />
             </div>
+          </div>
+        </div>
+
+        {/* Hero CTA row — spans the full content width across the lower hero to
+            balance the visual weight of the image; stacks on small screens. */}
+        <div className="mx-auto w-full max-w-content px-6 pb-14 md:px-10 md:pb-16">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+            <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
+            <CtaButton href="/audit" variant="secondary">
+              Start With the Midlife Metabolism Audit
+            </CtaButton>
+            <Link
+              href="/locations"
+              className="btn-forest-outline w-full whitespace-nowrap sm:w-auto"
+            >
+              Testing Locations
+            </Link>
           </div>
         </div>
       </section>
