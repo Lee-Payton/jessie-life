@@ -48,21 +48,32 @@ export default function LocationsPage() {
 
           {testingLocations.length > 0 ? (
             <div className="mt-10 grid gap-6">
-              {testingLocations.map((loc) => (
-                <div key={loc.name + loc.date} className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
-                  <h3 className="font-display text-2xl">{loc.name}</h3>
-                  <div className="mt-4 grid gap-2 font-body text-ink/80 sm:grid-cols-2">
-                    <p><span className="font-bold">City, State:</span> {loc.cityState}</p>
-                    <p><span className="font-bold">Date:</span> {loc.date}</p>
-                    <p><span className="font-bold">Testing available:</span> {loc.testing}</p>
-                    <p><span className="font-bold">Appointment type:</span> {loc.appointmentType}</p>
+              {testingLocations.map((loc) => {
+                const testingLabel = loc.testing === 'Both' ? 'RMR | VO₂ Max' : loc.testing === 'VO₂' ? 'VO₂ Max' : 'RMR';
+                const availableLabel = loc.auditAvailable
+                  ? `${testingLabel} | Midlife Metabolism Audit`
+                  : testingLabel;
+                return (
+                  <div key={loc.name + loc.date} className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+                    <h3 className="font-display text-2xl">{loc.name}</h3>
+                    <div className="mt-4 grid gap-2 font-body text-ink/80 sm:grid-cols-2">
+                      <p><span className="font-bold">City, State:</span> {loc.cityState}</p>
+                      <p><span className="font-bold">Date:</span> {loc.date}</p>
+                      <p><span className="font-bold">Available:</span> {availableLabel}</p>
+                      <p><span className="font-bold">Appointment type:</span> {loc.appointmentType}</p>
+                    </div>
+                    {loc.notes && <p className="mt-3 font-body text-sm text-ink/60">{loc.notes}</p>}
+                    <div className="mt-6 flex flex-wrap gap-4">
+                      <a href={loc.bookingUrl} className="btn-primary">Book This Location</a>
+                      {loc.auditAvailable && (
+                        <a href={loc.auditBookingUrl ?? loc.bookingUrl} className="btn-forest-outline">
+                          Book the Midlife Metabolism Audit
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  {loc.notes && <p className="mt-3 font-body text-sm text-ink/60">{loc.notes}</p>}
-                  <div className="mt-6">
-                    <a href={loc.bookingUrl} className="btn-primary">Book This Location</a>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ) : (
             <div className="mt-10 rounded-lg bg-cream p-8 text-center ring-1 ring-ink/5">

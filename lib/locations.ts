@@ -8,6 +8,12 @@ export type TestingLocation = {
   appointmentType: string;
   bookingUrl: string;
   notes?: string;
+  // The Midlife Metabolism Audit includes an in-person RMR breath test, so it can
+  // only be purchased through a location where testing is actually scheduled.
+  // Set true to show it as available and surface the Audit purchase link below.
+  auditAvailable?: boolean;
+  // Optional Audit-specific booking/purchase URL. Falls back to bookingUrl if omitted.
+  auditBookingUrl?: string;
 };
 
 export const testingLocations: TestingLocation[] = [
@@ -20,5 +26,7 @@ export const testingLocations: TestingLocation[] = [
   //   appointmentType: 'Individual appointments',
   //   bookingUrl: '#',
   //   notes: 'Parking behind the building; arrive 15 minutes early.',
+  //   auditAvailable: true,
+  //   auditBookingUrl: '#',
   // },
 ];

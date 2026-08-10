@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
-import { links } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'The Midlife Metabolism Audit — Jessie.Life',
@@ -42,8 +41,12 @@ export default function AuditPage() {
             <p className="mt-6 font-body text-sm font-bold text-terracotta">
               Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
             </p>
+            <p className="mt-3 font-body text-sm text-ink/60">
+              The breath test is completed in person at one of my scheduled testing locations. Check
+              current locations before purchasing your Audit.
+            </p>
             <div className="mt-8">
-              <CtaButton href={links.practiceBetter}>Book Your Midlife Metabolism Audit</CtaButton>
+              <CtaButton href="/locations">Find a Testing Location</CtaButton>
             </div>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
@@ -227,8 +230,8 @@ export default function AuditPage() {
         title="Before you cut more, measure more."
         texture="br"
         actions={
-          <a href={links.practiceBetter} className="btn-forest w-full whitespace-nowrap sm:w-auto">
-            Book the Midlife Metabolism Audit
+          <a href="/locations" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+            Find a Testing Location
           </a>
         }
       >
