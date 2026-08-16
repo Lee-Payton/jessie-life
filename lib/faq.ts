@@ -48,7 +48,8 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Are lab costs included in the $1,500 program?',
     a: [
-      'No. Lab fees are separate because the testing needed will vary from person to person. You will receive a clear recommendation before ordering and access to wholesale pricing for labs ordered through Jessie’s system. This prevents you from paying for a large prebuilt panel that duplicates information you already have or includes testing that would not change the plan.',
+      'No. Lab fees are separate because the testing needed will vary from person to person. For a thorough panel, lab costs typically range from about $250 to $500, with most clients landing somewhere in the middle. Your exact cost depends on what you already have, what is still needed, and which testing will actually improve the strategy.',
+      'We review your existing results first so you are not unnecessarily repeating useful testing. When direct ordering is appropriate, Reboot clients also receive access to my wholesale lab pricing.',
     ],
   },
   {
@@ -85,7 +86,8 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Can I participate remotely?',
     a: [
-      'Yes, the consultation, lab-review, education, and implementation portions can be delivered remotely. Breath testing depends on Jessie’s current location and scheduled pop-ups. Remote clients can still complete the Reboot without local breath testing unless the final program terms state otherwise.',
+      'Yes. The consultations, lab review, education, strategy, and implementation support can all be completed remotely.',
+      'Resting metabolic rate testing is included in the Midlife Reboot if you are able to attend one of my public testing locations during your program. If you are not near a testing location, you can still complete the full Reboot remotely without the RMR test.',
     ],
   },
   {
