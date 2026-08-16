@@ -222,7 +222,7 @@ export default function RebootPage() {
             <CheckList
               items={[
                 'Comprehensive midlife health, symptom, hormone, medication, supplement, lifestyle, nutrition, movement, sleep, stress, and goal intake',
-                'Personality and behavior-style assessments to help shape a strategy that fits how you actually operate',
+                'Implementation and support style assessment to help shape a strategy that fits how you actually operate',
                 'Private intake consultation to clarify your history, priorities, and meaningful testing gaps',
                 'Review of available laboratory results so useful testing is not repeated unnecessarily',
                 'Access to wholesale lab ordering and pricing for recommended blood work when appropriate',
@@ -341,7 +341,7 @@ export default function RebootPage() {
               additional testing would meaningfully improve the strategy. When direct ordering is
               appropriate, Reboot clients receive access to my wholesale lab pricing.
             </p>
-            <p>Payment plan: [INSERT FINAL PAYMENT-PLAN TERMS]</p>
+            <p>Payment plan: 4 payments of $400</p>
             <p>
               Previous Reboot clients may return for an annual or semiannual Midlife Reboot
               Review for $595.
