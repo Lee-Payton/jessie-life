@@ -4,7 +4,7 @@ import Accordion from '@/components/Accordion';
 import { rebootFaqs, testingFaqs } from '@/lib/faq';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions — Jessie.Life',
+  title: 'Frequently Asked Questions: Jessie.Life',
   description:
     'Answers about program scope, labs, payment, remote participation, and metabolic testing for the Midlife Reboot and Metabolic Testing.',
 };
@@ -18,7 +18,7 @@ export default function FaqPage() {
             <Eyebrow>FAQ</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">Frequently Asked Questions</h1>
             <p className="mt-6 font-body text-lg text-ink/80">
-              Answers to scope, lab, program, payment, remote, and testing questions — grouped by
+              Answers to scope, lab, program, payment, remote, and testing questions, grouped by
               service.
             </p>
           </div>

@@ -279,7 +279,7 @@ export default function HomePage() {
             <div className="order-1 md:order-2">
               <p className="eyebrow">About Jessie</p>
               <h2 className="mt-3 font-display text-2xl leading-snug md:text-[1.9rem]">
-                I&rsquo;m Jessie Faber — a functional health practitioner, researcher, educator, and
+                I&rsquo;m Jessie Faber: a functional health practitioner, researcher, educator, and
                 full-time nomad.
               </h2>
               <div className="mt-5 space-y-4 font-body text-ink/80">

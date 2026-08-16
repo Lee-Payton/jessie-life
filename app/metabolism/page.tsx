@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Section, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'Metabolism + VO₂ Testing — Jessie.Life',
+  title: 'Metabolism + VO₂ Testing: Jessie.Life',
   description:
     'Portable breath analysis to measure how your body uses energy at rest and oxygen during exercise. RMR ($125) and VO₂ max ($195) testing available through scheduled locations, pop-ups, and partner events.',
 };
@@ -59,7 +59,7 @@ export default function MetabolismPage() {
               breathe out.
             </p>
             <p>
-              Those measurements help estimate how your body is producing and using energy — either
+              Those measurements help estimate how your body is producing and using energy, either
               while you are resting quietly or while you are exercising at increasing intensity.
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function MetabolismPage() {
       {/* Section 4 — RMR */}
       <Section bg="creamDark">
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">Resting Metabolic Rate (RMR) — $125</h2>
+          <h2 className="text-3xl md:text-4xl">Resting Metabolic Rate (RMR): $125</h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
               Your resting metabolic rate is the amount of energy your body uses at rest before
@@ -166,14 +166,14 @@ export default function MetabolismPage() {
       {/* Section 5 — VO2 */}
       <Section>
         <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">VO₂ Max Testing — $195</h2>
+          <h2 className="text-3xl md:text-4xl">VO₂ Max Testing: $195</h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
               VO₂ max is the maximum amount of oxygen your body can use during hard exercise. It is
               often talked about in athletic settings, but it is not only an athlete number.
             </p>
             <p>
-              VO₂ max reflects cardiorespiratory fitness — how well your lungs, heart, blood vessels,
+              VO₂ max reflects cardiorespiratory fitness: how well your lungs, heart, blood vessels,
               and working muscles deliver and use oxygen. It can be useful for performance, training,
               endurance, healthy aging, and tracking whether your fitness is actually improving over
               time.

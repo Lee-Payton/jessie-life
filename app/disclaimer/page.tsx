@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { LegalHero, LegalBody, LegalSection } from '@/components/LegalContent';
 
 export const metadata: Metadata = {
-  title: 'Website Disclaimer — Jessie.Life',
+  title: 'Website Disclaimer: Jessie.Life',
   description:
     'Information about the educational nature of Jessie.life services, medical care and prescribing, and the scope of metabolic and fitness testing.',
 };

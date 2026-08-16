@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'The Midlife Metabolism Audit — Jessie.Life',
+  title: 'The Midlife Metabolism Audit: Jessie.Life',
   description:
     'A focused whole-health consultation built around objective metabolic testing, your symptom picture, and the real-life factors that influence how your body is functioning right now. $295.',
 };
@@ -32,7 +32,7 @@ export default function AuditPage() {
                 influence how your body is functioning right now.
               </p>
               <p>
-                This is for the woman who knows something has shifted — but is tired of trying to
+                This is for the woman who knows something has shifted, but is tired of trying to
                 figure out whether it is hormones, metabolism, stress, sleep, under-eating,
                 overtraining, low muscle, blood sugar, recovery, or some deeply inconvenient
                 combination of all of the above.
@@ -197,7 +197,7 @@ export default function AuditPage() {
             </p>
             <p>
               The Audit helps you understand where you are and what may deserve attention next.
-              The Reboot gives us the time, testing, and follow-up to build the fuller plan — and
+              The Reboot gives us the time, testing, and follow-up to build the fuller plan, and
               adjust it based on how your body actually responds.
             </p>
           </div>

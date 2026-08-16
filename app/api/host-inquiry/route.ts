@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({
-      message: 'Thank you — your host inquiry has been received. Jessie will review the fit and follow up with a proposal.',
+      message: 'Thank you. Your host inquiry has been received. Jessie will review the fit and follow up with a proposal.',
     });
   } catch (err) {
     console.error('[host-inquiry] Unexpected error', err);

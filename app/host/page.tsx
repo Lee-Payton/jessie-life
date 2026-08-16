@@ -3,7 +3,7 @@ import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/u
 import HostForm from '@/components/HostForm';
 
 export const metadata: Metadata = {
-  title: 'Bring Jessie to Your Location — Jessie.Life',
+  title: 'Bring Jessie to Your Location: Jessie.Life',
   description:
     'Bring portable RMR and VO₂ max testing to your gym, studio, clinic, med spa, office, retreat, or wellness event.',
 };
@@ -17,12 +17,12 @@ export default function HostPage() {
           <div className="mx-auto max-w-3xl">
             <Eyebrow>For Organizations</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
-              Bring useful metabolic testing to your people — right where they already are.
+              Bring useful metabolic testing to your people, right where they already are.
             </h1>
             <p className="mt-6 font-body text-lg text-ink/80">
               Jessie brings portable resting metabolic rate and VO₂ max testing to gyms, studios,
               offices, clinics, med spas, retreats, and wellness events. Your members, employees,
-              clients, or guests get objective information they can use — without being sent across
+              clients, or guests get objective information they can use, without being sent across
               town to a hospital lab.
             </p>
             <div className="mt-8">
@@ -40,7 +40,7 @@ export default function HostPage() {
             <p>
               Most wellness events give people broad advice they have already heard: move more, eat
               better, sleep eight hours, try not to be stressed. Metabolic testing gives them
-              something specific — a measured starting point and a reason to pay attention.
+              something specific: a measured starting point and a reason to pay attention.
             </p>
             <p>
               Depending on the event, participants can learn about their resting energy needs, fuel
@@ -58,7 +58,7 @@ export default function HostPage() {
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[
               ['Gyms and performance facilities', 'Give members measurable baselines, individualized training information, and a reason to retest after a training block.'],
-              ['Pilates and boutique fitness studios', 'Add a high-value assessment that supports strength, longevity, recovery, and member education — especially for midlife clients who want more than a calorie estimate.'],
+              ['Pilates and boutique fitness studios', 'Add a high-value assessment that supports strength, longevity, recovery, and member education, especially for midlife clients who want more than a calorie estimate.'],
               ['Med spas, wellness clinics, and hormone practices', 'Pair your existing services with objective information about resting metabolism, aerobic fitness, and fuel use without purchasing or staffing a full metabolic lab.'],
               ['Corporate offices and employee wellness programs', 'Offer a practical health event that goes beyond a lunch-and-learn and gives employees individualized information in a convenient on-site format.'],
               ['Retreats, conferences, and wellness events', 'Create a memorable, science-based experience that can stand alone or support programming around midlife health, performance, resilience, or longevity.'],

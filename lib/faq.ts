@@ -4,7 +4,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Do I need to be in menopause to join?',
     a: [
-      'Not at all. The Midlife Reboot is designed for women in perimenopause, menopause, and postmenopause — including women who want to understand the transition before symptoms become overwhelming. If hormones, metabolism, recovery, or midlife health are changing, the framework can be useful whether you are still cycling or not.',
+      'Not at all. The Midlife Reboot is designed for women in perimenopause, menopause, and postmenopause, including women who want to understand the transition before symptoms become overwhelming. If hormones, metabolism, recovery, or midlife health are changing, the framework can be useful whether you are still cycling or not.',
     ],
   },
   {
@@ -80,7 +80,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Do I need to track food?',
     a: [
-      'You may be asked to track food for a limited period when the information would be useful — for example, to assess protein, fiber, energy intake, or nutrient gaps. The goal is insight and education, not permanent surveillance or obsessive restriction. Accommodations can be made for people with a history of disordered eating or for whom tracking would be counterproductive.',
+      'You may be asked to track food for a limited period when the information would be useful, for example, to assess protein, fiber, energy intake, or nutrient gaps. The goal is insight and education, not permanent surveillance or obsessive restriction. Accommodations can be made for people with a history of disordered eating or for whom tracking would be counterproductive.',
     ],
   },
   {
@@ -138,7 +138,7 @@ export const testingFaqs: QA[] = [
   {
     q: 'How long does testing take?',
     a: [
-      'The measurement itself is relatively short — often roughly 7–10 minutes for resting testing and around 10 minutes for the active portion — but the full appointment includes screening, setup, mask fitting, calibration, explanation, cleaning, and transition time. Your booking page will show the full appointment length.',
+      'The measurement itself is relatively short (often roughly 7–10 minutes for resting testing and around 10 minutes for the active portion), but the full appointment includes screening, setup, mask fitting, calibration, explanation, cleaning, and transition time. Your booking page will show the full appointment length.',
     ],
   },
   {

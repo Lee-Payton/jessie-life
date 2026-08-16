@@ -5,7 +5,7 @@ import { ContourLines, SprigDoodle, MoleculeDoodle } from '@/components/decor';
 import { links } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'The Midlife Reboot — Jessie.Life',
+  title: 'The Midlife Reboot: Jessie.Life',
   description:
     'A six-month, lab-guided health strategy for women navigating perimenopause, menopause, hormone therapy, metabolism changes, and burnout. $1,500. Lab fees separate.',
 };
@@ -74,11 +74,11 @@ export default function RebootPage() {
             <p>
               That is why generic midlife advice can feel so frustrating. It treats hormones,
               labs, symptoms, nutrition, exercise, stress, and long-term health like separate
-              checklists — when in real life, they are constantly influencing each other.
+              checklists, when in real life, they are constantly influencing each other.
             </p>
             <p>
               This does not mean everything is &ldquo;just menopause.&rdquo; It means this phase
-              of life deserves a more connected strategy — one that looks at your patterns,
+              of life deserves a more connected strategy: one that looks at your patterns,
               priorities, history, and goals before deciding what to do next.
             </p>
           </div>
@@ -158,7 +158,7 @@ export default function RebootPage() {
           <h2 className="text-3xl md:text-4xl">What we look at</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
             The Reboot looks at the pieces that influence how you feel, function, recover, and
-            age — not just one symptom or one lab marker.
+            age, not just one symptom or one lab marker.
           </p>
           <div className="mt-8 grid gap-x-10 gap-y-9 md:grid-cols-2">
             {[
@@ -166,7 +166,7 @@ export default function RebootPage() {
               ['Metabolism and cardiovascular health', 'Blood sugar, insulin, lipids, body composition, resting metabolism, cardiorespiratory fitness, and risk factors easy to miss when the conversation is reduced to weight.'],
               ['Nutrition and nutrient status', 'Protein, energy intake, food quality, nutrient gaps, digestion, absorption, and whether your current approach supports the body you are asking to function.'],
               ['Strength, bone, and physical resilience', 'Muscle, bone, mobility, stability, recovery, exercise tolerance, and the physical capacity that protects your freedom and independence.'],
-              ['Energy, sleep, and nervous-system load', 'The factors that determine whether your plan is restorative and sustainable — or one more demand on an already overloaded system.'],
+              ['Energy, sleep, and nervous-system load', 'The factors that determine whether your plan is restorative and sustainable, or one more demand on an already overloaded system.'],
               ['Your real life', 'Work, travel, caregiving, relationships, schedule, personality, executive function, and the things no generic protocol bothers to ask about.'],
             ].map(([title, body]) => (
               <div key={title} className="border-t border-terracotta/25 pt-4">
@@ -194,7 +194,7 @@ export default function RebootPage() {
             </p>
             <p>
               It is a structured six-month process that moves from assessment to strategy to
-              implementation — with enough education, follow-up, and troubleshooting support to
+              implementation, with enough education, follow-up, and troubleshooting support to
               help the plan work in your actual life.
             </p>
           </div>
@@ -211,8 +211,8 @@ export default function RebootPage() {
               plan, without repeating testing unnecessarily.
             </p>
             <p>
-              Once your information is complete, I build your <strong>Optimal Health Blueprint</strong>{' '}
-              — a personalized written strategy that connects your labs, symptoms, history,
+              Once your information is complete, I build your <strong>Optimal Health Blueprint</strong>
+              : a personalized written strategy that connects your labs, symptoms, history,
               metabolism, hormones, nutrition, strength, recovery, and long-term health
               priorities.
             </p>
@@ -368,12 +368,12 @@ export default function RebootPage() {
             <p>
               I built the Midlife Reboot because midlife health gets messy when hormones,
               symptoms, labs, metabolism, stress, sleep, strength, nutrition, and real life are
-              all changing at the same time — and most advice only looks at one piece of the
+              all changing at the same time, and most advice only looks at one piece of the
               picture.
             </p>
             <p>
               My work combines functional health strategy, lab review, hormone and menopause
-              education, and real-life implementation support — with a deep respect for the fact
+              education, and real-life implementation support, with a deep respect for the fact
               that the plan has to work for the person living inside the body.
             </p>
           </div>
@@ -392,8 +392,8 @@ export default function RebootPage() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">Questions before you apply?</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
-            The most common questions — labs, existing hormone therapy, medical scope, remote
-            participation, payment, the Audit, and what happens after six months — are answered
+            The most common questions (labs, existing hormone therapy, medical scope, remote
+            participation, payment, the Audit, and what happens after six months) are answered
             in detail on the FAQ page.
           </p>
           <div className="mt-8">

@@ -20,12 +20,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Jessie.Life — Functional Health Strategy for Midlife Women',
+  title: 'Jessie.Life: Functional Health Strategy for Midlife Women',
   description:
     'Stop guessing what happened to your body. Lab-guided health strategy, metabolic testing, and education for women navigating perimenopause and menopause.',
   metadataBase: new URL('https://jessie.life'),
   openGraph: {
-    title: 'Jessie.Life — Functional Health Strategy for Midlife Women',
+    title: 'Jessie.Life: Functional Health Strategy for Midlife Women',
     description:
       'Lab-guided health strategy, metabolic testing, and education for midlife women.',
     url: 'https://jessie.life',
