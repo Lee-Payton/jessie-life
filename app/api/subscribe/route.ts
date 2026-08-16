@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 // Set GHL_SUBSCRIBE_WEBHOOK in Vercel env to the GHL inbound webhook URL.
 export async function POST(request: Request) {
   try {
-    const { email, source } = await request.json();
+    const { email, source, city, region } = await request.json();
 
     if (!email || typeof email !== 'string' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json(
@@ -19,7 +19,13 @@ export async function POST(request: Request) {
       const res = await fetch(webhook, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: source || 'site', tag: source || 'site' }),
+        body: JSON.stringify({
+          email,
+          source: source || 'site',
+          tag: source || 'site',
+          ...(city ? { city } : {}),
+          ...(region ? { region } : {}),
+        }),
       });
       if (!res.ok) {
         return NextResponse.json(
@@ -29,7 +35,7 @@ export async function POST(request: Request) {
       }
     } else {
       // No webhook configured yet — log so nothing is lost during build phase.
-      console.log('[subscribe] (no GHL webhook set)', { email, source });
+      console.log('[subscribe] (no GHL webhook set)', { email, source, city, region });
     }
 
     return NextResponse.json({
