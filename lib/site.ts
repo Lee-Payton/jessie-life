@@ -28,7 +28,7 @@ export const footerNav = {
     { label: 'FAQ', href: '/faq' },
     { label: 'Contact', href: '/contact' },
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms & Disclaimer', href: '/terms' },
+    { label: 'Website Disclaimer', href: '/disclaimer' },
   ],
 };
 
