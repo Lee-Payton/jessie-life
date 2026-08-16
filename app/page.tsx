@@ -31,14 +31,14 @@ export default function HomePage() {
               </h1>
               <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
                 <p>
-                  If your energy, sleep, weight, strength, mood, recovery, or hormones feel
-                  like they changed the rules without warning, you do not need another generic
-                  plan telling you to eat less, push harder, or &ldquo;just be consistent.&rdquo;
+                  If your body feels like it changed the rules in midlife, you do not need
+                  another generic plan telling you to eat less, push harder, and &ldquo;just be
+                  consistent.&rdquo;
                 </p>
                 <p>
-                  You need a better way to understand what is actually happening in your body
-                  — and a realistic strategy for hormones, metabolism, strength, energy, and
-                  long-term resilience that fits the life you are actually living.
+                  You need a better way to understand what changed, where it&rsquo;s useful to
+                  focus your attention, and what will help you feel and function better in the
+                  life you are actually living.
                 </p>
               </div>
             </div>
@@ -91,22 +91,14 @@ export default function HomePage() {
               </h2>
               <div className="relative mt-5 space-y-4 font-body text-lg text-ink/80">
                 <p>
-                  Your symptoms, hormones, metabolism, nervous system, history, personality,
-                  stress load, and lifestyle all matter. You don&rsquo;t need more generic advice.
-                  You need a better way to understand what&rsquo;s happening in your body, identify
-                  relevant patterns, and take the next right step.
+                  Hormone changes do not happen in isolation. They happen inside a body with a
+                  unique history, and midlife can make the things that were once manageable so
+                  much harder to ignore.
                 </p>
                 <p>
-                  Midlife has a way of making old strategies stop working — sometimes quietly,
-                  sometimes like your body staged a full internal coup. The things you carried into
-                  this transition, like poor sleep, chronic stress, under-recovery, blood-sugar
-                  swings, pain, nutrient gaps, dieting history, or a complicated health story, can
-                  become harder to ignore.
-                </p>
-                <p>That does not mean everything is &ldquo;just menopause.&rdquo;</p>
-                <p>
-                  It means this is the time to stop treating your symptoms, labs, metabolism,
-                  hormones, and lifestyle like they are all separate conversations.
+                  That does not mean everything is &ldquo;just menopause.&rdquo; It means your
+                  symptoms, labs, metabolism, hormones, health history, and lifestyle make more
+                  sense when we stop treating them like separate conversations.
                 </p>
               </div>
             </div>
@@ -123,18 +115,17 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl">This is not just about hot flashes.</h2>
               <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
                 <p>
-                  Perimenopause and menopause can change more than your cycle. These hormone shifts
-                  can influence how you sleep, think, recover, build muscle, regulate blood sugar,
-                  respond to stress, use energy, store fat, maintain bone, and feel in your own body.
+                  Perimenopause and menopause can affect how you sleep, think, recover, build
+                  muscle, regulate blood sugar, respond to stress, use energy, maintain bone, and
+                  feel in your own body.
                 </p>
                 <p>
-                  Midlife deserves a wider lens — especially if you already have a history
-                  of chronic illness, autoimmune issues, thyroid changes, reproductive disorders,
-                  pain, burnout, dieting, or old problems that suddenly start making noise again.
+                  The point is not to blame every change on hormones. It is to understand what
+                  changed, what else may be contributing, and what deserves attention now.
                 </p>
                 <p>
-                  This is where we look beyond one symptom, one lab marker, or one generic protocol
-                  and start connecting the bigger picture.
+                  This is where we look beyond one symptom, lab marker, or protocol and start
+                  connecting the dots of your bigger picture.
                 </p>
               </div>
             </div>

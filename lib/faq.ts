@@ -62,7 +62,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'What if I do not have a Labcorp near me?',
     a: [
-      'Availability depends on your location and the tests being ordered. When Labcorp is not practical, we can look at other direct-order options or identify what may be requested through a local medical provider. Any location-specific limitations will be discussed before you purchase testing.',
+      'Labcorp is my preferred option when it is available, but I can order testing through other laboratories when needed. We’ll use the option that makes the most sense based on your location, the testing we need, and cost.',
     ],
   },
   {
