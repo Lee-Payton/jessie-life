@@ -226,7 +226,7 @@ export default function RebootPage() {
                 'Private intake consultation to clarify your history, priorities, and meaningful testing gaps',
                 'Review of available laboratory results so useful testing is not repeated unnecessarily',
                 'Access to wholesale lab ordering and pricing for recommended blood work when appropriate',
-                'Support navigating hormone and menopause care, including preparing for medical appointments and facilitate access to appropriate prescriber or telehealth options when needed',
+                'Support navigating hormone and menopause care, including preparing for medical appointments and accessing appropriate prescriber or telehealth options when needed',
                 'Curated educational resources before your results session so the blueprint is easier to understand and use',
                 'Personalized Optimal Health Blueprint connecting your symptoms, history, labs, hormone questions, metabolism, nutrition, strength, recovery, and long-term health priorities',
                 'Results and recommendations session to walk through the blueprint and answer questions',
