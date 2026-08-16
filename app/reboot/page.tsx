@@ -21,7 +21,7 @@ export default function RebootPage() {
             <Eyebrow>The Flagship Program</Eyebrow>
             <h1 className="mt-4 text-4xl leading-[1.1] md:text-5xl">The Midlife Reboot</h1>
             <p className="mt-6 font-body text-lg text-ink/80">
-              A six-month, lab-guided health strategy for women navigating perimenopause,
+              A six-month, lab-guided health strategy built around women navigating perimenopause,
               menopause, hormone therapy, metabolism changes, burnout, and &ldquo;what the hell
               happened to my body?&rdquo;
             </p>
