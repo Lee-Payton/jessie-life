@@ -152,7 +152,7 @@ export default function RebootPage() {
           </p>
           <div className="mt-8 grid gap-x-10 gap-y-9 md:grid-cols-2">
             {[
-              ['Hormones and symptoms', 'Perimenopause, menopause, hysterectomy, hormone therapy, symptom patterns, and the questions to discuss with the clinician who manages your care.'],
+              ['Hormones, symptoms, and access to care', 'Perimenopause, menopause, hysterectomy, hormone therapy, symptom patterns, and the practical side of getting appropriate medical care. That can include helping you understand hormone options, prepare for appointments, identify the questions or data that matter, and getting you access to menopause-informed clinicians or telehealth options when you need a prescriber. I do not prescribe medication, but I can help reduce the friction between knowing what needs attention and actually getting it addressed.'],
               ['Metabolism and cardiovascular health', 'Blood sugar, insulin, lipids, body composition, resting metabolism, cardiorespiratory fitness, and risk factors easy to miss when the conversation is reduced to weight.'],
               ['Nutrition and nutrient status', 'Protein, energy intake, food quality, nutrient gaps, digestion, absorption, and whether your current approach supports the body you are asking to function.'],
               ['Strength, bone, and physical resilience', 'Muscle, bone, mobility, stability, recovery, exercise tolerance, and the physical capacity that protects your freedom and independence.'],
@@ -226,6 +226,7 @@ export default function RebootPage() {
                 'Private intake consultation to clarify your history, priorities, and meaningful testing gaps',
                 'Review of available laboratory results so useful testing is not repeated unnecessarily',
                 'Access to wholesale lab ordering and pricing for recommended blood work when appropriate',
+                'Support navigating hormone and menopause care, including preparing for medical appointments and accessing appropriate prescriber or telehealth options when needed',
                 'Curated educational resources before your results session so the blueprint is easier to understand and use',
                 'Personalized Optimal Health Blueprint connecting your symptoms, history, labs, hormone questions, metabolism, nutrition, strength, recovery, and long-term health priorities',
                 'Results and recommendations session to walk through the blueprint and answer questions',

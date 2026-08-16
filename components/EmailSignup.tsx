@@ -16,6 +16,7 @@ export default function EmailSignup({
   /** When true, also collects City and State/Region (e.g. for testing-location notifications). */
   collectLocation?: boolean;
 }) {
+  const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
   const [region, setRegion] = useState('');
@@ -31,13 +32,16 @@ export default function EmailSignup({
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(
-          collectLocation ? { email, source, city, region } : { email, source }
+          collectLocation
+            ? { firstName, email, source, city, region }
+            : { firstName, email, source }
         ),
       });
       const data = await res.json();
       if (res.ok) {
         setStatus('success');
         setMessage(data.message || 'You’re on the list. Check your inbox.');
+        setFirstName('');
         setEmail('');
         setCity('');
         setRegion('');
@@ -66,6 +70,21 @@ export default function EmailSignup({
       onSubmit={handleSubmit}
       className={isStack ? 'flex flex-col gap-3' : 'flex flex-col gap-3 sm:flex-row'}
     >
+      <label className="sr-only" htmlFor={`firstName-${source}`}>
+        First name
+      </label>
+      <input
+        id={`firstName-${source}`}
+        type="text"
+        required
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        placeholder="First name"
+        className={`h-12 min-w-0 rounded-md border border-ink/20 bg-cream-light px-4 font-body text-sm text-ink placeholder:text-ink/40 focus:border-terracotta focus:outline-none focus:ring-1 focus:ring-terracotta ${
+          isStack ? 'w-full' : 'flex-1'
+        }`}
+        disabled={status === 'submitting'}
+      />
       {collectLocation && (
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
@@ -123,7 +142,7 @@ export default function EmailSignup({
         {status === 'submitting' ? 'Joining…' : buttonLabel}
       </button>
       {status === 'error' && (
-        <p className={`font-body text-sm text-terracotta ${isStack ? '' : 'sm:sr-only'}`} role="alert">
+        <p className={`font-body text-sm text-terracotta ${isStack ? '' : 'w-full'}`} role="alert">
           {message}
         </p>
       )}

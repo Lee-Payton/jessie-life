@@ -20,9 +20,11 @@ export const rebootFaqs: QA[] = [
     ],
   },
   {
-    q: 'Can Jessie prescribe or adjust my hormones?',
+    q: 'Can Jessie prescribe my hormones, and what happens if I need a prescriber?',
     a: [
-      'No. Jessie can provide education about hormone options, help you organize symptoms and questions, and discuss the broader factors that may affect how you feel. Prescribing and medication changes must be handled by an appropriately licensed clinician.',
+      'No. I do not prescribe or change medications. But that does not mean you are handed a list of recommendations and left to figure out the medical side on your own.',
+      'If hormone therapy or another medical conversation is relevant, I can help you understand your options, organize your symptoms, history, labs, goals, and questions, and prepare for a more productive appointment. If you need a different provider, we can look at menopause-informed clinicians and telehealth options that may fit your needs, location, insurance situation, and budget.',
+      'If you already have a willing clinician who is less experienced with menopause or hormone therapy, I can help you organize the information, questions, and relevant evidence you bring into that conversation.',
     ],
   },
   {
