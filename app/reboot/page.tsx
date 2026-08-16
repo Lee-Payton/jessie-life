@@ -21,17 +21,21 @@ export default function RebootPage() {
             <Eyebrow>The Flagship Program</Eyebrow>
             <h1 className="mt-4 text-4xl leading-[1.1] md:text-5xl">The Midlife Reboot</h1>
             <p className="mt-6 font-body text-lg text-ink/80">
-              A six-month, lab-guided health strategy built around women navigating perimenopause,
-              menopause, hormone therapy, metabolism changes, burnout, and &ldquo;what the hell
-              happened to my body?&rdquo;
+              If midlife has changed your energy, sleep, strength, body composition, recovery,
+              mood, sex drive, or simply how you feel in your body, the Midlife Reboot is about
+              helping you feel comfortable in your body again.
             </p>
             <p className="mt-4 font-body text-lg text-ink/80">
-              You need a clear way to understand what is happening in your body, identify what
-              actually deserves attention, and build a practical strategy for hormones,
-              metabolism, nutrition, strength, recovery, and long-term resilience.
+              The goal is simple: better sleep. More energy. Less brain fog. More strength. Fewer
+              disruptive menopause symptoms. Healthier lab markers. More control over your body
+              composition goals.
+            </p>
+            <p className="mt-4 font-body text-lg text-ink/80">
+              And the knowledge, confidence, strategies, and resources to know what works for your
+              body and what to do when things change.
             </p>
             <p className="mt-6 font-body text-sm font-bold text-forest">
-              Six months • $1,500 • Lab fees are separate • Payment plan available
+              Six months • $1,500 + Lab fees • Payment plan available
             </p>
             <div className="mt-8">
               <CtaButton href={links.rebootApply}>Apply for the Midlife Reboot</CtaButton>
@@ -121,20 +125,26 @@ export default function RebootPage() {
           <h2 className="text-3xl md:text-4xl">What changes</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
             The Reboot is designed to help you move from scattered effort to a more connected,
-            prioritized strategy.
+            prioritized strategy, so that you can achieve:
           </p>
           <div className="mt-6">
             <CheckList
               items={[
-                'From chasing symptoms one at a time to understanding the larger pattern',
-                'From "normal labs" and unanswered questions to a clearer picture of what has and has not been measured',
-                'From random experiments to a strategy based on your body, history, goals, and capacity',
-                'From pushing harder to using effort where it is most likely to pay off',
-                'From feeling stuck or disconnected from your body to rebuilding strength, confidence, and resilience',
-                'From trying to do everything at once to knowing what deserves attention now and what can wait',
+                'Better sleep and more energy',
+                'Better focus and less brain fog',
+                'Fewer menopause symptoms, from hot flashes and palpitations to the less obvious ones that often get missed',
+                'More strength, muscle, and better recovery',
+                'Improved metabolic health and healthier lab markers',
+                'More control over your body composition goals',
+                'More interest in sex and better sexual wellbeing',
+                'More confidence navigating hormones, healthcare, and what your body needs',
               ]}
             />
           </div>
+          <p className="mt-6 font-body text-lg text-ink/80">
+            By the end, the goal is to feel less like you are reacting to your body and more like
+            you know how to work with it.
+          </p>
         </div>
       </Section>
 
@@ -152,7 +162,7 @@ export default function RebootPage() {
           </p>
           <div className="mt-8 grid gap-x-10 gap-y-9 md:grid-cols-2">
             {[
-              ['Hormones, symptoms, and access to care', 'Perimenopause, menopause, hysterectomy, hormone therapy, symptom patterns, and the practical side of getting appropriate medical care. That can include helping you understand hormone options, prepare for appointments, identify the questions or data that matter, and getting you access to menopause-informed clinicians or telehealth options when you need a prescriber. I do not prescribe medication, but I can help reduce the friction between knowing what needs attention and actually getting it addressed.'],
+              ['Hormones & Symptoms', 'Perimenopause, menopause, hysterectomy, hormone therapy, symptom patterns, and reproductive health history. Preparing for appointments, identifying useful questions or data, and finding menopause-informed prescribers.'],
               ['Metabolism and cardiovascular health', 'Blood sugar, insulin, lipids, body composition, resting metabolism, cardiorespiratory fitness, and risk factors easy to miss when the conversation is reduced to weight.'],
               ['Nutrition and nutrient status', 'Protein, energy intake, food quality, nutrient gaps, digestion, absorption, and whether your current approach supports the body you are asking to function.'],
               ['Strength, bone, and physical resilience', 'Muscle, bone, mobility, stability, recovery, exercise tolerance, and the physical capacity that protects your freedom and independence.'],
@@ -327,20 +337,11 @@ export default function RebootPage() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">$1,500 for six months</h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
+            <p className="font-display text-2xl text-terracotta">It&rsquo;s time for your Midlife Reboot.</p>
             <p>
-              The Midlife Reboot includes the assessment, education, private consultations,
-              Optimal Health Blueprint, implementation strategy, follow-up support, and
-              troubleshooting described above.
-            </p>
-            <p>
-              Laboratory fees and third-party testing costs are separate. This keeps the program
-              from forcing every client into the same prebuilt testing package, whether they need
-              it or not.
-            </p>
-            <p>
-              We start with the labs and health information you already have, then identify what
-              additional testing would meaningfully improve the strategy. When direct ordering is
-              appropriate, Reboot clients receive access to my wholesale lab pricing.
+              Midlife can be the point where your health starts making your world smaller, or the
+              point where you understand your body well enough to build something stronger. The
+              goal is to make the next chapter healthier, more capable, and more enjoyable.
             </p>
             <p>Payment plan: 4 payments of $400</p>
             <p>
