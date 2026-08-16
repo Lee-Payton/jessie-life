@@ -3,7 +3,7 @@ import { Section, Eyebrow } from '@/components/ui';
 import RebootApplication from '@/components/RebootApplication';
 
 export const metadata: Metadata = {
-  title: 'Apply for the Midlife Reboot — Jessie.Life',
+  title: 'Apply for the Midlife Reboot: Jessie.Life',
   description: 'Apply for the six-month Midlife Reboot program.',
   robots: { index: false }, // application belongs only to the Reboot journey — not main nav
 };

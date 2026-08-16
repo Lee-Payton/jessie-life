@@ -5,7 +5,7 @@ import LocationCard from '@/components/LocationCard';
 import { testingLocations } from '@/lib/locations';
 
 export const metadata: Metadata = {
-  title: 'Upcoming Testing Locations — Jessie.Life',
+  title: 'Upcoming Testing Locations: Jessie.Life',
   description:
     'See where metabolism and VO₂ testing is currently available, join the notification list, or request a testing day at your location.',
 };

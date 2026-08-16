@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { LegalHero, LegalBody, LegalSection, LegalList } from '@/components/LegalContent';
 
 export const metadata: Metadata = {
-  title: 'Privacy & Consumer Health Data Policy — Jessie.Life',
+  title: 'Privacy & Consumer Health Data Policy: Jessie.Life',
   description:
     'What information Jessie.life may collect, why it is collected, how it may be used or shared, and the choices you have regarding your information.',
 };

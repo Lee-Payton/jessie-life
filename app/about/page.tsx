@@ -6,7 +6,7 @@ import { CircleBadge } from '@/components/icons';
 import { ContourLines, SprigDoodle, MoleculeDoodle, LoopDoodle } from '@/components/decor';
 
 export const metadata: Metadata = {
-  title: 'About Jessie Faber — Jessie.Life',
+  title: 'About Jessie Faber: Jessie.Life',
   description:
     'Functional health practitioner, researcher, and educator helping women in perimenopause and menopause connect the dots between hormones, symptoms, labs, metabolism, strength, and real life.',
 };
@@ -15,7 +15,7 @@ const personalParagraphs = [
   'I didn’t come to this work because menopause started getting trendy.',
   'I arrived here after spending years inside a body that did not follow the easy instructions.',
   'I have lived through stage 4 endometriosis, fibroids, adhesive disease, chronic pain, hypermobility, autoimmune issues, early perimenopause, four abdominal surgeries, a total hysterectomy with removal of both ovaries, and the abrupt menopause that followed.',
-  'I know what it is like to move between conventional medicine, functional health, nutrition, alternative care, physical therapy, surgery, medications, hormone therapy, supplements, lifestyle changes, and a truly unreasonable amount of research—trying to understand which pieces mattered and which were simply adding more work.',
+  'I know what it is like to move between conventional medicine, functional health, nutrition, alternative care, physical therapy, surgery, medications, hormone therapy, supplements, lifestyle changes, and a truly unreasonable amount of research, trying to understand which pieces mattered and which were simply adding more work.',
   'I have experienced the limits of fragmented care, the relief that comes from finally finding the right lever, and the maddening reality that something that worked beautifully last year can stop working when hormones, stress, illness, injury, or life change the rules.',
   'I also know what it feels like when every provider addresses one piece, but no one helps you understand how the pieces fit together.',
   'A symptom gets one explanation. A lab result gets another. Pain is treated separately from sleep. Hormones are discussed separately from metabolism. Nutrition is reduced to calories. Exercise advice ignores recovery, injuries, and the nervous system. Every person gives you one more thing to do, but no one helps you decide what matters most.',
@@ -29,7 +29,7 @@ const professionalParagraphs = [
   'That work matters because I do not only want to know whether a claim sounds compelling. I want to know what the research actually supports, what the available data can and cannot tell us, and whether the conclusion is appropriate for the individual woman in front of me.',
   'At the same time, evidence cannot be separated from real life.',
   'Research matters. Lab data matters. So does the person trying to sleep, eat, move, work, travel, recover, care for other people, manage symptoms, afford the plan, and make decisions inside a very imperfect world.',
-  'That combination—client work, research synthesis, lived experience, and systems thinking—is what shapes the way I support women in midlife.',
+  'That combination (client work, research synthesis, lived experience, and systems thinking) is what shapes the way I support women in midlife.',
 ];
 
 const principles: { lead: string; body: string }[] = [
@@ -38,7 +38,7 @@ const principles: { lead: string; body: string }[] = [
     body: 'Your sleep, hormones, blood sugar, nutrition, stress response, strength, pain, energy, and recovery are constantly influencing one another.',
   },
   {
-    lead: 'We use lab work to improve decisions—not to manufacture a hundred new problems.',
+    lead: 'We use lab work to improve decisions, not to manufacture a hundred new problems.',
     body: 'More testing is not automatically better. We look at what has already been measured, what the results can reasonably tell us, what is missing, and whether additional information would change what we do.',
   },
   {
@@ -46,7 +46,7 @@ const principles: { lead: string; body: string }[] = [
     body: 'I do not assume every woman has insulin resistance, a damaged metabolism, a hormone imbalance, adrenal dysfunction, or the same root cause hiding underneath every symptom.',
   },
   {
-    lead: 'We approach hormone therapy as a crucial, nuanced part of the picture—not a set-it-and-forget-it solution.',
+    lead: 'We approach hormone therapy as a crucial, nuanced part of the picture, not a set-it-and-forget-it solution.',
     body: 'Hormones are closely connected with symptoms, sleep, mood, bone, brain, cardiovascular health, blood-sugar regulation, body composition, sexual health, and quality of life. We help you understand why hormone therapy may or may not be appropriate for you, how timing, formulation, delivery method, dose, and individual response shape the decision, and what to discuss with your prescribing clinician so you can make informed choices with greater confidence. If hormone therapy is not appropriate, not an option, not right yet, or simply not something you want, we focus on the other strategies that can still meaningfully support how you feel, function, and age.',
   },
   {
@@ -127,7 +127,7 @@ export default function AboutPage() {
               </h1>
               <div className="mt-6 max-w-md space-y-4 font-body text-base text-ink/75 md:text-lg">
                 <p>
-                  I&rsquo;m Jessie Faber—a functional health practitioner, researcher, educator and
+                  I&rsquo;m Jessie Faber: a functional health practitioner, researcher, educator and
                   full-time nomad.
                 </p>
                 <p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
               ))}
             </div>
             <blockquote className="mt-8 border-l-[3px] border-terracotta pl-6 font-display text-xl italic leading-snug text-ink md:text-2xl">
-              It makes me very unwilling to assume that every woman has the same problem—or hand every
+              It makes me very unwilling to assume that every woman has the same problem, or hand every
               woman the same plan.
             </blockquote>
           </div>

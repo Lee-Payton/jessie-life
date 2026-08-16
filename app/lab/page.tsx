@@ -3,7 +3,7 @@ import { Section, CheckList, CtaButton } from '@/components/ui';
 import EmailSignup from '@/components/EmailSignup';
 
 export const metadata: Metadata = {
-  title: 'The Resource Lab — Jessie.Life',
+  title: 'The Resource Lab: Jessie.Life',
   description:
     'A private education library for women who want better explanations about hormones, metabolism, medications, supplements, lab testing, strength, longevity, and midlife health.',
 };
@@ -21,7 +21,7 @@ export default function LabPage() {
               <p>
                 A private education library for women who want better explanations about hormones,
                 metabolism, medications, supplements, lab testing, strength, longevity, and midlife
-                health — without having to live in research mode.
+                health, without having to live in research mode.
               </p>
               <p>
                 The Resource Lab is where I share practical breakdowns of new science, health trends,
@@ -92,7 +92,7 @@ export default function LabPage() {
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl">Featured resources</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
-            Explore resources by topic — hormone therapy, symptom guides, lab explainers, metabolic
+            Explore resources by topic: hormone therapy, symptom guides, lab explainers, metabolic
             health, strength, and client decision tools.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

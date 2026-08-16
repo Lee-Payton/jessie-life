@@ -16,7 +16,7 @@ export default function Footer() {
           </p>
           <p className="mt-5 max-w-xs font-body text-sm text-ink/70">
             Empowering women in midlife with the data, strategy, and support to feel like
-            themselves again — and build a life they love.
+            themselves again, and build a life they love.
           </p>
         </div>
 
