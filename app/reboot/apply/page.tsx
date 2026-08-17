@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow } from '@/components/ui';
-import RebootApplication from '@/components/RebootApplication';
 
 export const metadata: Metadata = {
   title: 'Apply for the Midlife Reboot: Jessie.Life',
@@ -40,8 +39,14 @@ export default function RebootApplyPage() {
       </section>
 
       <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl">
-          <RebootApplication />
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-2xl md:text-3xl">
+            Midlife Reboot Applications Opening Tuesday
+          </h2>
+          <p className="mt-4 font-body text-lg text-ink/80">
+            The new Midlife Reboot application is almost ready. Please check back Tuesday, August
+            18.
+          </p>
         </div>
       </Section>
     </>
