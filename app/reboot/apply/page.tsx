@@ -26,14 +26,6 @@ export default function RebootApplyPage() {
                 closer look, Jessie will review them before you are sent to checkout.
               </p>
             </div>
-            <div className="mt-8 rounded-lg border-l-4 border-terracotta bg-cream-light p-5">
-              <p className="font-body text-sm font-bold uppercase tracking-wider text-terracotta">Urgent-Care Notice</p>
-              <p className="mt-2 font-body text-ink/80">
-                The Midlife Reboot is not emergency or medical care. If you are experiencing urgent
-                or severe symptoms, seek appropriate medical care rather than completing this
-                application.
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -41,11 +33,11 @@ export default function RebootApplyPage() {
       <Section bg="creamLight">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-3xl">
-            Midlife Reboot Applications Opening Tuesday
+            Midlife Reboot Applications Opening Thursday
           </h2>
           <p className="mt-4 font-body text-lg text-ink/80">
-            The new Midlife Reboot application is almost ready. Please check back Tuesday, August
-            18.
+            The new Midlife Reboot application is almost ready. Please check back Thursday, August
+            20.
           </p>
         </div>
       </Section>
