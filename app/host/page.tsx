@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
-import HostForm from '@/components/HostForm';
 
 export const metadata: Metadata = {
   title: 'Bring Jessie to Your Location: Jessie.Life',
@@ -154,14 +153,18 @@ export default function HostPage() {
       </Section>
 
       {/* Section 8 — Host Inquiry Form */}
-      <Section id="host-form" bg="creamDark">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">Host inquiry</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
+      <Section id="host-form" bg="creamDark" className="px-0 sm:px-6 md:px-10">
+        <div className="mx-auto w-full max-w-3xl">
+          <h2 className="px-6 text-3xl md:px-0 md:text-4xl">Host inquiry</h2>
+          <p className="mt-4 px-6 font-body text-lg text-ink/80 md:px-0">
             Tell Jessie about your location and audience, and she&rsquo;ll follow up with a proposal.
           </p>
           <div className="mt-8">
-            <HostForm />
+            <iframe
+              title="Host inquiry"
+              src="https://api.leadconnectorhq.com/widget/form/l4UjH1ZkewDrFig2b7t8"
+              className="h-[6200px] w-full border-0 md:h-[5200px]"
+            />
           </div>
         </div>
       </Section>
