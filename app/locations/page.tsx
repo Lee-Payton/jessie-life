@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
-import EmailSignup from '@/components/EmailSignup';
 import LocationCard from '@/components/LocationCard';
 import { testingLocations } from '@/lib/locations';
 
@@ -60,11 +59,16 @@ export default function LocationsPage() {
                 Join the testing notification list to find out when new dates are added, or request
                 a testing day at your location.
               </p>
-              <div className="mx-auto mt-6 max-w-md">
-                <EmailSignup source="testing-notification-list" buttonLabel="Join the List" collectLocation />
-              </div>
             </div>
           )}
+
+          <div className="mx-auto mt-10 w-full max-w-3xl">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[1400px] w-full border-0 md:h-[1100px]"
+            />
+          </div>
         </div>
       </Section>
 
@@ -138,11 +142,12 @@ export default function LocationsPage() {
               corporate event, or private group.
             </p>
           </div>
-          <div className="mt-8 max-w-md">
-            <EmailSignup source="testing-notification-list" buttonLabel="Join the List" collectLocation />
-          </div>
-          <div className="mt-6">
-            <CtaButton href="/host" variant="secondary">Request Testing at Your Location</CtaButton>
+          <div className="mt-8 w-full">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[1400px] w-full border-0 md:h-[1100px]"
+            />
           </div>
         </div>
       </Section>
