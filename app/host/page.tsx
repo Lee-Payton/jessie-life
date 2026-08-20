@@ -163,7 +163,7 @@ export default function HostPage() {
             <iframe
               title="Host inquiry"
               src="https://api.leadconnectorhq.com/widget/form/l4UjH1ZkewDrFig2b7t8"
-              className="h-[6200px] w-full border-0 md:h-[4200px]"
+              className="h-[6200px] w-full border-0 md:h-[4000px]"
             />
           </div>
         </div>
