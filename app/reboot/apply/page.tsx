@@ -30,12 +30,12 @@ export default function RebootApplyPage() {
         </div>
       </section>
 
-      <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl">
+      <Section bg="creamLight" className="px-0 sm:px-6 md:px-10">
+        <div className="mx-auto w-full max-w-3xl">
           <iframe
             title="Midlife Reboot application"
             src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
-            className="h-[3200px] w-full border-0"
+            className="h-[6200px] w-full border-0 md:h-[5200px]"
           />
         </div>
       </Section>
