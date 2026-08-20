@@ -66,7 +66,7 @@ export default function LocationsPage() {
             <iframe
               title="Testing location notification signup"
               src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
-              className="h-[1400px] w-full border-0 md:h-[1100px]"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
             />
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function LocationsPage() {
             <iframe
               title="Testing location notification signup"
               src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
-              className="h-[1400px] w-full border-0 md:h-[1100px]"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
             />
           </div>
         </div>
