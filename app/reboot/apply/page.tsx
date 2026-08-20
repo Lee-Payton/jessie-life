@@ -31,14 +31,12 @@ export default function RebootApplyPage() {
       </section>
 
       <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-3xl">
-            Midlife Reboot Applications Opening Thursday
-          </h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
-            The new Midlife Reboot application is almost ready. Please check back Thursday, August
-            20.
-          </p>
+        <div className="mx-auto max-w-3xl">
+          <iframe
+            title="Midlife Reboot application"
+            src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
+            className="min-h-[900px] w-full border-0"
+          />
         </div>
       </Section>
     </>
