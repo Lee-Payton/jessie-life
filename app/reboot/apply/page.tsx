@@ -35,7 +35,7 @@ export default function RebootApplyPage() {
           <iframe
             title="Midlife Reboot application"
             src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
-            className="min-h-[900px] w-full border-0"
+            className="h-[3200px] w-full border-0"
           />
         </div>
       </Section>
