@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Section, CheckList, CtaButton } from '@/components/ui';
-import EmailSignup from '@/components/EmailSignup';
 
 export const metadata: Metadata = {
   title: 'The Resource Lab: Jessie.Life',
@@ -74,15 +73,15 @@ export default function LabPage() {
       </Section>
 
       {/* Section 3 — How Access Works */}
-      <Section id="join">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl">How access works</h2>
-          <p className="mt-6 font-body text-lg text-ink/80">
-            Join with just your email to receive new resources, research breakdowns, and practical
-            tools as they are released.
-          </p>
-          <div className="mx-auto mt-8 max-w-md">
-            <EmailSignup source="resource-lab" buttonLabel="Get Free Access" />
+      <Section id="join" className="px-0 sm:px-6 md:px-10">
+        <div className="mx-auto w-full max-w-2xl">
+          <h2 className="px-6 text-center text-3xl md:px-0 md:text-4xl">Join the Resource Lab waitlist</h2>
+          <div className="mt-8">
+            <iframe
+              title="Resource Lab waitlist"
+              src="https://api.leadconnectorhq.com/widget/form/Dcj6bY4UVMx2xHp9o0Bf"
+              className="h-[1200px] w-full border-0 md:h-[900px]"
+            />
           </div>
         </div>
       </Section>
