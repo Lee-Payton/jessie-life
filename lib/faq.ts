@@ -105,7 +105,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'What if I am not ready for the full Reboot?',
     a: [
-      'Start with the $295 Midlife Metabolism Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
+      'Start with the $295 Midlife Metabolism & Hormone Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
     ],
   },
   {
@@ -162,7 +162,7 @@ export const testingFaqs: QA[] = [
   {
     q: 'Do standalone tests include personalized recommendations?',
     a: [
-      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
+      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism & Hormone Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
     ],
   },
   {

@@ -308,7 +308,7 @@ export default function RebootPage() {
           <h2 className="text-3xl md:text-4xl">Not ready for six months of support? Start with clarity.</h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
-              The Midlife Metabolism Audit is a focused option for women who want objective
+              The Midlife Metabolism & Hormone Audit is a focused option for women who want objective
               metabolic testing, a private consultation, and a written roadmap before deciding
               what comes next.
             </p>
@@ -323,7 +323,7 @@ export default function RebootPage() {
             </p>
           </div>
           <div className="mt-8">
-            <CtaButton href="/audit" variant="secondary">Start With the Midlife Metabolism Audit</CtaButton>
+            <CtaButton href="/audit" variant="secondary">Start With the Midlife Metabolism & Hormone Audit</CtaButton>
           </div>
         </div>
       </Section>

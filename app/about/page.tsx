@@ -92,10 +92,10 @@ const workOptions = [
     linkLabel: 'Explore the Midlife Reboot',
   },
   {
-    title: 'The Midlife Metabolism Audit',
+    title: 'The Midlife Metabolism & Hormone Audit',
     body: 'A focused assessment built around measured resting metabolism, your symptom picture, and the factors influencing your energy, blood sugar, body composition, recovery, and overall health.',
     href: '/audit',
-    linkLabel: 'Start With the Midlife Metabolism Audit',
+    linkLabel: 'Start With the Midlife Metabolism & Hormone Audit',
   },
   {
     title: 'Metabolic and VO₂ Testing',

@@ -66,7 +66,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <CtaButton href="/reboot">Explore the Midlife Reboot</CtaButton>
             <CtaButton href="/audit" variant="secondary">
-              Start With the Midlife Metabolism Audit
+              Start With the Midlife Metabolism & Hormone Audit
             </CtaButton>
             <Link
               href="/locations"
@@ -178,7 +178,7 @@ export default function HomePage() {
             />
             <OfferCard
               icon={<PulseIcon />}
-              title="The Midlife Metabolism Audit"
+              title="The Midlife Metabolism & Hormone Audit"
               tint="bg-[#f1e2da]"
               decor={
                 <MoleculeDoodle className="pointer-events-none absolute right-5 top-6 h-16 w-16 text-terracotta/15" />

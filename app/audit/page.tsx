@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'The Midlife Metabolism Audit: Jessie.Life',
+  title: 'The Midlife Metabolism & Hormone Audit: Jessie.Life',
   description:
     'A focused whole-health consultation built around objective metabolic testing, your symptom picture, and the real-life factors that influence how your body is functioning right now. $295.',
 };
@@ -16,7 +16,7 @@ export default function AuditPage() {
         <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>$295 Assessment</Eyebrow>
-            <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism Audit</h1>
+            <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism & Hormone Audit</h1>
             <h2 className="mt-3 font-display text-2xl text-ink/80 md:text-3xl">
               Stop guessing what happened to your body.
             </h2>
@@ -27,7 +27,7 @@ export default function AuditPage() {
                 generic calorie calculator telling you to &ldquo;eat less and move more.&rdquo;
               </p>
               <p>
-                The Midlife Metabolism Audit is a focused whole-health consultation built around
+                The Midlife Metabolism & Hormone Audit is a focused whole-health consultation built around
                 objective metabolic testing, your symptom picture, and the real-life factors that
                 influence how your body is functioning right now.
               </p>
@@ -168,7 +168,7 @@ export default function AuditPage() {
       <Section bg="creamLight">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">The Audit is a good fit if</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">The Midlife Metabolism Audit may be a good fit if:</p>
+          <p className="mt-4 font-body text-lg text-ink/80">The Midlife Metabolism & Hormone Audit may be a good fit if:</p>
           <div className="mt-6">
             <CheckList
               items={[

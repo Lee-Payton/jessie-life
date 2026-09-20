@@ -114,7 +114,7 @@ export default function MetabolismPage() {
             {[
               ['Resting Metabolic Rate', 'Choose RMR testing if you want to understand how much energy your body uses at rest and how that compares with an estimated metabolism. This is a good starting point if you are working on nutrition, body composition, under-fueling, weight-management, metabolic health, or a baseline before making changes.'],
               ['VO₂ Max Testing', 'Choose VO₂ testing if you want to understand your cardiorespiratory fitness, aerobic capacity, training zones, and how your body uses oxygen during exercise. This is a good fit if you are training for performance, rebuilding fitness, tracking healthy aging, or want more precise information than a wearable or age-based formula can provide.'],
-              ['Midlife Metabolism Audit', 'Choose the Midlife Metabolism Audit if you want resting metabolic testing placed inside a broader conversation about menopause symptoms, hormones, labs, nutrition, strength, recovery, and next steps.'],
+              ['Midlife Metabolism & Hormone Audit', 'Choose the Midlife Metabolism & Hormone Audit if you want resting metabolic testing placed inside a broader conversation about menopause symptoms, hormones, labs, nutrition, strength, recovery, and next steps.'],
             ].map(([title, body]) => (
               <div key={title} className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
                 <h3 className="font-display text-xl">{title}</h3>
@@ -313,13 +313,13 @@ export default function MetabolismPage() {
             </div>
           </div>
           <div className="mt-8 rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
-            <h3 className="text-lg">Choose the Midlife Metabolism Audit if:</h3>
+            <h3 className="text-lg">Choose the Midlife Metabolism & Hormone Audit if:</h3>
             <p className="mt-2 font-body text-ink/70">
               You want the breath data placed inside a wider conversation about menopause symptoms,
               hormones, labs, nutrition, strength, and next steps.
             </p>
             <div className="mt-4">
-              <CtaButton href="/audit" variant="secondary">Compare the Midlife Metabolism Audit</CtaButton>
+              <CtaButton href="/audit" variant="secondary">Compare the Midlife Metabolism & Hormone Audit</CtaButton>
             </div>
           </div>
         </div>
