@@ -41,6 +41,9 @@ export default function AuditPage() {
             <p className="mt-6 font-body text-sm font-bold text-terracotta">
               Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
             </p>
+            <p className="mt-2 font-body text-sm font-bold text-terracotta">
+              Add VO₂ Max testing for $150.
+            </p>
             <p className="mt-3 font-body text-sm text-ink/60">
               The breath test is completed in person at one of my scheduled testing locations. Check
               current locations before purchasing your Audit.
@@ -116,7 +119,7 @@ export default function AuditPage() {
           <div className="mt-6">
             <CheckList
               items={[
-                'A pre-appointment midlife hormone and health questionnaire',
+                'A comprehensive hormone + metabolism assessment completed before your consultation',
                 'A PNOĒ resting metabolic rate breath test',
                 'Your electronic PNOĒ resting metabolism report',
                 'A 45-minute private consultation with Jessie',
@@ -137,6 +140,26 @@ export default function AuditPage() {
               fully customized clinical protocol, or ongoing implementation support.
             </p>
           </div>
+        </div>
+      </Section>
+
+      {/* Section 4b — VO2 Max Add-On */}
+      <Section spacing="compact">
+        <div className="mx-auto max-w-3xl rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+          <h2 className="font-display text-2xl md:text-3xl">Want an even bigger picture?</h2>
+          <p className="mt-3 font-body text-lg font-bold text-terracotta">
+            Add VO₂ Max testing to your Audit for $150.
+          </p>
+          <p className="mt-4 font-body text-ink/80">
+            VO₂ Max adds objective information about your cardiorespiratory fitness, individualized
+            training zones, ventilatory thresholds, and how your body uses fuel as exercise
+            intensity changes.
+          </p>
+          <p className="mt-3 font-body text-ink/80">
+            Combined with your resting metabolic testing, this gives us another useful layer of
+            data when looking at your metabolism, exercise response, recovery, strength goals, and
+            long-term health.
+          </p>
         </div>
       </Section>
 

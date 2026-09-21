@@ -141,21 +141,29 @@ export default function MetabolismPage() {
               rest.
             </p>
           </div>
-          <p className="mt-6 font-body text-lg text-ink/80">RMR testing can help you understand:</p>
+          <p className="mt-6 font-body text-lg text-ink/80">RMR testing is for you if:</p>
           <div className="mt-4">
             <CheckList
               items={[
-                'Your measured resting energy needs',
-                'How your measured metabolism compares with a predicted estimate',
-                'Whether your body is relying more on fat or carbohydrate for fuel at rest',
-                'Whether your current intake may be low, high, or mismatched for your goals',
-                'A baseline you can retest after a meaningful change in nutrition, training, body composition, recovery, or health',
+                'Dieting has been unsuccessful or felt unsustainable',
+                'You want to start, are currently taking, are coming off, or want to come off a GLP-1 medication',
+                "You want to know if you're fueling appropriately for building and preserving muscle",
+                'You want to support your active lifestyle with nutrition targets built around your measured energy needs rather than a generic formula',
+                'Your weight, body composition, energy needs, or response to dieting seems to have changed',
+                'You want a measured baseline before changing your nutrition, training, body composition, or health strategy',
+                'Everything is going well and you simply want to know your actual resting metabolic rate as a baseline',
               ]}
             />
           </div>
           <p className="mt-6 font-body text-ink/70">
-            This option includes the resting test and a standard electronic report. Personalized
-            hormone, nutrition, supplement, or full health recommendations are not included.
+            You&rsquo;ll receive your complete PNOĒ results along with a personalized, plain-English
+            summary from Jessie highlighting the numbers worth paying attention to and what they
+            mean. Results & summary available within 72 hours after testing.
+          </p>
+          <p className="mt-4 font-body text-ink/70">
+            Want to understand what those numbers mean in the bigger picture of your hormones,
+            symptoms, nutrition, strength, recovery, and midlife health? The Midlife Metabolism &
+            Hormone Audit adds that deeper assessment and strategy.
           </p>
           <div className="mt-8">
             <CtaButton href="/locations">Find an RMR Testing Location</CtaButton>
@@ -195,6 +203,32 @@ export default function MetabolismPage() {
               ]}
             />
           </div>
+          <p className="mt-8 font-body text-lg text-ink/80">This test is for you if:</p>
+          <div className="mt-4">
+            <CheckList
+              items={[
+                'Recovery is taking longer than it used to, and you want to understand what may be limiting you',
+                "You exercise consistently, but the results don't seem to match the effort",
+                'You keep losing and regaining the same weight or more',
+                "You're focused on building and preserving muscle while also protecting cardiovascular health",
+                "You're returning to exercise after a break and want to make progress with less trial and error",
+                'You have insulin resistance, prediabetes, fatty liver, or another metabolic issue and want more information about how your body responds to exercise',
+                "You're intentional about how well you're aging and want objective cardiorespiratory fitness data as part of the bigger picture",
+                'You want to make the heart-rate and exercise data from your wearable more useful',
+                "You're already highly fit and want to see where your current ceiling is, identify where you can improve, or earn some legitimate bragging rights",
+              ]}
+            />
+          </div>
+          <p className="mt-6 font-body text-ink/70">
+            You do not need to be a runner or an endurance athlete. Testing can be performed on a
+            bike, rower, or inclined treadmill, with the protocol matched to your current fitness
+            level.
+          </p>
+          <p className="mt-4 font-body text-ink/70">
+            You&rsquo;ll receive your complete PNOĒ results along with a personalized, plain-English
+            summary from Jessie highlighting the numbers worth paying attention to and what they
+            mean. Results & summary available within 72 hours after testing.
+          </p>
           <p className="mt-6 rounded-lg bg-cream-dark p-5 font-body text-ink/80">
             This is a fitness and wellness assessment, not a diagnostic cardiac stress test. People
             with known or suspected heart or lung disease, unexplained chest pain, fainting, or
@@ -202,6 +236,23 @@ export default function MetabolismPage() {
           </p>
           <div className="mt-8">
             <CtaButton href="/locations">Find a VO₂ Testing Location</CtaButton>
+          </div>
+        </div>
+      </Section>
+
+      {/* Section 5b — RMR + VO2 Max Bundle */}
+      <Section spacing="compact">
+        <div className="mx-auto max-w-3xl rounded-lg bg-cream-light p-8 text-center ring-1 ring-ink/5">
+          <h2 className="font-display text-2xl md:text-3xl">Want both?</h2>
+          <p className="mt-4 font-body text-lg text-ink/80">
+            Bundle your RMR + VO₂ Max testing for $275 and save $45.
+          </p>
+          <p className="mt-2 font-body text-ink/70">
+            The tests can be scheduled separately so each can be performed under the conditions
+            that give you the most useful results.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <CtaButton href="/locations">Book RMR + VO₂ Max Testing</CtaButton>
           </div>
         </div>
       </Section>
@@ -225,32 +276,62 @@ export default function MetabolismPage() {
             <div>
               <h3 className="text-lg">For RMR testing</h3>
               <p className="mt-3 font-body text-ink/70">
-                You&rsquo;ll rest quietly while the system measures your breathing. The measurement
-                itself is short, but the full appointment includes setup, mask fitting, calibration,
-                testing, and report delivery.
+                You&rsquo;ll rest quietly while the system measures your breathing. The breath
+                measurement itself takes about 10 minutes, but plan approximately 30 to 40 minutes
+                for the full appointment, including setup, time to settle into a true resting
+                state, testing, and equipment reset.
               </p>
             </div>
             <div>
               <h3 className="text-lg">For VO₂ testing</h3>
               <p className="mt-3 font-body text-ink/70">
-                You&rsquo;ll exercise on the agreed equipment while intensity gradually increases. The
-                test becomes progressively harder, and you can stop at any time.
+                You&rsquo;ll exercise on a bike, rower, or inclined treadmill while the intensity
+                gradually increases based on your current fitness level. After a short warm-up,
+                the active portion generally lasts about 8 to 12 minutes, followed by a cool-down
+                and recovery. Plan approximately 40 to 50 minutes for the full appointment. You
+                decide when you&rsquo;ve reached your maximum effort, and the test can be stopped
+                at any time.
               </p>
             </div>
           </div>
           <h3 className="mt-8 text-lg">Basic preparation</h3>
-          <div className="mt-3">
-            <CheckList
-              items={[
-                'Avoid food, coffee, nicotine, and other stimulants for at least three hours before testing',
-                'Avoid intense exercise for 24 hours before testing',
-                'Wear comfortable clothing',
-                'Bring athletic shoes for active testing',
-                'Arrive hydrated and early enough to settle before the test',
-                'Follow any additional instructions in your confirmation email',
-              ]}
-            />
+          <div className="mt-6 grid gap-8 md:grid-cols-2">
+            <div>
+              <h4 className="font-body text-base font-bold text-ink">RMR preparation</h4>
+              <div className="mt-3">
+                <CheckList
+                  items={[
+                    'Morning testing is preferred whenever possible',
+                    'Finish your last meal or caloric drink preferably 10 to 12 hours before testing and at least 7 hours beforehand. A normal overnight fast is ideal',
+                    'Drink water normally and arrive comfortably hydrated',
+                    'Avoid caffeine, pre-workout, stimulants, nicotine, food, and caloric supplements before testing',
+                    'Avoid alcohol the evening before testing',
+                    'Avoid hard, long, or unusually strenuous exercise during the 24 hours before testing',
+                    'Continue normal prescribed medications unless your physician has instructed you otherwise',
+                  ]}
+                />
+              </div>
+            </div>
+            <div>
+              <h4 className="font-body text-base font-bold text-ink">VO₂ Max preparation</h4>
+              <div className="mt-3">
+                <CheckList
+                  items={[
+                    'Arrive fueled and normally hydrated rather than intentionally fasted',
+                    'Eat normally earlier in the day and finish your last meal or caloric beverage at least 4 hours before testing',
+                    'If caffeine is part of your normal routine, your normal low amount earlier in the day is fine. Avoid additional caffeine or stimulants for approximately 2 to 3 hours before testing',
+                    'Use your normal routine rather than introducing a new pre-workout or stimulant on testing day',
+                    'Avoid hard, long, or unusually strenuous exercise during the 24 hours before testing',
+                    'Continue normal prescribed medications unless your physician has instructed you otherwise',
+                    'Wear comfortable exercise clothing and the shoes you normally use for training',
+                  ]}
+                />
+              </div>
+            </div>
           </div>
+          <p className="mt-6 font-body text-ink/70">
+            You&rsquo;ll receive complete preparation instructions after booking.
+          </p>
         </div>
       </Section>
 
@@ -290,23 +371,31 @@ export default function MetabolismPage() {
               <div className="mt-3">
                 <CheckList
                   items={[
-                    'Measured resting calorie needs',
-                    'Under-fueling, over-restriction, or a mismatch between intake and goals',
-                    'Baseline metabolism before or after a nutrition or strength phase',
-                    'Fuel use at rest',
+                    'Your measured energy needs',
+                    'Nutrition and fueling needs',
+                    'Weight or body-composition changes',
+                    'Under-fueling or prolonged restriction',
+                    'Muscle-building and muscle-preservation needs',
+                    'Metabolic changes before, during, or after GLP-1 use',
+                    'Your resting fuel use',
+                    'Your metabolic baseline before making changes',
                   ]}
                 />
               </div>
             </div>
             <div>
-              <h3 className="text-lg">Choose VO₂ max if you want to understand:</h3>
+              <h3 className="text-lg">Choose VO₂ Max if you want to understand:</h3>
               <div className="mt-3">
                 <CheckList
                   items={[
-                    'Cardiorespiratory fitness and aerobic capacity',
-                    'Training zones based on your physiology rather than a generic formula',
-                    'Performance, endurance, and exercise efficiency',
-                    'A repeatable marker for fitness and healthy aging',
+                    'Cardiorespiratory fitness',
+                    'Individualized training zones and thresholds',
+                    'Recovery and exercise response',
+                    'How your fuel use changes as intensity increases',
+                    'Whether your training is producing the adaptations you expect',
+                    'Fitness and healthy-aging trends',
+                    'How to make your wearable data more useful',
+                    'Your current performance ceiling',
                   ]}
                 />
               </div>
@@ -315,8 +404,12 @@ export default function MetabolismPage() {
           <div className="mt-8 rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
             <h3 className="text-lg">Choose the Midlife Metabolism & Hormone Audit if:</h3>
             <p className="mt-2 font-body text-ink/70">
-              You want the breath data placed inside a wider conversation about menopause symptoms,
-              hormones, labs, nutrition, strength, and next steps.
+              You want your RMR results placed inside a broader assessment of your hormones,
+              symptoms, nutrition, strength, recovery, lifestyle, and the factors influencing how
+              your body is functioning in midlife.
+            </p>
+            <p className="mt-2 font-body text-sm font-bold text-terracotta">
+              Add VO₂ Max testing to your Audit for $150.
             </p>
             <div className="mt-4">
               <CtaButton href="/audit" variant="secondary">Compare the Midlife Metabolism & Hormone Audit</CtaButton>

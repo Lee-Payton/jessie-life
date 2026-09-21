@@ -103,20 +103,30 @@ export default function LocationsPage() {
           <p className="mt-4 font-body text-lg text-ink/80">
             You&rsquo;ll receive location-specific instructions after booking, but in general:
           </p>
-          <div className="mt-6">
-            <CheckList
-              items={[
-                'Avoid food, coffee, nicotine, and other stimulants for at least three hours before testing',
-                'Avoid intense exercise for 24 hours before testing',
-                'Wear comfortable clothing',
-                'Bring athletic shoes for VO₂ testing',
-                'Arrive hydrated',
-                'Give yourself time to settle before the test',
-                'Follow any instructions included in your booking confirmation',
-              ]}
-            />
+          <div className="mt-6 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="text-lg">RMR</h3>
+              <p className="mt-3 font-body text-ink/70">
+                Morning testing is preferred. Arrive after a normal overnight fast with no food,
+                caffeine, stimulants, or nicotine beforehand. Water is fine. Avoid hard or
+                unusually strenuous exercise for 24 hours before testing.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg">VO₂ Max</h3>
+              <p className="mt-3 font-body text-ink/70">
+                Arrive normally fueled and hydrated. Finish food or caloric beverages at least 4
+                hours before testing. If caffeine is part of your normal routine, a normal low
+                amount earlier in the day is fine; avoid additional caffeine or stimulants for
+                approximately 2 to 3 hours before testing. Avoid hard or unusually strenuous
+                exercise for 24 hours.
+              </p>
+            </div>
           </div>
           <p className="mt-6 font-body text-ink/70">
+            You&rsquo;ll receive complete instructions after booking.
+          </p>
+          <p className="mt-4 font-body text-ink/70">
             If you are sick, recovering from a recent illness, injured, or unsure whether you should
             test, please reach out before your appointment.
           </p>
