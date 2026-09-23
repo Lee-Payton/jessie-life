@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 
-export type QA = { q: string; a: string[] };
+export type QA = { q: string; a: (string | ReactNode)[] };
 
 export default function Accordion({ items }: { items: QA[] }) {
   const [open, setOpen] = useState<number | null>(null);

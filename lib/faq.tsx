@@ -1,4 +1,5 @@
 import type { QA } from '@/components/Accordion';
+import Link from 'next/link';
 
 export const rebootFaqs: QA[] = [
   {
@@ -183,6 +184,23 @@ export const testingFaqs: QA[] = [
     q: 'Can my gym, studio, office, clinic, or retreat host testing?',
     a: [
       'Yes. Jessie offers scheduled pop-ups and custom events for organizations with suitable space, equipment, and participant interest. Visit the host page to request information.',
+    ],
+  },
+  {
+    q: 'What is your cancellation and rescheduling policy?',
+    a: [
+      <>
+        Metabolic testing requires advance preparation and may only be available on specific
+        testing dates, so cancellation and rescheduling terms depend on how close you are to your
+        appointment. Virtual consultations have separate rescheduling terms.
+        <br />
+        <br />
+        Please review the full{' '}
+        <Link href="/booking-policy" className="font-bold text-terracotta">
+          Booking, Cancellation & Rescheduling Policy
+        </Link>{' '}
+        before scheduling.
+      </>,
     ],
   },
 ];
