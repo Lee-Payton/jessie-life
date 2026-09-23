@@ -294,7 +294,7 @@ export default function MetabolismPage() {
               </p>
             </div>
           </div>
-          <h3 className="mt-8 text-lg">Basic preparation</h3>
+          <h3 id="preparation" className="mt-8 text-lg scroll-mt-24">Basic preparation</h3>
           <div className="mt-6 grid gap-8 md:grid-cols-2">
             <div>
               <h4 className="font-body text-base font-bold text-ink">RMR preparation</h4>
@@ -330,7 +330,8 @@ export default function MetabolismPage() {
             </div>
           </div>
           <p className="mt-6 font-body text-ink/70">
-            You&rsquo;ll receive complete preparation instructions after booking.
+            You&rsquo;ll receive a link to these preparation instructions in your booking
+            confirmation and appointment reminders.
           </p>
         </div>
       </Section>
