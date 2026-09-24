@@ -47,24 +47,42 @@ export default function LocationsPage() {
             instructions, so please review the details before scheduling.
           </p>
 
-          {testingLocations.length > 0 ? (
-            <div className="mt-10 grid gap-6">
-              {testingLocations.map((loc) => (
-                <LocationCard key={loc.name + loc.date} location={loc} />
-              ))}
-            </div>
-          ) : (
-            <div className="mt-10 rounded-lg bg-cream p-8 text-center ring-1 ring-ink/5">
-              <p className="font-body text-lg text-ink/80">No public testing dates are currently open.</p>
-              <p className="mt-2 font-body text-ink/70">
-                Join the testing notification list to find out when new dates are added, or request
-                a testing day at your location.
+          <div className="mt-10 grid gap-6">
+            <div id="island-fitness" className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+              <h3 className="font-display text-2xl">Island Fitness</h3>
+              <p className="mt-1 font-body text-ink/70">South Padre Island, Texas</p>
+              <h4 className="mt-5 text-lg">Island Fitness Member Scheduling</h4>
+              <p className="mt-3 font-body text-ink/80">
+                Metabolic and fitness testing is currently available for Island Fitness members
+                during scheduled South Padre Island testing dates.
               </p>
-              <div className="mx-auto mt-6 max-w-md">
-                <EmailSignup source="testing-notification-list" buttonLabel="Join the List" collectLocation />
+              <p className="mt-3 font-body text-ink/80">
+                Choose standalone RMR or VO₂ Max testing, combine both tests, or choose the Midlife
+                Metabolism &amp; Hormone Audit if you want your metabolic data placed inside a
+                broader look at menopause, hormones, nutrition, body composition, strength, sleep,
+                and recovery.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <a
+                  href="https://dotlifeoptimalhealth.practicebetter.io/#/61475f3a398033134419f352/bookings?r=6ab592a976690fd7c82cd881&step=services"
+                  className="btn-primary"
+                >
+                  Schedule Member Testing
+                </a>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                <CtaButton href="/metabolism" variant="secondary">Learn About Metabolic Testing</CtaButton>
+                <CtaButton href="/audit" variant="secondary">
+                  Learn About the Midlife Metabolism &amp; Hormone Audit
+                </CtaButton>
               </div>
             </div>
-          )}
+
+            {testingLocations.length > 0 &&
+              testingLocations.map((loc) => (
+                <LocationCard key={loc.name + loc.date} location={loc} />
+              ))}
+          </div>
         </div>
       </Section>
 
