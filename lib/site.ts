@@ -26,7 +26,6 @@ export const footerNav = {
   more: [
     { label: 'Bring Jessie to Your Location', href: '/host' },
     { label: 'FAQ', href: '/faq' },
-    { label: 'Contact', href: '/contact' },
     { label: 'Booking & Rescheduling Policy', href: '/booking-policy' },
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Website Disclaimer', href: '/disclaimer' },
