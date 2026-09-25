@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Section, Eyebrow } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -31,16 +32,29 @@ export default function RebootApplyPage() {
       </section>
 
       <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-3xl">
-            Midlife Reboot Applications Opening Thursday
-          </h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
-            The new Midlife Reboot application is almost ready. Please check back Thursday, August
-            20.
-          </p>
+        <div className="mx-auto max-w-3xl">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
+            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+            id="inline-Ech8l2HP8JG3ZVfEpcgH"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 1: Midlife Reboot Application"
+            data-height="5088"
+            data-layout-iframe-id="inline-Ech8l2HP8JG3ZVfEpcgH"
+            data-form-id="Ech8l2HP8JG3ZVfEpcgH"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Form 1: Midlife Reboot Application"
+          />
         </div>
       </Section>
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </>
   );
 }
