@@ -31,8 +31,8 @@ export default function RebootApplyPage() {
         </div>
       </section>
 
-      <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl">
+      <Section bg="creamLight" className="px-0 sm:px-6 md:px-10">
+        <div className="mx-auto w-full max-w-3xl">
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
             style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}

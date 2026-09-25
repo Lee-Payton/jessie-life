@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
-import EmailSignup from '@/components/EmailSignup';
 import LocationCard from '@/components/LocationCard';
 import { testingLocations } from '@/lib/locations';
 
@@ -82,6 +81,14 @@ export default function LocationsPage() {
               testingLocations.map((loc) => (
                 <LocationCard key={loc.name + loc.date} location={loc} />
               ))}
+          </div>
+
+          <div className="mx-auto mt-10 w-full max-w-3xl">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
+            />
           </div>
         </div>
       </Section>
@@ -166,11 +173,12 @@ export default function LocationsPage() {
               corporate event, or private group.
             </p>
           </div>
-          <div className="mt-8 max-w-md">
-            <EmailSignup source="testing-notification-list" buttonLabel="Join the List" collectLocation />
-          </div>
-          <div className="mt-6">
-            <CtaButton href="/host" variant="secondary">Request Testing at Your Location</CtaButton>
+          <div className="mt-8 w-full">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
+            />
           </div>
         </div>
       </Section>
