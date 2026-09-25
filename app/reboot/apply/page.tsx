@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Section, Eyebrow } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -33,12 +34,27 @@ export default function RebootApplyPage() {
       <Section bg="creamLight" className="px-0 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-3xl">
           <iframe
-            title="Midlife Reboot application"
             src="https://api.leadconnectorhq.com/widget/form/Ech8l2HP8JG3ZVfEpcgH"
-            className="h-[6200px] w-full border-0 md:h-[5200px]"
+            style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+            id="inline-Ech8l2HP8JG3ZVfEpcgH"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 1: Midlife Reboot Application"
+            data-height="5088"
+            data-layout-iframe-id="inline-Ech8l2HP8JG3ZVfEpcgH"
+            data-form-id="Ech8l2HP8JG3ZVfEpcgH"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="Form 1: Midlife Reboot Application"
           />
         </div>
       </Section>
+      <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="afterInteractive" />
     </>
   );
 }

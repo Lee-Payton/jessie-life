@@ -24,7 +24,7 @@ export default function LocationCard({ location }: { location: TestingLocation }
             <a href={vo2BookingUrl} className="btn-primary">Book VO₂ Max Testing</a>
           )}
           {auditBookingUrl && (
-            <a href={auditBookingUrl} className="btn-forest-outline">Book the Midlife Metabolism Audit</a>
+            <a href={auditBookingUrl} className="btn-forest-outline">Book the Midlife Metabolism & Hormone Audit</a>
           )}
         </div>
       )}

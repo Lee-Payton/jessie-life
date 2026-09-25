@@ -1,4 +1,5 @@
 import type { QA } from '@/components/Accordion';
+import Link from 'next/link';
 
 export const rebootFaqs: QA[] = [
   {
@@ -105,7 +106,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'What if I am not ready for the full Reboot?',
     a: [
-      'Start with the $295 Midlife Metabolism Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
+      'Start with the $295 Midlife Metabolism & Hormone Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
     ],
   },
   {
@@ -138,7 +139,7 @@ export const testingFaqs: QA[] = [
   {
     q: 'How long does testing take?',
     a: [
-      'The measurement itself is relatively short (often roughly 7–10 minutes for resting testing and around 10 minutes for the active portion), but the full appointment includes screening, setup, mask fitting, calibration, explanation, cleaning, and transition time. Your booking page will show the full appointment length.',
+      'RMR testing itself takes about 10 minutes, with the full appointment running approximately 30 to 40 minutes including setup, time to settle into a resting state, and equipment reset. VO₂ Max testing includes a short warm-up followed by 8 to 12 minutes of active testing and a cool-down, with the full appointment running approximately 40 to 50 minutes. Your booking page will show the full appointment length.',
     ],
   },
   {
@@ -156,13 +157,15 @@ export const testingFaqs: QA[] = [
   {
     q: 'How should I prepare?',
     a: [
-      'Plan to avoid food, coffee, nicotine, and other stimulants for at least three hours, avoid intense exercise for 24 hours, and follow the exact instructions in your confirmation email. Wear comfortable clothing and athletic shoes for active testing.',
+      'For RMR, arrive after a normal overnight fast (preferably 10 to 12 hours, at least 7), avoid caffeine, stimulants, and nicotine beforehand, and avoid hard exercise for 24 hours. Morning testing is preferred.',
+      'For VO₂ Max, arrive normally fueled and hydrated rather than fasted, finish food or caloric beverages at least 4 hours beforehand, keep caffeine to your normal low earlier-day amount, and avoid hard exercise for 24 hours. Wear comfortable clothing and the shoes you normally train in.',
+      'You will receive complete preparation instructions after booking.',
     ],
   },
   {
     q: 'Do standalone tests include personalized recommendations?',
     a: [
-      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
+      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism & Hormone Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
     ],
   },
   {
@@ -172,9 +175,32 @@ export const testingFaqs: QA[] = [
     ],
   },
   {
+    q: 'Can I add VO₂ Max testing to the Midlife Metabolism & Hormone Audit?',
+    a: [
+      'Yes. VO₂ Max testing can be added to the Audit for $150, giving you cardiorespiratory fitness, training-zone, and fuel-use data alongside your resting metabolic and hormone assessment.',
+    ],
+  },
+  {
     q: 'Can my gym, studio, office, clinic, or retreat host testing?',
     a: [
       'Yes. Jessie offers scheduled pop-ups and custom events for organizations with suitable space, equipment, and participant interest. Visit the host page to request information.',
+    ],
+  },
+  {
+    q: 'What is your cancellation and rescheduling policy?',
+    a: [
+      <>
+        Metabolic testing requires advance preparation and may only be available on specific
+        testing dates, so cancellation and rescheduling terms depend on how close you are to your
+        appointment. Virtual consultations have separate rescheduling terms.
+        <br />
+        <br />
+        Please review the full{' '}
+        <Link href="/booking-policy" className="font-bold text-terracotta">
+          Booking, Cancellation & Rescheduling Policy
+        </Link>{' '}
+        before scheduling.
+      </>,
     ],
   },
 ];
