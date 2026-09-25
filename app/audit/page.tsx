@@ -132,14 +132,6 @@ export default function AuditPage() {
               ]}
             />
           </div>
-          <div className="mt-8 rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
-            <p className="eyebrow mb-2">Scope Note</p>
-            <p className="font-body text-ink/80">
-              The Audit provides education, interpretation of wellness data, and a prioritized
-              roadmap. It does not include diagnosis, medical treatment, hormone prescribing, a
-              fully customized clinical protocol, or ongoing implementation support.
-            </p>
-          </div>
         </div>
       </Section>
 
@@ -180,7 +172,7 @@ export default function AuditPage() {
               hormone-related questions with their medical provider.
             </p>
             <p>
-              And sometimes the biggest win is realizing your body is not broken ��� it has been
+              And sometimes the biggest win is realizing your body is not broken, it has been
               adapting to the inputs, stressors, and hormone shifts it has been dealing with.
             </p>
           </div>
