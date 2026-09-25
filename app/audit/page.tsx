@@ -18,24 +18,24 @@ export default function AuditPage() {
             <Eyebrow>$295 Assessment</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism & Hormone Audit</h1>
             <h2 className="mt-3 font-display text-2xl text-ink/80 md:text-3xl">
-              Stop guessing what happened to your body.
+              Midlife is having a moment. That doesn&rsquo;t mean it&rsquo;s gotten any less
+              confusing.
             </h2>
+            <p className="mt-3 font-body text-lg text-ink/80">
+              Now that the list of things you &ldquo;should&rdquo; be doing feels like it
+              quadrupled, what actually deserves your attention?
+            </p>
             <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
               <p>
-                If your weight, energy, appetite, sleep, recovery, blood sugar, or response to
-                dieting and exercise has changed in midlife, you probably do not need another
-                generic calorie calculator telling you to &ldquo;eat less and move more.&rdquo;
+                You may be trying to figure out whether the changes you&rsquo;re noticing are
+                hormonal, metabolic, nutritional, stress-related, or some messy combination of all
+                of it.
               </p>
               <p>
-                The Midlife Metabolism & Hormone Audit is a focused whole-health consultation built around
-                objective metabolic testing, your symptom picture, and the real-life factors that
-                influence how your body is functioning right now.
-              </p>
-              <p>
-                This is for the woman who knows something has shifted, but is tired of trying to
-                figure out whether it is hormones, metabolism, stress, sleep, under-eating,
-                overtraining, low muscle, blood sugar, recovery, or some deeply inconvenient
-                combination of all of the above.
+                The Midlife Metabolism & Hormone Audit gives you a focused place to start. We
+                combine measured metabolic data with the context of what&rsquo;s actually happening
+                in your body and life, then help you narrow the noise into the questions,
+                priorities, and next steps that make the most sense right now.
               </p>
             </div>
             <p className="mt-6 font-body text-sm font-bold text-terracotta">
@@ -54,11 +54,11 @@ export default function AuditPage() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <Image
-              src="/images/PNOE.png"
-              alt="Resting metabolic rate breath test with a PNOĒ mask"
+              src="/images/audit-hero.png"
+              alt="A woman reviewing notes and her laptop at her kitchen table, trying to make sense of the changes in her body"
               fill
               sizes="(max-width: 768px) 100vw, 45vw"
-              className="object-cover object-top"
+              className="object-cover"
             />
           </div>
         </div>
