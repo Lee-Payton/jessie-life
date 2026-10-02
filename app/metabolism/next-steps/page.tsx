@@ -27,7 +27,7 @@ const startHere = [
         If your package includes VO₂ Max and it is not already scheduled, book it through your
         Practice Better Client Portal. You can find this under the Packages or Bookings section of
         your portal. This applies to the RMR + VO₂ Max bundle and the{' '}
-        <span className="whitespace-nowrap">Midlife Metabolism & Hormone Audit + VO₂ Max</span>.
+        <span className="sm:whitespace-nowrap">Midlife Metabolism & Hormone Audit + VO₂ Max</span>.
       </>
     ),
   },
