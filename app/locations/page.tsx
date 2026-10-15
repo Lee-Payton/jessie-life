@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import LocationCard from '@/components/LocationCard';
+import InHomeTestingCard from '@/components/InHomeTestingCard';
 import { testingLocations } from '@/lib/locations';
 
 export const metadata: Metadata = {
@@ -76,6 +77,8 @@ export default function LocationsPage() {
                 </CtaButton>
               </div>
             </div>
+
+            <InHomeTestingCard />
 
             {testingLocations.length > 0 &&
               testingLocations.map((loc) => (
