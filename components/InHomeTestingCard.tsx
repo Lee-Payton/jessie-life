@@ -1,8 +1,9 @@
+// Keep null until the final GHL form URL is approved. No booking action is rendered yet.
 const REQUEST_FORM_URL: string | null = null;
 
 export default function InHomeTestingCard() {
   return (
-    <div id="in-home-testing" className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+    <div id="in-home-testing" className="min-w-0 rounded-lg bg-cream-light p-6 ring-1 ring-ink/5 sm:p-8">
       <h3 className="font-display text-2xl">
         In-Home Testing &mdash; South Padre Island &amp; Port Isabel
       </h3>
