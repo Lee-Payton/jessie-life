@@ -51,11 +51,7 @@ export default function LocationsPage() {
             <div id="island-fitness" className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
               <h3 className="font-display text-2xl">Island Fitness</h3>
               <p className="mt-1 font-body text-ink/70">South Padre Island, Texas</p>
-              <h4 className="mt-5 text-lg">Island Fitness Member Scheduling</h4>
-              <p className="mt-3 font-body text-ink/80">
-                Metabolic and fitness testing is currently available for Island Fitness members
-                during scheduled South Padre Island testing dates.
-              </p>
+              <h4 className="mt-5 text-lg">Open to the Public</h4>
               <p className="mt-3 font-body text-ink/80">
                 Choose standalone RMR or VO₂ Max testing, combine both tests, or choose the Midlife
                 Metabolism &amp; Hormone Audit if you want your metabolic data placed inside a
