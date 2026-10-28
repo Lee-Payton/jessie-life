@@ -63,7 +63,7 @@ export default function LocationsPage() {
                   href="https://dotlifeoptimalhealth.practicebetter.io/#/61475f3a398033134419f352/bookings?r=6ab592a976690fd7c82cd881&step=services"
                   className="btn-primary"
                 >
-                  Schedule Member Testing
+                  Schedule Testing
                 </a>
               </div>
               <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
