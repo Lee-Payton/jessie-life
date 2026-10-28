@@ -2,13 +2,10 @@ import Link from 'next/link';
 import { footerNav } from '@/lib/site';
 import EmailSignup from '@/components/EmailSignup';
 
-// Computed once at module load so the server and client render the same value.
-const currentYear = new Date().getFullYear();
-
 export default function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-cream-dark">
-      <div className="container-content grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-content grid gap-10 py-14 md:grid-cols-2 md:py-16 lg:grid-cols-4">
         {/* Brand */}
         <div>
           <span className="font-display text-2xl font-medium text-ink">
@@ -19,7 +16,7 @@ export default function Footer() {
           </p>
           <p className="mt-5 max-w-xs font-body text-sm text-ink/70">
             Empowering women in midlife with the data, strategy, and support to feel like
-            themselves again — and build a life they love.
+            themselves again, and build a life they love.
           </p>
         </div>
 
@@ -51,19 +48,21 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* Stay connected */}
-        <div>
-          <h3 className="eyebrow mb-4">Stay Connected</h3>
+        {/* Resource Lab opt-in */}
+        <div className="text-center md:text-left lg:text-center">
+          <h3 className="eyebrow mb-2">Get access to the Resource Lab</h3>
           <p className="mb-4 font-body text-sm text-ink/70">
-            Get free resources, education, and testing updates.
+            Practical resources, explanations, and education for women in midlife.
           </p>
-          <EmailSignup source="footer" />
+          <div className="mx-auto max-w-sm">
+            <EmailSignup source="footer" buttonLabel="Get Free Access" layout="stack" />
+          </div>
         </div>
       </div>
 
       <div className="border-t border-ink/10">
         <div className="container-content flex flex-col items-center justify-between gap-3 py-6 text-xs text-ink/50 md:flex-row">
-          <p suppressHydrationWarning>© {currentYear} Jessie.life. All rights reserved.</p>
+          <p>© 2026 Jessie.life. All rights reserved.</p>
           <p className="max-w-xl text-center md:text-right">
             Educational and health-strategy services only. Not medical diagnosis, treatment, or
             prescribing. Consult your licensed clinician.

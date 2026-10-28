@@ -81,7 +81,7 @@ export default function HostForm() {
       </div>
       <div className="md:col-span-2">
         <label className={labelClass} htmlFor="services">Interested services</label>
-        <input id="services" name="services" placeholder="RMR, VO₂, both, workshop, Midlife Metabolism Audit, custom event" className={fieldClass} />
+        <input id="services" name="services" placeholder="RMR, VO₂, both, workshop, Midlife Metabolism & Hormone Audit, custom event" className={fieldClass} />
       </div>
       <div className="md:col-span-2">
         <label className={labelClass} htmlFor="space">Available equipment and space</label>

@@ -1,10 +1,11 @@
 import type { QA } from '@/components/Accordion';
+import Link from 'next/link';
 
 export const rebootFaqs: QA[] = [
   {
     q: 'Do I need to be in menopause to join?',
     a: [
-      'Not at all. The Midlife Reboot is designed for women in perimenopause, menopause, and postmenopause — including women who want to understand the transition before symptoms become overwhelming. If hormones, metabolism, recovery, or midlife health are changing, the framework can be useful whether you are still cycling or not.',
+      'Not at all. The Midlife Reboot is designed for women in perimenopause, menopause, and postmenopause, including women who want to understand the transition before symptoms become overwhelming. If hormones, metabolism, recovery, or midlife health are changing, the framework can be useful whether you are still cycling or not.',
     ],
   },
   {
@@ -20,9 +21,11 @@ export const rebootFaqs: QA[] = [
     ],
   },
   {
-    q: 'Can Jessie prescribe or adjust my hormones?',
+    q: 'Can Jessie prescribe my hormones, and what happens if I need a prescriber?',
     a: [
-      'No. Jessie can provide education about hormone options, help you organize symptoms and questions, and discuss the broader factors that may affect how you feel. Prescribing and medication changes must be handled by an appropriately licensed clinician.',
+      'No. I do not prescribe or change medications. But that does not mean you are handed a list of recommendations and left to figure out the medical side on your own.',
+      'If hormone therapy or another medical conversation is relevant, I can help you understand your options, organize your symptoms, history, labs, goals, and questions, and prepare for a more productive appointment. If you need a different provider, we can look at menopause-informed clinicians and telehealth options that may fit your needs, location, insurance situation, and budget.',
+      'If you already have a willing clinician who is less experienced with menopause or hormone therapy, I can help you organize the information, questions, and relevant evidence you bring into that conversation.',
     ],
   },
   {
@@ -46,7 +49,8 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Are lab costs included in the $1,500 program?',
     a: [
-      'No. Lab fees are separate because the testing needed will vary from person to person. You will receive a clear recommendation before ordering and access to wholesale pricing for labs ordered through Jessie’s system. This prevents you from paying for a large prebuilt panel that duplicates information you already have or includes testing that would not change the plan.',
+      'No. Lab fees are separate because the testing needed will vary from person to person. For a thorough panel, lab costs typically range from about $250 to $500, with most clients landing somewhere in the middle. Your exact cost depends on what you already have, what is still needed, and which testing will actually improve the strategy.',
+      'We review your existing results first so you are not unnecessarily repeating useful testing. When direct ordering is appropriate, Reboot clients also receive access to my wholesale lab pricing.',
     ],
   },
   {
@@ -59,7 +63,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'What if I do not have a Labcorp near me?',
     a: [
-      'Availability depends on your location and the tests being ordered. When Labcorp is not practical, we can look at other direct-order options or identify what may be requested through a local medical provider. Any location-specific limitations will be discussed before you purchase testing.',
+      'Labcorp is my preferred option when it is available, but I can order testing through other laboratories when needed. We’ll use the option that makes the most sense based on your location, the testing we need, and cost.',
     ],
   },
   {
@@ -77,13 +81,14 @@ export const rebootFaqs: QA[] = [
   {
     q: 'Do I need to track food?',
     a: [
-      'You may be asked to track food for a limited period when the information would be useful — for example, to assess protein, fiber, energy intake, or nutrient gaps. The goal is insight and education, not permanent surveillance or obsessive restriction. Accommodations can be made for people with a history of disordered eating or for whom tracking would be counterproductive.',
+      'You may be asked to track food for a limited period when the information would be useful, for example, to assess protein, fiber, energy intake, or nutrient gaps. The goal is insight and education, not permanent surveillance or obsessive restriction. Accommodations can be made for people with a history of disordered eating or for whom tracking would be counterproductive.',
     ],
   },
   {
     q: 'Can I participate remotely?',
     a: [
-      'Yes, the consultation, lab-review, education, and implementation portions can be delivered remotely. Breath testing depends on Jessie’s current location and scheduled pop-ups. Remote clients can still complete the Reboot without local breath testing unless the final program terms state otherwise.',
+      'Yes. The consultations, lab review, education, strategy, and implementation support can all be completed remotely.',
+      'Resting metabolic rate testing is included in the Midlife Reboot if you are able to attend one of my public testing locations during your program. If you are not near a testing location, you can still complete the full Reboot remotely without the RMR test.',
     ],
   },
   {
@@ -101,7 +106,7 @@ export const rebootFaqs: QA[] = [
   {
     q: 'What if I am not ready for the full Reboot?',
     a: [
-      'Start with the $295 Midlife Metabolism Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
+      'Start with the $295 Midlife Metabolism & Hormone Audit. It includes a focused assessment, a 45-minute consultation, and a written roadmap. If you enroll in the Reboot within 14 days, the full Audit fee is applied to the program investment.',
     ],
   },
   {
@@ -134,7 +139,7 @@ export const testingFaqs: QA[] = [
   {
     q: 'How long does testing take?',
     a: [
-      'The measurement itself is relatively short — often roughly 7–10 minutes for resting testing and around 10 minutes for the active portion — but the full appointment includes screening, setup, mask fitting, calibration, explanation, cleaning, and transition time. Your booking page will show the full appointment length.',
+      'RMR testing itself takes about 10 minutes, with the full appointment running approximately 30 to 40 minutes including setup, time to settle into a resting state, and equipment reset. VO₂ Max testing includes a short warm-up followed by 8 to 12 minutes of active testing and a cool-down, with the full appointment running approximately 40 to 50 minutes. Your booking page will show the full appointment length.',
     ],
   },
   {
@@ -152,13 +157,15 @@ export const testingFaqs: QA[] = [
   {
     q: 'How should I prepare?',
     a: [
-      'Plan to avoid food, coffee, nicotine, and other stimulants for at least three hours, avoid intense exercise for 24 hours, and follow the exact instructions in your confirmation email. Wear comfortable clothing and athletic shoes for active testing.',
+      'For RMR, arrive after a normal overnight fast (preferably 10 to 12 hours, at least 7), avoid caffeine, stimulants, and nicotine beforehand, and avoid hard exercise for 24 hours. Morning testing is preferred.',
+      'For VO₂ Max, arrive normally fueled and hydrated rather than fasted, finish food or caloric beverages at least 4 hours beforehand, keep caffeine to your normal low earlier-day amount, and avoid hard exercise for 24 hours. Wear comfortable clothing and the shoes you normally train in.',
+      'You will receive complete preparation instructions after booking.',
     ],
   },
   {
     q: 'Do standalone tests include personalized recommendations?',
     a: [
-      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
+      'Standalone testing includes the measurement and standard report. It does not include a customized hormone, nutrition, supplement, or full health consultation. Choose the Midlife Metabolism & Hormone Audit or Midlife Reboot when you want the data interpreted inside your broader health picture.',
     ],
   },
   {
@@ -168,9 +175,32 @@ export const testingFaqs: QA[] = [
     ],
   },
   {
+    q: 'Can I add VO₂ Max testing to the Midlife Metabolism & Hormone Audit?',
+    a: [
+      'Yes. VO₂ Max testing can be added to the Audit for $150, giving you cardiorespiratory fitness, training-zone, and fuel-use data alongside your resting metabolic and hormone assessment.',
+    ],
+  },
+  {
     q: 'Can my gym, studio, office, clinic, or retreat host testing?',
     a: [
       'Yes. Jessie offers scheduled pop-ups and custom events for organizations with suitable space, equipment, and participant interest. Visit the host page to request information.',
+    ],
+  },
+  {
+    q: 'What is your cancellation and rescheduling policy?',
+    a: [
+      <>
+        Metabolic testing requires advance preparation and may only be available on specific
+        testing dates, so cancellation and rescheduling terms depend on how close you are to your
+        appointment. Virtual consultations have separate rescheduling terms.
+        <br />
+        <br />
+        Please review the full{' '}
+        <Link href="/booking-policy" className="font-bold text-terracotta">
+          Booking, Cancellation & Rescheduling Policy
+        </Link>{' '}
+        before scheduling.
+      </>,
     ],
   },
 ];

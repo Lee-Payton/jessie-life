@@ -1,15 +1,22 @@
 import Link from 'next/link';
+import { ContourLines } from '@/components/decor';
 
 export function Section({
   children,
   className = '',
   bg = 'cream',
   id,
+  decor,
+  spacing = 'default',
 }: {
   children: React.ReactNode;
   className?: string;
-  bg?: 'cream' | 'creamLight' | 'creamDark' | 'forest' | 'sand';
+  bg?: 'cream' | 'creamLight' | 'creamDark' | 'forest' | 'sand' | 'sage';
   id?: string;
+  /* Optional low-opacity decorative texture rendered behind the content.
+     Provide varied glyphs/positions per call site so it never looks stamped. */
+  decor?: React.ReactNode;
+  spacing?: 'default' | 'compact';
 }) {
   const bgClass = {
     cream: 'bg-cream',
@@ -17,10 +24,56 @@ export function Section({
     creamDark: 'bg-cream-dark',
     forest: 'bg-forest text-white',
     sand: 'bg-sand',
+    sage: 'bg-sage',
   }[bg];
+  const spacingClass = spacing === 'compact' ? 'py-10 md:py-14' : 'py-14 md:py-20';
   return (
-    <section id={id} className={`${bgClass} scroll-mt-24 py-16 md:py-24`}>
-      <div className={`container-content ${className}`}>{children}</div>
+    <section id={id} className={`relative overflow-hidden ${bgClass} ${spacingClass} scroll-mt-24`}>
+      {decor}
+      <div className={`container-content relative ${className}`}>{children}</div>
+    </section>
+  );
+}
+
+// Shared closing call-to-action band, modeled exactly on the approved homepage
+// and About page: a warm pale-sage band with a forest heading, muted intro
+// copy, and forest button treatments. A single reusable topographic texture is
+// dropped in behind the content and its placement is varied per call site so
+// the same graphic never looks stamped. Texture is desktop-only and low-opacity
+// to protect readability on small screens.
+export function FinalCta({
+  title,
+  children,
+  actions,
+  texture = 'br',
+}: {
+  title: React.ReactNode;
+  children?: React.ReactNode;
+  actions: React.ReactNode;
+  texture?: 'br' | 'bl' | 'tr' | 'tl';
+}) {
+  const pos = {
+    br: '-bottom-24 -right-16',
+    bl: '-bottom-24 -left-16',
+    tr: '-top-24 -right-16',
+    tl: '-top-24 -left-16',
+  }[texture];
+  return (
+    <section className="relative overflow-hidden bg-sage py-14 text-center md:py-16">
+      <ContourLines
+        className={`pointer-events-none absolute ${pos} hidden h-80 w-80 text-forest/[0.07] lg:block`}
+      />
+      <div className="container-content relative">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-3xl text-forest md:text-4xl">{title}</h2>
+          {children && (
+            <div className="mt-6 space-y-4 font-body text-lg text-ink/75">{children}</div>
+          )}
+        </div>
+        <div className="mx-auto mt-8 flex max-w-md flex-col items-center justify-center gap-3 sm:max-w-none sm:flex-row">
+          {actions}
+        </div>
+      </div>
     </section>
   );
 }

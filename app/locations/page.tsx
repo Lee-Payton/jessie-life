@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
-import EmailSignup from '@/components/EmailSignup';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
+import LocationCard from '@/components/LocationCard';
+import InHomeTestingCard from '@/components/InHomeTestingCard';
 import { testingLocations } from '@/lib/locations';
 
 export const metadata: Metadata = {
-  title: 'Upcoming Testing Locations — Jessie.Life',
+  title: 'Upcoming Testing Locations: Jessie.Life',
   description:
     'See where metabolism and VO₂ testing is currently available, join the notification list, or request a testing day at your location.',
 };
@@ -14,7 +15,7 @@ export default function LocationsPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-24">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
             <Eyebrow>Mobile Testing</Eyebrow>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">
@@ -46,36 +47,48 @@ export default function LocationsPage() {
             instructions, so please review the details before scheduling.
           </p>
 
-          {testingLocations.length > 0 ? (
-            <div className="mt-10 grid gap-6">
-              {testingLocations.map((loc) => (
-                <div key={loc.name + loc.date} className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
-                  <h3 className="font-display text-2xl">{loc.name}</h3>
-                  <div className="mt-4 grid gap-2 font-body text-ink/80 sm:grid-cols-2">
-                    <p><span className="font-bold">City, State:</span> {loc.cityState}</p>
-                    <p><span className="font-bold">Date:</span> {loc.date}</p>
-                    <p><span className="font-bold">Testing available:</span> {loc.testing}</p>
-                    <p><span className="font-bold">Appointment type:</span> {loc.appointmentType}</p>
-                  </div>
-                  {loc.notes && <p className="mt-3 font-body text-sm text-ink/60">{loc.notes}</p>}
-                  <div className="mt-6">
-                    <a href={loc.bookingUrl} className="btn-primary">Book This Location</a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="mt-10 rounded-lg bg-cream p-8 text-center ring-1 ring-ink/5">
-              <p className="font-body text-lg text-ink/80">No public testing dates are currently open.</p>
-              <p className="mt-2 font-body text-ink/70">
-                Join the testing notification list to find out when new dates are added, or request
-                a testing day at your location.
+          <div className="mt-10 grid gap-6">
+            <div id="island-fitness" className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+              <h3 className="font-display text-2xl">Island Fitness</h3>
+              <p className="mt-1 font-body text-ink/70">South Padre Island, Texas</p>
+              <h4 className="mt-5 text-lg">Open to the Public</h4>
+              <p className="mt-3 font-body text-ink/80">
+                Choose standalone RMR or VO₂ Max testing, combine both tests, or choose the Midlife
+                Metabolism &amp; Hormone Audit if you want your metabolic data placed inside a
+                broader look at menopause, hormones, nutrition, body composition, strength, sleep,
+                and recovery.
               </p>
-              <div className="mx-auto mt-6 max-w-md">
-                <EmailSignup source="testing-notification-list" buttonLabel="Join the List" />
+              <div className="mt-6 flex flex-wrap gap-4">
+                <a
+                  href="https://dotlifeoptimalhealth.practicebetter.io/#/61475f3a398033134419f352/bookings?r=6ab592a976690fd7c82cd881&step=services"
+                  className="btn-primary"
+                >
+                  Schedule Testing
+                </a>
+              </div>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                <CtaButton href="/metabolism" variant="secondary">Learn About Metabolic Testing</CtaButton>
+                <CtaButton href="/audit" variant="secondary">
+                  Learn About the Midlife Metabolism &amp; Hormone Audit
+                </CtaButton>
               </div>
             </div>
-          )}
+
+            <InHomeTestingCard />
+
+            {testingLocations.length > 0 &&
+              testingLocations.map((loc) => (
+                <LocationCard key={loc.name + loc.date} location={loc} />
+              ))}
+          </div>
+
+          <div className="mx-auto mt-10 w-full max-w-3xl">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
+            />
+          </div>
         </div>
       </Section>
 
@@ -114,20 +127,30 @@ export default function LocationsPage() {
           <p className="mt-4 font-body text-lg text-ink/80">
             You&rsquo;ll receive location-specific instructions after booking, but in general:
           </p>
-          <div className="mt-6">
-            <CheckList
-              items={[
-                'Avoid food, coffee, nicotine, and other stimulants for at least three hours before testing',
-                'Avoid intense exercise for 24 hours before testing',
-                'Wear comfortable clothing',
-                'Bring athletic shoes for VO₂ testing',
-                'Arrive hydrated',
-                'Give yourself time to settle before the test',
-                'Follow any instructions included in your booking confirmation',
-              ]}
-            />
+          <div className="mt-6 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="text-lg">RMR</h3>
+              <p className="mt-3 font-body text-ink/70">
+                Morning testing is preferred. Arrive after a normal overnight fast with no food,
+                caffeine, stimulants, or nicotine beforehand. Water is fine. Avoid hard or
+                unusually strenuous exercise for 24 hours before testing.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg">VO₂ Max</h3>
+              <p className="mt-3 font-body text-ink/70">
+                Arrive normally fueled and hydrated. Finish food or caloric beverages at least 4
+                hours before testing. If caffeine is part of your normal routine, a normal low
+                amount earlier in the day is fine; avoid additional caffeine or stimulants for
+                approximately 2 to 3 hours before testing. Avoid hard or unusually strenuous
+                exercise for 24 hours.
+              </p>
+            </div>
           </div>
           <p className="mt-6 font-body text-ink/70">
+            You&rsquo;ll receive complete instructions after booking.
+          </p>
+          <p className="mt-4 font-body text-ink/70">
             If you are sick, recovering from a recent illness, injured, or unsure whether you should
             test, please reach out before your appointment.
           </p>
@@ -149,32 +172,37 @@ export default function LocationsPage() {
               corporate event, or private group.
             </p>
           </div>
-          <div className="mt-8 max-w-md">
-            <EmailSignup source="testing-notification-list" buttonLabel="Join the List" />
-          </div>
-          <div className="mt-6">
-            <CtaButton href="/host" variant="secondary">Request Testing at Your Location</CtaButton>
+          <div className="mt-8 w-full">
+            <iframe
+              title="Testing location notification signup"
+              src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
+              className="h-[2200px] w-full border-0 md:h-[1800px]"
+            />
           </div>
         </div>
       </Section>
 
       {/* Section 6 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Ready to stop guessing?</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            If you want better data about your resting metabolism, cardiorespiratory fitness,
-            training zones, or baseline health and fitness trends, check the current testing schedule
-            or join the notification list for future dates.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="#schedule" className="btn-primary">View Upcoming Testing Dates</a>
-            <a href="/host" className="inline-flex items-center justify-center rounded-md border border-white/60 px-7 py-3.5 font-body text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-forest">
+      <FinalCta
+        title="Ready to stop guessing?"
+        texture="bl"
+        actions={
+          <>
+            <a href="#schedule" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+              View Upcoming Testing Dates
+            </a>
+            <a href="/host" className="btn-forest-outline w-full whitespace-nowrap sm:w-auto">
               Request Testing at Your Location
             </a>
-          </div>
-        </div>
-      </Section>
+          </>
+        }
+      >
+        <p>
+          If you want better data about your resting metabolism, cardiorespiratory fitness,
+          training zones, or baseline health and fitness trends, check the current testing schedule
+          or join the notification list for future dates.
+        </p>
+      </FinalCta>
     </>
   );
 }

@@ -26,11 +26,14 @@ const config: Config = {
         },
         ink: '#2b2620', // warm near-black for headings/body
         sand: '#d8d4c6', // muted band / borders
+        sage: {
+          DEFAULT: '#d7dbc9', // soft warm sage with beige undertone — light CTA band
+          dark: '#cdd1ba',
+        },
       },
       fontFamily: {
-        display: ['var(--font-fraunces)', 'Georgia', 'serif'], // serif display headlines
-        body: ['var(--font-open-sans)', 'system-ui', 'sans-serif'],
-        script: ['var(--font-caveat)', 'cursive'],
+        display: ['var(--font-cormorant-garamond)', 'Georgia', 'serif'],
+        body: ['var(--font-dm-sans)', 'Arial', 'sans-serif'],
       },
       maxWidth: {
         content: '75rem',

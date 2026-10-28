@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
-import { links } from '@/lib/site';
+import Image from 'next/image';
+import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'The Midlife Metabolism Audit — Jessie.Life',
+  title: 'The Midlife Metabolism & Hormone Audit: Jessie.Life',
   description:
     'A focused whole-health consultation built around objective metabolic testing, your symptom picture, and the real-life factors that influence how your body is functioning right now. $295.',
 };
@@ -13,41 +13,53 @@ export default function AuditPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content grid items-center gap-12 py-16 md:grid-cols-2 md:py-24">
+        <div className="container-content grid items-center gap-12 py-14 md:grid-cols-2 md:py-20">
           <div>
             <Eyebrow>$295 Assessment</Eyebrow>
-            <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism Audit</h1>
+            <h1 className="mt-4 font-display text-4xl md:text-5xl">The Midlife Metabolism & Hormone Audit</h1>
             <h2 className="mt-3 font-display text-2xl text-ink/80 md:text-3xl">
-              Stop guessing what happened to your body.
+              Midlife is having a moment. That doesn&rsquo;t mean it&rsquo;s gotten any less
+              confusing.
             </h2>
+            <p className="mt-3 font-body text-lg text-ink/80">
+              Now that the list of things you &ldquo;should&rdquo; be doing feels like it
+              quadrupled, what actually deserves your attention?
+            </p>
             <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
               <p>
-                If your weight, energy, appetite, sleep, recovery, blood sugar, or response to
-                dieting and exercise has changed in midlife, you probably do not need another
-                generic calorie calculator telling you to &ldquo;eat less and move more.&rdquo;
+                You may be trying to figure out whether the changes you&rsquo;re noticing are
+                hormonal, metabolic, nutritional, stress-related, or some messy combination of all
+                of it.
               </p>
               <p>
-                The Midlife Metabolism Audit is a focused whole-health consultation built around
-                objective metabolic testing, your symptom picture, and the real-life factors that
-                influence how your body is functioning right now.
-              </p>
-              <p>
-                This is for the woman who knows something has shifted — but is tired of trying to
-                figure out whether it is hormones, metabolism, stress, sleep, under-eating,
-                overtraining, low muscle, blood sugar, recovery, or some deeply inconvenient
-                combination of all of the above.
+                The Midlife Metabolism & Hormone Audit gives you a focused place to start. We
+                combine measured metabolic data with the context of what&rsquo;s actually happening
+                in your body and life, then help you narrow the noise into the questions,
+                priorities, and next steps that make the most sense right now.
               </p>
             </div>
             <p className="mt-6 font-body text-sm font-bold text-terracotta">
               Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
             </p>
+            <p className="mt-2 font-body text-sm font-bold text-terracotta">
+              Add VO₂ Max testing for $150.
+            </p>
+            <p className="mt-3 font-body text-sm text-ink/60">
+              The breath test is completed in person at one of my scheduled testing locations. Check
+              current locations before purchasing your Audit.
+            </p>
             <div className="mt-8">
-              <CtaButton href={links.practiceBetter}>Book Your Midlife Metabolism Audit</CtaButton>
+              <CtaButton href="/locations">Find a Testing Location</CtaButton>
             </div>
           </div>
-          <div className="flex aspect-[4/5] items-center justify-center rounded-lg bg-cream-dark text-center font-body text-sm text-ink/40">
-            {/* PHOTO DIRECTION: Jessie performing the resting breath test or reviewing report with a client */}
-            Jessie performing the RMR breath test
+          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+            <Image
+              src="/images/audit-hero.png"
+              alt="A woman reviewing notes and her laptop at her kitchen table, trying to make sense of the changes in her body"
+              fill
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -107,7 +119,7 @@ export default function AuditPage() {
           <div className="mt-6">
             <CheckList
               items={[
-                'A pre-appointment midlife hormone and health questionnaire',
+                'A comprehensive hormone + metabolism assessment completed before your consultation',
                 'A PNOĒ resting metabolic rate breath test',
                 'Your electronic PNOĒ resting metabolism report',
                 'A 45-minute private consultation with Jessie',
@@ -120,14 +132,26 @@ export default function AuditPage() {
               ]}
             />
           </div>
-          <div className="mt-8 rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
-            <p className="eyebrow mb-2">Scope Note</p>
-            <p className="font-body text-ink/80">
-              The Audit provides education, interpretation of wellness data, and a prioritized
-              roadmap. It does not include diagnosis, medical treatment, hormone prescribing, a
-              fully customized clinical protocol, or ongoing implementation support.
-            </p>
-          </div>
+        </div>
+      </Section>
+
+      {/* Section 4b — VO2 Max Add-On */}
+      <Section spacing="compact">
+        <div className="mx-auto max-w-3xl rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
+          <h2 className="font-display text-2xl md:text-3xl">Want an even bigger picture?</h2>
+          <p className="mt-3 font-body text-lg font-bold text-terracotta">
+            Add VO₂ Max testing to your Audit for $150.
+          </p>
+          <p className="mt-4 font-body text-ink/80">
+            VO₂ Max adds objective information about your cardiorespiratory fitness, individualized
+            training zones, ventilatory thresholds, and how your body uses fuel as exercise
+            intensity changes.
+          </p>
+          <p className="mt-3 font-body text-ink/80">
+            Combined with your resting metabolic testing, this gives us another useful layer of
+            data when looking at your metabolism, exercise response, recovery, strength goals, and
+            long-term health.
+          </p>
         </div>
       </Section>
 
@@ -148,7 +172,7 @@ export default function AuditPage() {
               hormone-related questions with their medical provider.
             </p>
             <p>
-              And sometimes the biggest win is realizing your body is not broken — it has been
+              And sometimes the biggest win is realizing your body is not broken, it has been
               adapting to the inputs, stressors, and hormone shifts it has been dealing with.
             </p>
           </div>
@@ -159,7 +183,7 @@ export default function AuditPage() {
       <Section bg="creamLight">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">The Audit is a good fit if</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">The Midlife Metabolism Audit may be a good fit if:</p>
+          <p className="mt-4 font-body text-lg text-ink/80">The Midlife Metabolism & Hormone Audit may be a good fit if:</p>
           <div className="mt-6">
             <CheckList
               items={[
@@ -188,7 +212,7 @@ export default function AuditPage() {
             </p>
             <p>
               The Audit helps you understand where you are and what may deserve attention next.
-              The Reboot gives us the time, testing, and follow-up to build the fuller plan — and
+              The Reboot gives us the time, testing, and follow-up to build the fuller plan, and
               adjust it based on how your body actually responds.
             </p>
           </div>
@@ -217,21 +241,23 @@ export default function AuditPage() {
       </Section>
 
       {/* Section 9 — Final CTA */}
-      <Section bg="forest" className="text-center">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-3xl text-white md:text-4xl">Before you cut more, measure more.</h2>
-          <p className="mt-6 font-body text-lg text-white/80">
-            Find out how much energy your body actually uses, what may be influencing that number,
-            and which next steps make sense for the body you are living in now.
-          </p>
-          <p className="mt-6 font-body text-sm font-bold text-white/90">
-            Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
-          </p>
-          <div className="mt-8">
-            <a href={links.practiceBetter} className="btn-primary">Book the Midlife Metabolism Audit</a>
-          </div>
-        </div>
-      </Section>
+      <FinalCta
+        title="Before you cut more, measure more."
+        texture="br"
+        actions={
+          <a href="/locations" className="btn-forest w-full whitespace-nowrap sm:w-auto">
+            Find a Testing Location
+          </a>
+        }
+      >
+        <p>
+          Find out how much energy your body actually uses, what may be influencing that number,
+          and which next steps make sense for the body you are living in now.
+        </p>
+        <p className="text-base font-bold text-forest">
+          Resting metabolic rate breath test + 45-minute private consultation + written roadmap • $295
+        </p>
+      </FinalCta>
     </>
   );
 }

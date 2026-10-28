@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { Section, Eyebrow, CheckList, CtaButton } from '@/components/ui';
-import EmailSignup from '@/components/EmailSignup';
+import { Section, CheckList, CtaButton } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'The Resource Lab — Jessie.Life',
+  title: 'The Resource Lab: Jessie.Life',
   description:
     'A private education library for women who want better explanations about hormones, metabolism, medications, supplements, lab testing, strength, longevity, and midlife health.',
 };
@@ -13,15 +12,15 @@ export default function LabPage() {
     <>
       {/* Section 1 — Hero */}
       <section className="bg-cream">
-        <div className="container-content py-16 md:py-24">
+        <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
-            <Eyebrow>Education Library</Eyebrow>
+            <p className="eyebrow text-terracotta">Education Library</p>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Resource Lab</h1>
             <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
               <p>
                 A private education library for women who want better explanations about hormones,
                 metabolism, medications, supplements, lab testing, strength, longevity, and midlife
-                health — without having to live in research mode.
+                health, without having to live in research mode.
               </p>
               <p>
                 The Resource Lab is where I share practical breakdowns of new science, health trends,
@@ -74,15 +73,15 @@ export default function LabPage() {
       </Section>
 
       {/* Section 3 — How Access Works */}
-      <Section id="join">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl">How access works</h2>
-          <p className="mt-6 font-body text-lg text-ink/80">
-            Join with just your email to receive new resources, research breakdowns, and practical
-            tools as they are released.
-          </p>
-          <div className="mx-auto mt-8 max-w-md">
-            <EmailSignup source="resource-lab" buttonLabel="Get Free Access" />
+      <Section id="join" className="px-0 sm:px-6 md:px-10">
+        <div className="mx-auto w-full max-w-2xl">
+          <h2 className="px-6 text-center text-3xl md:px-0 md:text-4xl">Join the Resource Lab waitlist</h2>
+          <div className="mt-8">
+            <iframe
+              title="Resource Lab waitlist"
+              src="https://api.leadconnectorhq.com/widget/form/Dcj6bY4UVMx2xHp9o0Bf"
+              className="h-[1200px] w-full border-0 md:h-[900px]"
+            />
           </div>
         </div>
       </Section>
@@ -92,7 +91,7 @@ export default function LabPage() {
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl">Featured resources</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
-            Explore resources by topic — hormone therapy, symptom guides, lab explainers, metabolic
+            Explore resources by topic: hormone therapy, symptom guides, lab explainers, metabolic
             health, strength, and client decision tools.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

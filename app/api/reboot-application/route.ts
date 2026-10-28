@@ -62,6 +62,8 @@ const TAGS: Record<Route, string> = {
   red: 'Reboot Application — Not a Fit',
 };
 
+const GENERIC_ERROR = 'Something went wrong while submitting your information. Please try again.';
+
 export async function POST(request: Request) {
   try {
     const data = (await request.json()) as Record<string, string>;
@@ -77,32 +79,33 @@ export async function POST(request: Request) {
     const tag = TAGS[route];
 
     const webhook = process.env.GHL_APPLICATION_WEBHOOK;
-    if (webhook) {
-      // Send the application copy + tag to GHL (GHL handles internal notification,
-      // application-copy email, and review-queue task per automation notes).
-      const res = await fetch(webhook, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, tag, route, source: 'reboot-application' }),
+    if (!webhook) {
+      console.error('[reboot-application] GHL_APPLICATION_WEBHOOK is not configured; submission was not forwarded.', {
+        tag,
+        route,
+        email: data.email,
       });
-      if (!res.ok) {
-        return NextResponse.json(
-          { message: 'We could not submit your application right now. Please try again shortly.' },
-          { status: 502 }
-        );
-      }
-    } else {
-      console.log('[reboot-application] (no GHL webhook set)', { tag, route, email: data.email });
+      return NextResponse.json({ message: GENERIC_ERROR }, { status: 500 });
+    }
+
+    // Send the application copy + tag to GHL (GHL handles internal notification,
+    // application-copy email, and review-queue task per automation notes).
+    const res = await fetch(webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, tag, route, source: 'reboot-application' }),
+    });
+    if (!res.ok) {
+      console.error('[reboot-application] GHL webhook responded with an error status', res.status);
+      return NextResponse.json({ message: GENERIC_ERROR }, { status: 502 });
     }
 
     return NextResponse.json({
       route,
       redirectUrl: route === 'green' ? process.env.PRACTICE_BETTER_CHECKOUT_URL || '#' : undefined,
     });
-  } catch {
-    return NextResponse.json(
-      { message: 'Something went wrong. Please try again.' },
-      { status: 500 }
-    );
+  } catch (err) {
+    console.error('[reboot-application] Unexpected error', err);
+    return NextResponse.json({ message: GENERIC_ERROR }, { status: 500 });
   }
 }
