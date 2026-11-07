@@ -84,8 +84,8 @@ export default function HostGuidePage() {
             <div>
               <h3 className="text-lg">RMR appointments</h3>
               <p className="mt-3 font-body text-ink/70">
-                The breath measurement itself takes about 10 minutes. Plan approximately 30 to 40
-                minutes per appointment, including setup, time to settle into a resting state,
+                The breath measurement itself takes about 10 minutes. Plan about 30 minutes per
+                appointment, including setup, time to settle into a resting state,
                 testing, and equipment reset.
               </p>
             </div>
@@ -93,14 +93,13 @@ export default function HostGuidePage() {
               <h3 className="text-lg">VO₂ Max appointments</h3>
               <p className="mt-3 font-body text-ink/70">
                 After a short warm-up, the active testing portion generally lasts about 8 to 12
-                minutes, followed by a cool-down. Plan approximately 40 to 50 minutes per
+                minutes, followed by a cool-down. Plan about 30 minutes per
                 appointment.
               </p>
             </div>
           </div>
           <p className="mt-6 font-body text-ink/70">
-            When both tests are completed back-to-back, plan approximately 60 to 75 minutes per
-            participant. Exact appointment spacing is set based on the event schedule and expected
+            Exact appointment spacing is set based on the event schedule and expected
             participation.
           </p>
         </div>
