@@ -1,5 +1,76 @@
 import type { Metadata } from 'next';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
+import Accordion, { type QA } from '@/components/Accordion';
+import FitnessRiskChart from '@/components/FitnessRiskChart';
+
+const EMPLOYER_BLOCKS: [string, string][] = [
+  [
+    'What it means for your people now',
+    "It's the stamina to get through a hard day and bounce back the next. In a study of Finnish city employees, the fittest took 2 sick days over six months, compared with 6 for the least fit.",
+  ],
+  [
+    'What it means for the years ahead',
+    "It's the difference between getting out of a chair and climbing stairs on your own at 85, and needing help. In a study of 750,000 adults, low fitness carried more risk than smoking, diabetes, or high blood pressure. Higher fitness is also linked to a lower risk of dementia.",
+  ],
+  [
+    'What it means for your organization',
+    'A low-cost benefit that gives people something real. Each person gets a private, plain-English report and their own training zones. You get an anonymous group summary, and a retest in 6 to 12 months shows whether your people moved.',
+  ],
+];
+
+const EMPLOYER_SOURCES: [string, string][] = [
+  ['Kolu et al., 2022', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9578675/'],
+  ['Kokkinos et al., 2022', 'https://www.jacc.org/doi/10.1016/j.jacc.2022.05.031'],
+  ['Wang et al., 2024', 'https://bjsm.bmj.com/content/early/2024/10/10/bjsports-2023-108048'],
+  ['Ross et al., 2016', 'https://www.ahajournals.org/doi/10.1161/cir.0000000000000461'],
+];
+
+const EMPLOYER_FAQ: QA[] = [
+  {
+    q: "Is it safe for people who aren't athletes?",
+    a: [
+      "Everyone completes a health and readiness screening first. The test is matched to each person's current fitness level, and participants can stop at any time. I have tested people in their 80s.",
+    ],
+  },
+  {
+    q: 'Will we see individual results?',
+    a: [
+      'No. Each participant receives their own results privately. The organization receives only an anonymous group summary.',
+    ],
+  },
+  {
+    q: 'Are you insured?',
+    a: [
+      'Yes. I carry professional liability insurance and can provide a certificate of insurance. Every participant completes a waiver before testing.',
+    ],
+  },
+  {
+    q: 'How much time does it take away from work?',
+    a: ['Each appointment takes about 30 minutes, including setup.'],
+  },
+  {
+    q: "We don't have a gym. Can we still do this?",
+    a: [
+      'Yes. RMR testing only needs a quiet room. VO₂ testing can use a bike or treadmill on-site or at a partner facility.',
+    ],
+  },
+  {
+    q: 'Do participants need to fast?',
+    a: [
+      'For RMR, yes: an overnight fast with testing in the morning. For VO₂, participants eat a light meal at least 4 hours before testing. Preparation instructions are sent ahead of time.',
+    ],
+  },
+  {
+    q: 'Is this a medical test?',
+    a: [
+      'No. It is a fitness and wellness assessment, not a diagnostic test or a fitness-for-duty exam.',
+    ],
+  },
+  {
+    q: 'How do we measure whether it worked?',
+    a: ['Retest at 6 to 12 months and compare anonymous group averages.'],
+  },
+];
 
 export const metadata: Metadata = {
   title: 'Bring Jessie to Your Location: Jessie.Life',
@@ -62,12 +133,99 @@ export default function HostPage() {
               ['Corporate offices and employee wellness programs', 'Offer a practical health event that goes beyond a lunch-and-learn and gives employees individualized information in a convenient on-site format.'],
               ['Retreats, conferences, and wellness events', 'Create a memorable, science-based experience that can stand alone or support programming around midlife health, performance, resilience, or longevity.'],
               ['Residential communities, condos, and resorts', 'Offer residents or guests a convenient, data-driven wellness service using space and fitness equipment already available on-site. Testing can be scheduled as individual appointments and can appeal to people interested in fitness, healthy aging, weight management, performance, or simply understanding their health better.'],
+              ['Cities, counties, and public employers', 'Give employees, firefighters, and police a measured fitness baseline in a private, on-site format. Results go to each person. The employer receives only an anonymous group summary.'],
             ].map(([title, body]) => (
               <div key={title} className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
                 <h3 className="font-display text-xl">{title}</h3>
                 <p className="mt-2 font-body text-ink/70">{body}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Section 3b — For Employers and Public Agencies */}
+      <Section id="employers" bg="creamDark">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl">For employers and public agencies</h2>
+          <p className="mt-6 font-display text-2xl text-terracotta md:text-3xl">
+            Give your team their own number, and a reason to improve it.
+          </p>
+          <div className="mt-4 max-w-3xl space-y-4 font-body text-lg text-ink/80">
+            <p>
+              Most workplace wellness comes down to another lecture or lunch-and-learn. VO₂ testing
+              gives each person something they can actually use: an objective measure of where their
+              fitness stands today, and a clear way to see it improve.
+            </p>
+            <p>
+              Standard screenings look at structure: arteries, cholesterol, blood sugar. VO₂ max
+              measures what they can&rsquo;t: how well the heart delivers oxygen to the body, and
+              how well the body turns it into energy. The American Heart Association calls
+              cardiorespiratory fitness a clinical vital sign.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <FitnessRiskChart className="max-w-2xl" />
+          </div>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {EMPLOYER_BLOCKS.map(([title, body]) => (
+              <div key={title} className="border-l-2 border-terracotta pl-5">
+                <h3 className="font-display text-xl">{title}</h3>
+                <p className="mt-2 font-body text-ink/70">{body}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="mt-12 font-display text-2xl">How a pilot works</h3>
+          <div className="mt-4">
+            <CheckList
+              items={[
+                'Start with 10 to 20 people',
+                'About 2 testing days on-site for 10 people',
+                'RMR testing in the morning and VO₂ testing late morning to early afternoon, about 30 minutes per appointment',
+                'Private results and a plain-English summary for each participant within 72 hours',
+                'An anonymous group summary for the organization, and an optional retest at 6 to 12 months',
+              ]}
+            />
+          </div>
+
+          <h3 className="mt-10 font-display text-2xl">Paperwork made simple</h3>
+          <p className="mt-3 font-body text-lg text-ink/80">
+            W-9, certificate of insurance, and invoice provided. Vendor registration completed on
+            request.
+          </p>
+          <div className="mt-8">
+            <a href="#host-form" className="btn-primary">Request a Pilot</a>
+          </div>
+
+          <p className="mt-10 font-body text-xs leading-relaxed text-ink/60">
+            Sources:{' '}
+            {EMPLOYER_SOURCES.map(([name, href], i) => (
+              <span key={name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-terracotta"
+                >
+                  {name}
+                </a>
+                {i < EMPLOYER_SOURCES.length - 1 ? ', ' : '. '}
+              </span>
+            ))}
+            VO₂ testing is a fitness and wellness assessment and does not diagnose disease.
+          </p>
+        </div>
+      </Section>
+
+      {/* Section 3c — Employer Questions */}
+      <Section bg="creamLight">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl">Questions employers ask</h2>
+          <div className="mt-8">
+            <Accordion items={EMPLOYER_FAQ} />
           </div>
         </div>
       </Section>
