@@ -1,6 +1,34 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Section, CheckList, CtaButton, FinalCta } from '@/components/ui';
+import FitnessRiskChart from '@/components/FitnessRiskChart';
+
+const WHY_VO2_CARDS: [string, string][] = [
+  [
+    'Low fitness carries more risk than smoking',
+    'In a study of more than 750,000 adults, low fitness was linked to a higher risk of death than smoking, type 2 diabetes, or high blood pressure.',
+  ],
+  [
+    'Same scan, different odds',
+    'Two people can have the same heart scan and the same risk factors. The one with low fitness is two to three times more likely to die early.',
+  ],
+  [
+    "Lean isn't the same as fit",
+    'In a study of nearly 400,000 people, fit people at a higher body weight had no significantly higher risk of death than fit people at a “normal” weight. People with low fitness had about twice the risk, whatever they weighed.',
+  ],
+  [
+    'The independence line',
+    "VO₂ max declines with age, and there's a point where it starts to limit your independence. Sedentary adults lose roughly 10% per decade after about 30. Active people still decline, but they start higher and stay higher at every age. For women, the level tied to living independently at 85 is about 15 mL/kg/min, and about 18 for men. Below that, climbing stairs or carrying groceries gets hard. Staying well above that line is what training is for.",
+  ],
+];
+
+const VO2_SOURCES: [string, string][] = [
+  ['Kokkinos et al., 2022', 'https://www.jacc.org/doi/10.1016/j.jacc.2022.05.031'],
+  ['Franklin et al., 2023', 'https://pubmed.ncbi.nlm.nih.gov/36737120/'],
+  ['Weeldreyer et al., 2024', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11874340/'],
+  ['Paterson et al., 1999', 'https://pubmed.ncbi.nlm.nih.gov/10613433/'],
+  ['Hawkins and Wiswell, 2003', 'https://pubmed.ncbi.nlm.nih.gov/12974656/'],
+];
 
 export const metadata: Metadata = {
   title: 'Metabolism + VO₂ Testing: Jessie.Life',
@@ -176,33 +204,38 @@ export default function MetabolismPage() {
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">VO₂ Max Testing: $195</h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
-            <p>
-              VO₂ max is the maximum amount of oxygen your body can use during hard exercise. It is
-              often talked about in athletic settings, but it is not only an athlete number.
+            <p className="font-display text-2xl text-ink md:text-3xl">
+              Your fitness is a vital sign.
             </p>
             <p>
-              VO₂ max reflects cardiorespiratory fitness: how well your lungs, heart, blood vessels,
-              and working muscles deliver and use oxygen. It can be useful for performance, training,
-              endurance, healthy aging, and tracking whether your fitness is actually improving over
-              time.
+              Blood pressure, cholesterol, and heart scans show how the structure of your heart and
+              arteries is holding up. VO₂ max measures what they can&rsquo;t: how well your heart
+              delivers oxygen to the rest of your body, and how well your body is able to turn it
+              into energy. It&rsquo;s one of the strongest predictors of how long and how well
+              you&rsquo;ll live, and the American Heart Association calls it a clinical vital sign
+              that should be monitored regularly.
             </p>
             <p>
               During the test, exercise intensity increases gradually while the mask measures your
               breathing and gas exchange.
             </p>
           </div>
-          <p className="mt-6 font-body text-lg text-ink/80">VO₂ testing can help you understand:</p>
+          <p className="mt-6 font-body text-lg text-ink/80">What you&rsquo;ll walk away with:</p>
           <div className="mt-4">
             <CheckList
               items={[
-                'Your VO₂ max or peak oxygen uptake',
-                'Individualized heart-rate and training zones',
-                'How your body uses fat and carbohydrate at different exercise intensities',
-                'Ventilatory thresholds and breathing efficiency',
-                'A baseline for performance, fitness, and future retesting',
+                'Where you stand on one of the strongest predictors of long-term health',
+                'Heart-rate zones built from your body, not an age formula, so your workouts do what you want them to',
+                "A clearer picture of why your effort isn't paying off, and what to change",
+                'How far above the “independence line” you are, and how to stay there',
+                'A baseline you can retest and watch improve',
               ]}
             />
           </div>
+          <p className="mt-4 font-body text-sm text-ink/60">
+            Your full report also includes your measured VO₂ max, ventilatory thresholds, and how
+            you use fat and carbohydrate at each intensity.
+          </p>
           <p className="mt-8 font-body text-lg text-ink/80">This test is for you if:</p>
           <div className="mt-4">
             <CheckList
@@ -237,6 +270,41 @@ export default function MetabolismPage() {
           <div className="mt-8">
             <CtaButton href="/locations">Find a VO₂ Testing Location</CtaButton>
           </div>
+        </div>
+      </Section>
+
+      {/* Section 5a — Why VO2 Max Matters */}
+      <Section bg="creamLight">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl">Why VO₂ max matters</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {WHY_VO2_CARDS.map(([title, body]) => (
+              <div key={title} className="rounded-lg bg-white p-6 ring-1 ring-ink/5">
+                <h3 className="font-display text-xl">{title}</h3>
+                <p className="mt-2 font-body text-ink/70">{body}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <FitnessRiskChart className="max-w-3xl" />
+          </div>
+          <p className="mx-auto mt-6 max-w-3xl font-body text-xs leading-relaxed text-ink/60">
+            Sources:{' '}
+            {VO2_SOURCES.map(([name, href], i) => (
+              <span key={name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-terracotta"
+                >
+                  {name}
+                </a>
+                {i < VO2_SOURCES.length - 1 ? ', ' : '. '}
+              </span>
+            ))}
+            VO₂ testing is a fitness and wellness assessment and does not diagnose disease.
+          </p>
         </div>
       </Section>
 
@@ -277,7 +345,7 @@ export default function MetabolismPage() {
               <h3 className="text-lg">For RMR testing</h3>
               <p className="mt-3 font-body text-ink/70">
                 You&rsquo;ll rest quietly while the system measures your breathing. The breath
-                measurement itself takes about 10 minutes, but plan approximately 30 to 40 minutes
+                measurement itself takes about 10 minutes, but plan about 30 minutes
                 for the full appointment, including setup, time to settle into a true resting
                 state, testing, and equipment reset.
               </p>
@@ -288,7 +356,7 @@ export default function MetabolismPage() {
                 You&rsquo;ll exercise on a bike, rower, or inclined treadmill while the intensity
                 gradually increases based on your current fitness level. After a short warm-up,
                 the active portion generally lasts about 8 to 12 minutes, followed by a cool-down
-                and recovery. Plan approximately 40 to 50 minutes for the full appointment. You
+                and recovery. Plan about 30 minutes for the full appointment. You
                 decide when you&rsquo;ve reached your maximum effort, and the test can be stopped
                 at any time.
               </p>
