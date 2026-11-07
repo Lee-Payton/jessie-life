@@ -25,7 +25,7 @@ const EMPLOYER_SOURCES: [string, string][] = [
   ['Ross et al., 2016', 'https://www.ahajournals.org/doi/10.1161/cir.0000000000000461'],
 ];
 
-const EMPLOYER_FAQ: QA[] = [
+const HOSTING_FAQ: QA[] = [
   {
     q: "Is it safe for people who aren't athletes?",
     a: [
@@ -45,7 +45,7 @@ const EMPLOYER_FAQ: QA[] = [
     ],
   },
   {
-    q: 'How much time does it take away from work?',
+    q: 'How long does each appointment take?',
     a: ['Each appointment takes about 30 minutes, including setup.'],
   },
   {
@@ -104,60 +104,25 @@ export default function HostPage() {
 
       {/* Section 2 — Better Than a Generic Wellness Talk */}
       <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">Better than another generic wellness talk</h2>
-          <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
-            <p>
-              Most wellness events give people broad advice they have already heard: move more, eat
-              better, sleep eight hours, try not to be stressed. Metabolic testing gives them
-              something specific: a measured starting point and a reason to pay attention.
-            </p>
-            <p>
-              Depending on the event, participants can learn about their resting energy needs, fuel
-              use, aerobic fitness, training zones, or the ways metabolism and cardiorespiratory
-              capacity connect with health, performance, and healthy aging.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* Section 3 — Who This Works For */}
-      <Section>
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl">Who this works for</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {[
-              ['Gyms and performance facilities', 'Give members measurable baselines, individualized training information, and a reason to retest after a training block.'],
-              ['Pilates and boutique fitness studios', 'Add a high-value assessment that supports strength, longevity, recovery, and member education, especially for midlife clients who want more than a calorie estimate.'],
-              ['Med spas, wellness clinics, and hormone practices', 'Pair your existing services with objective information about resting metabolism, aerobic fitness, and fuel use without purchasing or staffing a full metabolic lab.'],
-              ['Corporate offices and employee wellness programs', 'Offer a practical health event that goes beyond a lunch-and-learn and gives employees individualized information in a convenient on-site format.'],
-              ['Retreats, conferences, and wellness events', 'Create a memorable, science-based experience that can stand alone or support programming around midlife health, performance, resilience, or longevity.'],
-              ['Residential communities, condos, and resorts', 'Offer residents or guests a convenient, data-driven wellness service using space and fitness equipment already available on-site. Testing can be scheduled as individual appointments and can appeal to people interested in fitness, healthy aging, weight management, performance, or simply understanding their health better.'],
-              ['Cities, counties, and public employers', 'Give employees, firefighters, and police a measured fitness baseline in a private, on-site format. Results go to each person. The employer receives only an anonymous group summary.'],
-            ].map(([title, body]) => (
-              <div key={title} className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
-                <h3 className="font-display text-xl">{title}</h3>
-                <p className="mt-2 font-body text-ink/70">{body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* Section 3b — For Employers and Public Agencies */}
-      <Section id="employers" bg="creamDark">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl">For employers and public agencies</h2>
-          <p className="mt-6 font-display text-2xl text-terracotta md:text-3xl">
-            Give your team their own number, and a reason to improve it.
-          </p>
-          <div className="mt-4 max-w-3xl space-y-4 font-body text-lg text-ink/80">
-            <p>
-              Most workplace wellness comes down to another lecture or lunch-and-learn. VO₂ testing
-              gives each person something they can actually use: an objective measure of where their
-              fitness stands today, and a clear way to see it improve.
+          <div className="max-w-3xl">
+            <h2 className="text-3xl md:text-4xl">Better than another generic wellness talk</h2>
+            <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
+              <p>
+                Most wellness events give people broad advice they have already heard: move more,
+                eat better, sleep eight hours, try not to be stressed. Metabolic testing gives them
+                something specific: a measured starting point and a reason to pay attention.
+              </p>
+              <p>
+                Depending on the event, participants can learn about their resting energy needs,
+                fuel use, aerobic fitness, training zones, or the ways metabolism and
+                cardiorespiratory capacity connect with health, performance, and healthy aging.
+              </p>
+            </div>
+            <p className="mt-8 font-display text-2xl text-terracotta md:text-3xl">
+              Give your clients, team, or members their own number, and a reason to improve it.
             </p>
-            <p>
+            <p className="mt-4 font-body text-lg text-ink/80">
               Standard screenings look at structure: arteries, cholesterol, blood sugar. VO₂ max
               measures what they can&rsquo;t: how well the heart delivers oxygen to the body, and
               how well the body turns it into energy. The American Heart Association calls
@@ -165,8 +130,8 @@ export default function HostPage() {
             </p>
           </div>
 
-          <div className="mt-10">
-            <FitnessRiskChart className="max-w-2xl" />
+          <div className="mt-10 flex justify-center">
+            <FitnessRiskChart className="w-full max-w-2xl" />
           </div>
 
           <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -176,28 +141,6 @@ export default function HostPage() {
                 <p className="mt-2 font-body text-ink/70">{body}</p>
               </div>
             ))}
-          </div>
-
-          <h3 className="mt-12 font-display text-2xl">How a pilot works</h3>
-          <div className="mt-4">
-            <CheckList
-              items={[
-                'Start with 10 to 20 people',
-                'About 2 testing days on-site for 10 people',
-                'RMR testing in the morning and VO₂ testing late morning to early afternoon, about 30 minutes per appointment',
-                'Private results and a plain-English summary for each participant within 72 hours',
-                'An anonymous group summary for the organization, and an optional retest at 6 to 12 months',
-              ]}
-            />
-          </div>
-
-          <h3 className="mt-10 font-display text-2xl">Paperwork made simple</h3>
-          <p className="mt-3 font-body text-lg text-ink/80">
-            W-9, certificate of insurance, and invoice provided. Vendor registration completed on
-            request.
-          </p>
-          <div className="mt-8">
-            <a href="#host-form" className="btn-primary">Request a Pilot</a>
           </div>
 
           <p className="mt-10 font-body text-xs leading-relaxed text-ink/60">
@@ -220,12 +163,25 @@ export default function HostPage() {
         </div>
       </Section>
 
-      {/* Section 3c — Employer Questions */}
-      <Section bg="creamLight">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl">Questions employers ask</h2>
-          <div className="mt-8">
-            <Accordion items={EMPLOYER_FAQ} />
+      {/* Section 3 — Who This Works For */}
+      <Section>
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl">Who this works for</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {[
+              ['Gyms and performance facilities', 'Give members measurable baselines, individualized training information, and a reason to retest after a training block.'],
+              ['Pilates and boutique fitness studios', 'Add a high-value assessment that supports strength, longevity, recovery, and member education, especially for midlife clients who want more than a calorie estimate.'],
+              ['Med spas, wellness clinics, and hormone practices', 'Pair your existing services with objective information about resting metabolism, aerobic fitness, and fuel use without purchasing or staffing a full metabolic lab.'],
+              ['Corporate offices and employee wellness programs', 'Offer a practical health event that goes beyond a lunch-and-learn and gives employees individualized information in a convenient on-site format.'],
+              ['Retreats, conferences, and wellness events', 'Create a memorable, science-based experience that can stand alone or support programming around midlife health, performance, resilience, or longevity.'],
+              ['Residential communities, condos, and resorts', 'Offer residents or guests a convenient, data-driven wellness service using space and fitness equipment already available on-site. Testing can be scheduled as individual appointments and can appeal to people interested in fitness, healthy aging, weight management, performance, or simply understanding their health better.'],
+              ['Cities, counties, and public employers', 'Give employees, firefighters, and police a measured fitness baseline in a private, on-site format. Results go to each person. The employer receives only an anonymous group summary.'],
+            ].map(([title, body]) => (
+              <div key={title} className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
+                <h3 className="font-display text-xl">{title}</h3>
+                <p className="mt-2 font-body text-ink/70">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -321,10 +277,20 @@ export default function HostPage() {
         </div>
       </Section>
 
+      {/* Section 7a: Hosting FAQ */}
+      <Section bg="creamDark">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl">Hosting FAQ</h2>
+          <div className="mt-8">
+            <Accordion items={HOSTING_FAQ} />
+          </div>
+        </div>
+      </Section>
+
       {/* Section 7b — More Value For Existing Services */}
       <Section>
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl">More value for the services you already provide</h2>
+          <h2 className="text-3xl md:text-4xl">More value for the services you may already provide</h2>
           <p className="mt-4 font-body text-lg text-ink/80">
             Metabolic testing is designed to add useful information to the relationship your
             members or clients already have with you. It gives trainers, practitioners, and
