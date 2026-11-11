@@ -47,7 +47,20 @@ export default function LocationsPage() {
             instructions, so please review the details before scheduling.
           </p>
 
-          <div className="mt-10 grid gap-6">
+          <div className="mt-12 border-t-2 border-forest pt-6">
+            <p className="font-body text-sm font-semibold uppercase tracking-widest text-terracotta">
+              Available now through January 12, 2027
+            </p>
+            <h3 className="mt-2 font-display text-2xl uppercase tracking-wide text-forest md:text-3xl">
+              South Padre Island &middot; Port Isabel &middot; Rio Grande Valley
+            </h3>
+            <p className="mt-3 font-body text-lg text-ink/80">
+              Metabolic and VO₂ Max testing is currently available in the South Padre Island area,
+              with additional mobile testing opportunities by request.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-6">
             <div id="island-fitness" className="rounded-lg bg-cream-light p-8 ring-1 ring-ink/5">
               <h3 className="font-display text-2xl">Island Fitness</h3>
               <p className="mt-1 font-body text-ink/70">South Padre Island, Texas</p>
@@ -82,7 +95,37 @@ export default function LocationsPage() {
               ))}
           </div>
 
-          <div className="mx-auto mt-10 w-full max-w-3xl">
+          <div className="mt-14 border-t-2 border-forest pt-6">
+            <p className="font-body text-sm font-semibold uppercase tracking-widest text-terracotta">
+              Coming January 2027 &mdash; exact testing dates and locations to be announced
+            </p>
+            <h3 className="mt-2 font-display text-2xl uppercase tracking-wide text-forest md:text-3xl">
+              Austin &middot; Central Texas
+            </h3>
+            <p className="mt-3 font-body text-lg text-ink/80">
+              Metabolic and VO₂ Max testing is coming to the Austin area, with appointments offered
+              through scheduled partner locations, mobile testing days, and private or group events.
+            </p>
+            <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <a
+                href="#notify"
+                className="btn-primary w-full max-w-full text-center sm:w-auto"
+              >
+                Get Notified When Austin Dates Open
+              </a>
+              <a
+                href="/host"
+                className="btn-secondary w-full max-w-full text-center sm:w-auto"
+              >
+                Request Testing at Your Location
+              </a>
+            </div>
+            <p className="mt-4 font-body text-sm text-ink/70">
+              Hosting for Austin-area gyms, studios, clinics, employers, and wellness communities.
+            </p>
+          </div>
+
+          <div id="notify" className="mx-auto mt-10 w-full max-w-3xl scroll-mt-24">
             <iframe
               title="Testing location notification signup"
               src="https://api.leadconnectorhq.com/widget/form/MAOr3FEnU5aBs8lNazXE"
