@@ -9,22 +9,18 @@ export const metadata: Metadata = {
 
 // Paste the real Substack links here. Anything left empty renders as a clearly
 // marked placeholder on the page instead of a broken or invented link.
-const PUBLICATION_URL = '';
-const NUGGET_1_URL = '';
-const NUGGET_2_URL = '';
+const PUBLICATION_URL = 'https://jessiefaber.substack.com';
 
 const featuredArticles = [
   {
-    label: 'Menopause Nugget',
-    title: 'Menopause Nugget #1: title to be added',
-    excerpt: 'Excerpt to be added from the published Substack post.',
-    url: NUGGET_1_URL,
+    title: 'WHAT THE HELL IS HAPPENING TO ME?',
+    excerpt: 'Demystifying Perimenopause & Menopause so you can get your brain & body back.',
+    url: 'https://jessiefaber.substack.com/p/what-the-hell-is-happening-to-me?r=dhpsa',
   },
   {
-    label: 'Menopause Nugget',
-    title: 'Menopause Nugget #2: title to be added',
-    excerpt: 'Excerpt to be added from the published Substack post.',
-    url: NUGGET_2_URL,
+    title: 'From Peri to Post...',
+    excerpt: 'And the \u201Cinception\u201D of your conception.',
+    url: 'https://jessiefaber.substack.com/p/from-peri-to-post?r=dhpsa',
   },
 ];
 
@@ -61,17 +57,13 @@ export default function LabPage() {
       <Section id="featured" bg="creamDark">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl">Featured resources</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
-            Start with the Menopause Nuggets: short, practical reads that break down what matters.
-          </p>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {featuredArticles.map((article) => (
               <article
                 key={article.title}
                 className="flex flex-col rounded-lg bg-cream-light p-6 ring-1 ring-ink/5"
               >
-                <p className="eyebrow">{article.label}</p>
-                <h3 className="mt-2 font-display text-xl">{article.title}</h3>
+                <h3 className="font-display text-xl">{article.title}</h3>
                 <p className="mt-2 font-body text-ink/70">{article.excerpt}</p>
                 <div className="mt-6 pt-2 md:mt-auto">
                   {article.url ? (
