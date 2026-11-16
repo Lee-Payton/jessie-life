@@ -1,7 +1,8 @@
+import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Section, CheckList, CtaButton } from '@/components/ui';
-import { LeafIcon, PulseIcon } from '@/components/icons';
-import { ContourLines, SprigDoodle, MoleculeDoodle } from '@/components/decor';
+import { ArticleCard } from '@/components/ArticleCard';
+import { RecentSubstackArticles } from '@/components/RecentSubstackArticles';
 
 export const metadata: Metadata = {
   title: 'The Resource Lab: Jessie.Life',
@@ -23,23 +24,6 @@ const featuredArticles = [
     title: 'From Peri to Post...',
     excerpt: 'And the \u201Cinception\u201D of your conception.',
     url: 'https://jessiefaber.substack.com/p/from-peri-to-post?r=dhpsa',
-  },
-];
-
-const articleStyles = [
-  {
-    tint: 'bg-cream-light',
-    icon: <LeafIcon />,
-    decor: (
-      <ContourLines className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 text-forest/[0.10]" />
-    ),
-  },
-  {
-    tint: 'bg-[#f1e2da]',
-    icon: <PulseIcon />,
-    decor: (
-      <MoleculeDoodle className="pointer-events-none absolute right-5 top-6 h-16 w-16 text-terracotta/15" />
-    ),
   },
 ];
 
@@ -86,40 +70,23 @@ export default function LabPage() {
           <h2 className="text-3xl md:text-4xl">Featured resources</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {featuredArticles.map((article, i) => (
-              <article
+              <ArticleCard
                 key={article.title}
-                className={`relative flex flex-col overflow-hidden rounded-2xl p-8 ring-1 ring-ink/5 ${articleStyles[i % articleStyles.length].tint}`}
-              >
-                {articleStyles[i % articleStyles.length].decor}
-                <div className="relative flex flex-1 flex-col">
-                  <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-ink/15 bg-cream/60 text-forest">
-                    {articleStyles[i % articleStyles.length].icon}
-                    {i % articleStyles.length === 0 && (
-                      <SprigDoodle className="pointer-events-none absolute -right-5 -top-4 h-9 w-7 text-forest/30" />
-                    )}
-                  </span>
-                  <h3 className="mt-6 font-display text-2xl">{article.title}</h3>
-                  <p className="mt-3 font-body text-sm text-ink/70">{article.excerpt}</p>
-                  <div className="mt-6 flex-1" />
-                  {article.url ? (
-                    <a
-                      href={article.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-arrow"
-                    >
-                      Read on Substack&nbsp;→
-                      <span className="sr-only"> (opens in a new tab): {article.title}</span>
-                    </a>
-                  ) : (
-                    <p className="font-body text-sm text-ink/60">
-                      Link to be added once the Substack post URL is provided.
-                    </p>
-                  )}
-                </div>
-              </article>
+                title={article.title}
+                excerpt={article.excerpt}
+                url={article.url}
+                index={i}
+              />
             ))}
           </div>
+
+          <Suspense fallback={null}>
+            <RecentSubstackArticles
+              publicationUrl={PUBLICATION_URL}
+              featuredUrls={featuredArticles.map((article) => article.url)}
+              startIndex={featuredArticles.length}
+            />
+          </Suspense>
 
           {topicCards.length > 0 && (
             <div className="mt-10 grid gap-6 md:grid-cols-3">
