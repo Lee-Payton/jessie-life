@@ -4,39 +4,115 @@ import { Section, CheckList, CtaButton } from '@/components/ui';
 export const metadata: Metadata = {
   title: 'The Resource Lab: Jessie.Life',
   description:
-    'A private education library for women who want better explanations about hormones, metabolism, medications, supplements, lab testing, strength, longevity, and midlife health.',
+    'Practical science for living better, longer. Free articles on menopause, hormones, metabolism, nutrition, strength, and healthy aging.',
 };
+
+// Paste the real Substack links here. Anything left empty renders as a clearly
+// marked placeholder on the page instead of a broken or invented link.
+const PUBLICATION_URL = '';
+const NUGGET_1_URL = '';
+const NUGGET_2_URL = '';
+
+const featuredArticles = [
+  {
+    label: 'Menopause Nugget',
+    title: 'Menopause Nugget #1: title to be added',
+    excerpt: 'Excerpt to be added from the published Substack post.',
+    url: NUGGET_1_URL,
+  },
+  {
+    label: 'Menopause Nugget',
+    title: 'Menopause Nugget #2: title to be added',
+    excerpt: 'Excerpt to be added from the published Substack post.',
+    url: NUGGET_2_URL,
+  },
+];
+
+// Add real topic cards here later (for example { title, description, href }).
+// The grid only renders when at least one card exists.
+const topicCards: { title: string; description: string; href: string }[] = [];
+
+const subscribeUrl = PUBLICATION_URL
+  ? `${PUBLICATION_URL.replace(/\/+$/, '')}/subscribe`
+  : '';
 
 export default function LabPage() {
   return (
     <>
-      {/* Section 1 — Hero */}
+      {/* Section 1: Hero */}
       <section className="bg-cream">
         <div className="container-content py-14 md:py-20">
           <div className="mx-auto max-w-3xl">
-            <p className="eyebrow text-terracotta">Education Library</p>
+            <p className="eyebrow text-terracotta">Free Education Library</p>
             <h1 className="mt-4 font-display text-4xl md:text-5xl">The Resource Lab</h1>
-            <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
-              <p>
-                A private education library for women who want better explanations about hormones,
-                metabolism, medications, supplements, lab testing, strength, longevity, and midlife
-                health, without having to live in research mode.
-              </p>
-              <p>
-                The Resource Lab is where I share practical breakdowns of new science, health trends,
-                testing options, medications, supplements, and the questions that come up when you
-                are trying to make informed decisions about your body.
-              </p>
-              <p>
-                Some resources are free with access. Others are reserved for clients, testing
-                participants, or paid resource tiers.
-              </p>
+            <p className="mt-6 font-body text-lg text-ink/80">
+              Practical science for living better, longer. Explore menopause, hormones, metabolism,
+              nutrition, strength, and healthy aging through clear explanations and resources you
+              can actually use.
+            </p>
+            <div className="mt-8">
+              <CtaButton href="#featured">Explore Free Resources</CtaButton>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2 — What You'll Find Inside */}
+      {/* Section 2: Featured Resources */}
+      <Section id="featured" bg="creamDark">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl md:text-4xl">Featured resources</h2>
+          <p className="mt-4 font-body text-lg text-ink/80">
+            Start with the Menopause Nuggets: short, practical reads that break down what matters.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {featuredArticles.map((article) => (
+              <article
+                key={article.title}
+                className="flex flex-col rounded-lg bg-cream-light p-6 ring-1 ring-ink/5"
+              >
+                <p className="eyebrow">{article.label}</p>
+                <h3 className="mt-2 font-display text-xl">{article.title}</h3>
+                <p className="mt-2 font-body text-ink/70">{article.excerpt}</p>
+                <div className="mt-6 pt-2 md:mt-auto">
+                  {article.url ? (
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                    >
+                      Read on Substack
+                      <span className="sr-only"> (opens in a new tab): {article.title}</span>
+                    </a>
+                  ) : (
+                    <p className="font-body text-sm text-ink/60">
+                      Link to be added once the Substack post URL is provided.
+                    </p>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {topicCards.length > 0 && (
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {topicCards.map((topic) => (
+                <a
+                  key={topic.title}
+                  href={topic.href}
+                  className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5"
+                >
+                  <p className="eyebrow">Topic</p>
+                  <h3 className="mt-2 font-display text-xl">{topic.title}</h3>
+                  <p className="mt-2 font-body text-sm text-ink/70">{topic.description}</p>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+      </Section>
+
+      {/* Section 3: What You'll Find Inside */}
       <Section bg="creamLight">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl">
@@ -44,10 +120,10 @@ export default function LabPage() {
           </h2>
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
-              Inside the Resource Lab, I share clear, grounded explanations about the science,
-              trends, tests, tools, and options that come up in midlife health.
+              The Resource Lab is where I share clear, grounded explanations about the science,
+              trends, tests, tools, and options that come up in midlife health. You may find
+              resources on:
             </p>
-            <p>You may find resources on:</p>
           </div>
           <div className="mt-4">
             <CheckList
@@ -55,7 +131,7 @@ export default function LabPage() {
                 'New hormone, menopause, and longevity research',
                 'Medications, supplements, peptides, and popular health trends',
                 'Metabolic testing, VO₂, wearables, and fitness data',
-                'Lab markers, testing options',
+                'Lab markers and testing options',
                 'Nutrition, strength, recovery, and resilience in midlife',
                 'Questions worth asking before jumping into the next protocol, product, or promise',
               ]}
@@ -65,43 +141,46 @@ export default function LabPage() {
             The Resource Lab is for education and context. It can help you understand the landscape,
             ask better questions, and decide what may be worth exploring further.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <CtaButton href="#join">Get Free Access to the Resource Lab</CtaButton>
-            <CtaButton href="/metabolism" variant="secondary">Explore Midlife Metabolism Testing</CtaButton>
-          </div>
-        </div>
-      </Section>
-
-      {/* Section 3 — How Access Works */}
-      <Section id="join" className="px-0 sm:px-6 md:px-10">
-        <div className="mx-auto w-full max-w-2xl">
-          <h2 className="px-6 text-center text-3xl md:px-0 md:text-4xl">Join the Resource Lab waitlist</h2>
           <div className="mt-8">
-            <iframe
-              title="Resource Lab waitlist"
-              src="https://api.leadconnectorhq.com/widget/form/Dcj6bY4UVMx2xHp9o0Bf"
-              className="h-[1200px] w-full border-0 md:h-[900px]"
-            />
+            <CtaButton href="/metabolism" variant="secondary">
+              Explore Midlife Metabolism Testing
+            </CtaButton>
           </div>
         </div>
       </Section>
 
-      {/* Section 4 — Featured Resources */}
-      <Section bg="creamDark">
-        <div className="mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl">Featured resources</h2>
-          <p className="mt-4 font-body text-lg text-ink/80">
-            Explore resources by topic: hormone therapy, symptom guides, lab explainers, metabolic
-            health, strength, and client decision tools.
+      {/* Section 4: Optional subscribe */}
+      <Section id="subscribe">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl">New research, delivered when you want it</h2>
+          <p className="mt-4 font-body text-sm text-ink/60">
+            All articles are free to read. Subscribe if you&apos;d like new research and resources
+            delivered to your inbox.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {['Hormone Therapy', 'Symptom Guides', 'Lab Explainers', 'Metabolic Health', 'Strength', 'Decision Tools'].map((topic) => (
-              <div key={topic} className="rounded-lg bg-cream-light p-6 ring-1 ring-ink/5">
-                <p className="eyebrow">Category</p>
-                <h3 className="mt-2 font-display text-xl">{topic}</h3>
-                <p className="mt-2 font-body text-sm text-ink/60">Resources coming soon.</p>
-              </div>
-            ))}
+          <div className="mt-6">
+            {subscribeUrl ? (
+              <a
+                href={subscribeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Get New Research in Your Inbox
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            ) : (
+              <>
+                <span
+                  className="btn-primary pointer-events-none opacity-60"
+                  aria-disabled="true"
+                >
+                  Get New Research in Your Inbox
+                </span>
+                <p className="mt-3 font-body text-sm text-ink/60">
+                  Link to be added once the Substack publication URL is provided.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </Section>
