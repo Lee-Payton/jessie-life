@@ -1,19 +1,22 @@
 import { LeafIcon, PulseIcon } from '@/components/icons';
 import { ContourLines, SprigDoodle, MoleculeDoodle } from '@/components/decor';
 
-const articleStyles = [
+const visualStyles = [
   {
-    tint: 'bg-cream-light',
+    tint: 'bg-[#e8e3d3]',
     icon: <LeafIcon />,
     decor: (
-      <ContourLines className="pointer-events-none absolute -right-12 -top-12 h-44 w-44 text-forest/[0.10]" />
+      <>
+        <ContourLines className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 text-forest/[0.14]" />
+        <SprigDoodle className="pointer-events-none absolute bottom-5 left-6 h-12 w-9 text-forest/25" />
+      </>
     ),
   },
   {
     tint: 'bg-[#f1e2da]',
     icon: <PulseIcon />,
     decor: (
-      <MoleculeDoodle className="pointer-events-none absolute right-5 top-6 h-16 w-16 text-terracotta/15" />
+      <MoleculeDoodle className="pointer-events-none absolute right-6 top-6 h-20 w-20 text-terracotta/20" />
     ),
   },
 ];
@@ -24,6 +27,8 @@ type ArticleCardProps = {
   url: string;
   index: number;
   publishedAt?: string;
+  topic?: string;
+  image?: string;
 };
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', {
@@ -33,31 +38,66 @@ const dateFormatter = new Intl.DateTimeFormat('en-US', {
   timeZone: 'UTC',
 });
 
-export function ArticleCard({ title, excerpt, url, index, publishedAt }: ArticleCardProps) {
-  const style = articleStyles[index % articleStyles.length];
+export function ArticleCard({
+  title,
+  excerpt,
+  url,
+  index,
+  publishedAt,
+  topic,
+  image,
+}: ArticleCardProps) {
+  const style = visualStyles[index % visualStyles.length];
 
   return (
-    <article
-      className={`relative flex flex-col overflow-hidden rounded-2xl p-8 ring-1 ring-ink/5 ${style.tint}`}
-    >
-      {style.decor}
-      <div className="relative flex flex-1 flex-col">
-        <span className="relative flex h-14 w-14 items-center justify-center rounded-full border border-ink/15 bg-cream/60 text-forest">
-          {style.icon}
-          {index % articleStyles.length === 0 && (
-            <SprigDoodle className="pointer-events-none absolute -right-5 -top-4 h-9 w-7 text-forest/30" />
-          )}
-        </span>
-        {publishedAt && (
-          <time dateTime={publishedAt} className="eyebrow mt-6 text-ink/60">
-            {dateFormatter.format(new Date(publishedAt))}
-          </time>
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl bg-cream-light ring-1 ring-ink/5 transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-ink/10 motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+      <div className={`relative aspect-[16/9] overflow-hidden ${style.tint}`}>
+        {image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={image}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          />
+        ) : (
+          <>
+            {style.decor}
+            <span className="absolute left-6 top-6 flex h-14 w-14 items-center justify-center rounded-full border border-ink/15 bg-cream/70 text-forest">
+              {style.icon}
+            </span>
+          </>
         )}
-        <h3 className={`${publishedAt ? 'mt-2' : 'mt-6'} font-display text-2xl`}>{title}</h3>
-        {excerpt && <p className="mt-3 font-body text-sm text-ink/70">{excerpt}</p>}
+      </div>
+
+      <div className="flex flex-1 flex-col p-6 md:p-8">
+        <p className="eyebrow flex flex-wrap items-center gap-x-2 text-terracotta">
+          {topic && <span>{topic}</span>}
+          {topic && publishedAt && (
+            <span aria-hidden="true" className="text-ink/30">
+              /
+            </span>
+          )}
+          {publishedAt && (
+            <time dateTime={publishedAt} className="text-ink/60">
+              {dateFormatter.format(new Date(publishedAt))}
+            </time>
+          )}
+        </p>
+        <h3 className="mt-3 text-balance font-display text-2xl leading-snug md:text-[1.75rem]">
+          {title}
+        </h3>
+        {excerpt && <p className="mt-3 font-body text-sm leading-relaxed text-ink/70">{excerpt}</p>}
         <div className="mt-6 flex-1" />
-        <a href={url} target="_blank" rel="noopener noreferrer" className="link-arrow">
-          Read on Substack&nbsp;→
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="link-arrow after:absolute after:inset-0 after:content-['']"
+        >
+          Read article&nbsp;→
           <span className="sr-only"> (opens in a new tab): {title}</span>
         </a>
       </div>

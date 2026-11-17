@@ -1,8 +1,7 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Section, CheckList, CtaButton } from '@/components/ui';
-import { ArticleCard } from '@/components/ArticleCard';
-import { RecentSubstackArticles } from '@/components/RecentSubstackArticles';
+import { ArticleGrid, FeaturedArticleGrid, type FeaturedArticle } from '@/components/ArticleGrid';
 
 export const metadata: Metadata = {
   title: 'The Resource Lab: Jessie.Life',
@@ -14,16 +13,18 @@ export const metadata: Metadata = {
 // marked placeholder on the page instead of a broken or invented link.
 const PUBLICATION_URL = 'https://jessiefaber.substack.com';
 
-const featuredArticles = [
+const featuredArticles: FeaturedArticle[] = [
   {
     title: 'WHAT THE HELL IS HAPPENING TO ME?',
     excerpt: 'Demystifying Perimenopause & Menopause so you can get your brain & body back.',
     url: 'https://jessiefaber.substack.com/p/what-the-hell-is-happening-to-me?r=dhpsa',
+    topic: 'Menopause',
   },
   {
     title: 'From Peri to Post...',
     excerpt: 'And the \u201Cinception\u201D of your conception.',
     url: 'https://jessiefaber.substack.com/p/from-peri-to-post?r=dhpsa',
+    topic: 'Perimenopause',
   },
 ];
 
@@ -68,25 +69,11 @@ export default function LabPage() {
       <Section id="featured" bg="creamDark">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl md:text-4xl">Featured resources</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {featuredArticles.map((article, i) => (
-              <ArticleCard
-                key={article.title}
-                title={article.title}
-                excerpt={article.excerpt}
-                url={article.url}
-                index={i}
-              />
-            ))}
+          <div className="mt-8">
+            <Suspense fallback={<FeaturedArticleGrid featured={featuredArticles} />}>
+              <ArticleGrid publicationUrl={PUBLICATION_URL} featured={featuredArticles} />
+            </Suspense>
           </div>
-
-          <Suspense fallback={null}>
-            <RecentSubstackArticles
-              publicationUrl={PUBLICATION_URL}
-              featuredUrls={featuredArticles.map((article) => article.url)}
-              startIndex={featuredArticles.length}
-            />
-          </Suspense>
 
           {topicCards.length > 0 && (
             <div className="mt-10 grid gap-6 md:grid-cols-3">
