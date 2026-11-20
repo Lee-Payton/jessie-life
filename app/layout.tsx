@@ -36,6 +36,23 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: 'Jessie.Life',
     type: 'website',
+    images: [
+      {
+        url: '/images/home-hero.png',
+        width: 1448,
+        height: 1086,
+        alt: 'Jessie Faber sitting with a warm mug of coffee',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [
+      {
+        url: '/images/home-hero.png',
+        alt: 'Jessie Faber sitting with a warm mug of coffee',
+      },
+    ],
   },
 };
 

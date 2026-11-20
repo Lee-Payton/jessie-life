@@ -29,6 +29,7 @@ type ArticleCardProps = {
   publishedAt?: string;
   topic?: string;
   image?: string;
+  imageAlt?: string;
 };
 
 const dateFormatter = new Intl.DateTimeFormat('en-US', {
@@ -46,6 +47,7 @@ export function ArticleCard({
   publishedAt,
   topic,
   image,
+  imageAlt,
 }: ArticleCardProps) {
   const style = visualStyles[index % visualStyles.length];
 
@@ -56,7 +58,7 @@ export function ArticleCard({
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={image}
-            alt=""
+            alt={imageAlt ?? ''}
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
