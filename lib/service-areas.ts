@@ -1,6 +1,5 @@
-// Local RMR + VO2 pages. One entry here feeds the shared template,
-// the footer "Service areas" list, and the sitemap. Austin is not
-// listed yet; adding it later is one new object in this array.
+// Local RMR + VO2 pages. Each entry feeds the shared template,
+// the footer "Service areas" list, and the sitemap.
 
 export type ServiceAreaPlace = {
   type: 'City' | 'AdministrativeArea';
@@ -58,6 +57,47 @@ export const serviceAreas: ServiceArea[] = [
         question: 'Which communities does this page cover?',
         answer:
           'This page covers South Padre Island and the Rio Grande Valley, including Port Isabel, Brownsville, and Harlingen.',
+      },
+      {
+        question: 'Can RMR and VO₂ be done on the same day?',
+        answer:
+          'RMR is done first, in the morning, after an overnight fast. VO₂ is scheduled at least 4 hours later. Each test is about 30 minutes. The two tests are never done back-to-back.',
+      },
+      {
+        question: 'Is this a diagnostic medical test?',
+        answer:
+          'No. RMR and VO₂ testing are fitness and wellness assessments, not diagnostic tests.',
+      },
+    ],
+  },
+  {
+    slug: 'austin',
+    path: '/austin/rmr-vo2-testing',
+    footerLabel: 'Austin',
+    name: 'Austin',
+    h1: 'RMR and VO₂ testing in Austin',
+    title: 'RMR and VO₂ Testing in Austin: Jessie.Life',
+    description:
+      'RMR and VO₂ testing in Austin, including Round Rock, Cedar Park, Georgetown, and Pflugerville. Fitness and wellness assessments.',
+    servingLine: 'Serving Austin, Round Rock, Cedar Park, Georgetown, and Pflugerville',
+    faqHeading: 'Questions about testing in Austin',
+    areaServed: [
+      { type: 'City', name: 'Austin' },
+      { type: 'City', name: 'Round Rock' },
+      { type: 'City', name: 'Cedar Park' },
+      { type: 'City', name: 'Georgetown' },
+      { type: 'City', name: 'Pflugerville' },
+    ],
+    faqs: [
+      {
+        question: 'Is testing available in Austin right now?',
+        answer:
+          'Jessie is testing in Austin from mid-January through mid-April 2027. Testing days start the week of January 18, 2027. Testing is mobile and on-site, and Jessie comes to you. Group testing days are available by request on the host page.',
+      },
+      {
+        question: 'Which communities does this page cover?',
+        answer:
+          'This page covers Austin, Round Rock, Cedar Park, Georgetown, and Pflugerville.',
       },
       {
         question: 'Can RMR and VO₂ be done on the same day?',
