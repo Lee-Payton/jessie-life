@@ -52,7 +52,7 @@ export const serviceAreas: ServiceArea[] = [
       {
         question: 'Is testing available in South Padre Island right now?',
         answer:
-          'Jessie is testing in South Padre Island through January 11, 2027. Testing is mobile and on-site, and Jessie comes to you. Group testing days are available by request on the host page.',
+          'Jessie is testing in South Padre Island through January 12, 2027. Testing is mobile and on-site, and Jessie comes to you. Group testing days are available by request on the host page.',
       },
       {
         question: 'Which communities does this page cover?',
