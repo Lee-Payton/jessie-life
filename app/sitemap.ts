@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { serviceAreas } from '@/lib/service-areas';
 import { siteConfig } from '@/lib/site';
 
 /**
@@ -24,7 +25,8 @@ const publicRoutes = [
 ] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return publicRoutes.map((path) => ({
+  const paths = [...publicRoutes, ...serviceAreas.map((area) => area.path)];
+  return paths.map((path) => ({
     url: path === '/' ? siteConfig.url : `${siteConfig.url}${path}`,
   }));
 }

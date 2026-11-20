@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { footerNav } from '@/lib/site';
+import { serviceAreas } from '@/lib/service-areas';
 import EmailSignup from '@/components/EmailSignup';
 
 export default function Footer() {
@@ -46,6 +47,20 @@ export default function Footer() {
               </li>
             ))}
           </ul>
+          {serviceAreas.length > 0 && (
+            <div className="mt-8">
+              <h3 className="eyebrow mb-4">Service areas</h3>
+              <ul className="space-y-2.5">
+                {serviceAreas.map((area) => (
+                  <li key={area.path}>
+                    <Link href={area.path} className="font-body text-sm text-ink/80 transition-colors hover:text-terracotta">
+                      {area.footerLabel}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </nav>
 
         {/* Resource Lab opt-in */}
