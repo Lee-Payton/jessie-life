@@ -2,6 +2,8 @@
 export const siteConfig = {
   name: 'Jessie.Life',
   domain: 'jessie.life',
+  // Apex is canonical: www.jessie.life 308-redirects to https://jessie.life.
+  url: 'https://jessie.life',
   tagline: 'Science. Strategy. Freedom.',
 };
 
