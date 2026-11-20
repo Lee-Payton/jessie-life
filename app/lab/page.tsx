@@ -19,12 +19,16 @@ const featuredArticles: FeaturedArticle[] = [
     excerpt: 'Demystifying Perimenopause & Menopause so you can get your brain & body back.',
     url: 'https://jessiefaber.substack.com/p/what-the-hell-is-happening-to-me?r=dhpsa',
     topic: 'Menopause',
+    imageAlt:
+      'Infographic cover titled What the Hell Is Happening to Me, arranged in three numbered sections with small icons.',
   },
   {
     title: 'From Peri to Post...',
     excerpt: 'And the \u201Cinception\u201D of your conception.',
     url: 'https://jessiefaber.substack.com/p/from-peri-to-post?r=dhpsa',
     topic: 'Perimenopause',
+    imageAlt:
+      'Infographic cover titled From Peri to Post, with a three-step timeline and two question boxes.',
   },
 ];
 

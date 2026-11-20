@@ -6,6 +6,7 @@ export type FeaturedArticle = {
   excerpt: string;
   url: string;
   topic?: string;
+  imageAlt?: string;
 };
 
 type ArticleGridProps = {
