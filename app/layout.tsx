@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description:
     'Stop guessing what happened to your body. Lab-guided health strategy, metabolic testing, and education for women navigating perimenopause and menopause.',
   metadataBase: new URL(siteConfig.url),
+  verification: {
+    google: 'mt1SHq4p20TBXhFAbuL5FBOkoq_D2gj2-yLQqFqYsVs',
+  },
   // './' resolves against each page pathname, so every route gets its own canonical.
   alternates: {
     canonical: './',
