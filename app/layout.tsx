@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { siteConfig } from '@/lib/site';
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
@@ -23,12 +24,16 @@ export const metadata: Metadata = {
   title: 'Jessie.Life: Functional Health Strategy for Midlife Women',
   description:
     'Stop guessing what happened to your body. Lab-guided health strategy, metabolic testing, and education for women navigating perimenopause and menopause.',
-  metadataBase: new URL('https://jessie.life'),
+  metadataBase: new URL(siteConfig.url),
+  // './' resolves against each page pathname, so every route gets its own canonical.
+  alternates: {
+    canonical: './',
+  },
   openGraph: {
     title: 'Jessie.Life: Functional Health Strategy for Midlife Women',
     description:
       'Lab-guided health strategy, metabolic testing, and education for midlife women.',
-    url: 'https://jessie.life',
+    url: siteConfig.url,
     siteName: 'Jessie.Life',
     type: 'website',
   },
