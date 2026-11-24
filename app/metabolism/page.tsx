@@ -94,6 +94,7 @@ export default function MetabolismPage() {
           </div>
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <div>
+              <VerticalVimeo videoId="1249500805" title="RMR testing explainer from Jessie" />
               <h3 className="text-lg">Resting metabolic testing can help show:</h3>
               <div className="mt-3">
                 <CheckList
@@ -107,6 +108,7 @@ export default function MetabolismPage() {
               </div>
             </div>
             <div>
+              <VerticalVimeo videoId="1249501853" title="VO₂ max testing explainer from Jessie" />
               <h3 className="text-lg">VO₂ testing can help show:</h3>
               <div className="mt-3">
                 <CheckList
@@ -158,7 +160,6 @@ export default function MetabolismPage() {
       <Section bg="creamDark">
         <div className="mx-auto flow-root max-w-3xl">
           <h2 className="text-3xl md:text-4xl">Resting Metabolic Rate (RMR): $125</h2>
-          <VerticalVimeo videoId="1249500805" title="RMR testing explainer from Jessie" />
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
               Your resting metabolic rate is the amount of energy your body uses at rest before
@@ -205,7 +206,6 @@ export default function MetabolismPage() {
       <Section>
         <div className="mx-auto flow-root max-w-3xl">
           <h2 className="text-3xl md:text-4xl">VO₂ Max Testing: $195</h2>
-          <VerticalVimeo videoId="1249501853" title="VO₂ max testing explainer from Jessie" />
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p className="font-display text-2xl text-ink md:text-3xl">
               Your fitness is a vital sign.
