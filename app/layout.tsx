@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BookingAnalytics from '@/components/BookingAnalytics';
+import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 import { siteConfig } from '@/lib/site';
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -70,6 +73,24 @@ export default function RootLayout({
       className={`bg-cream ${cormorantGaramond.variable} ${dmSans.variable}`}
     >
       <body className="font-body">
+        {GA_MEASUREMENT_ID ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        ) : null}
+        <BookingAnalytics />
         <Header />
         <main>{children}</main>
         <Footer />

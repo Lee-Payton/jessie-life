@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Section, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import FitnessRiskChart from '@/components/FitnessRiskChart';
 import VerticalVimeo from '@/components/VerticalVimeo';
@@ -95,6 +96,14 @@ export default function MetabolismPage() {
           <div className="mt-8 grid gap-8 md:grid-cols-2">
             <div>
               <VerticalVimeo videoId="1249500805" title="RMR testing explainer from Jessie" />
+              <p className="mb-4 font-body text-sm">
+                <Link
+                  href="/metabolism/rmr-video"
+                  className="underline underline-offset-2 hover:text-terracotta"
+                >
+                  Watch the RMR video
+                </Link>
+              </p>
               <h3 className="text-lg">Resting metabolic testing can help show:</h3>
               <div className="mt-3">
                 <CheckList
@@ -109,6 +118,14 @@ export default function MetabolismPage() {
             </div>
             <div>
               <VerticalVimeo videoId="1249501853" title="VO₂ max testing explainer from Jessie" />
+              <p className="mb-4 font-body text-sm">
+                <Link
+                  href="/metabolism/vo2-max-video"
+                  className="underline underline-offset-2 hover:text-terracotta"
+                >
+                  Watch the VO₂ max video
+                </Link>
+              </p>
               <h3 className="text-lg">VO₂ testing can help show:</h3>
               <div className="mt-3">
                 <CheckList

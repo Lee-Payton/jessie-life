@@ -20,6 +20,8 @@ const publicRoutes = [
   '/lab',
   '/locations',
   '/metabolism',
+  '/metabolism/rmr-video',
+  '/metabolism/vo2-max-video',
   '/privacy',
   '/reboot',
 ] as const;

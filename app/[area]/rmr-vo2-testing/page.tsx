@@ -29,6 +29,14 @@ export function generateMetadata({ params }: PageProps): Metadata {
       title: area.title,
       description: area.description,
       url: area.path,
+      images: [
+        {
+          url: `${siteConfig.url}/images/home-hero.png`,
+          width: 1448,
+          height: 1086,
+          alt: 'Jessie Faber sitting with a warm mug of coffee',
+        },
+      ],
     },
   };
 }
@@ -348,7 +356,7 @@ export default function ServiceAreaPage({ params }: PageProps) {
             that give you the most useful results.
           </p>
           <div className="mt-6 flex justify-center">
-            <CtaButton href="/locations">Book RMR + VO₂ Max Testing</CtaButton>
+            <CtaButton href={area.bookingUrl ?? '/locations'}>Book RMR + VO₂ Max Testing</CtaButton>
           </div>
         </div>
       </Section>
