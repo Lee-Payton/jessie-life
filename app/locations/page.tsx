@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Section, Eyebrow, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import LocationCard from '@/components/LocationCard';
 import InHomeTestingCard from '@/components/InHomeTestingCard';
 import { testingLocations } from '@/lib/locations';
+import { getServiceArea } from '@/lib/service-areas';
 
 export const metadata: Metadata = {
   title: 'Upcoming Testing Locations: Jessie.Life',
@@ -10,7 +12,11 @@ export const metadata: Metadata = {
     'See where metabolism and VO₂ testing is currently available, join the notification list, or request a testing day at your location.',
 };
 
+const detailsLinkClass =
+  'font-body text-sm text-ink/80 underline underline-offset-2 hover:text-terracotta';
+
 export default function LocationsPage() {
+  const southPadre = getServiceArea('south-padre-island');
   return (
     <>
       {/* Section 1 — Hero */}
@@ -72,13 +78,15 @@ export default function LocationsPage() {
                 and recovery.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <a
-                  href="https://dotlifeoptimalhealth.practicebetter.io/#/61475f3a398033134419f352/bookings?r=6ab592a976690fd7c82cd881&step=services"
-                  className="btn-primary"
-                >
+                <a href={southPadre?.bookingUrl ?? '/locations'} className="btn-primary">
                   Schedule Testing
                 </a>
               </div>
+              <p className="mt-4">
+                <Link href="/south-padre-island/rmr-vo2-testing" className={detailsLinkClass}>
+                  Testing details
+                </Link>
+              </p>
               <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
                 <CtaButton href="/metabolism" variant="secondary">Learn About Metabolic Testing</CtaButton>
                 <CtaButton href="/audit" variant="secondary">
@@ -97,14 +105,20 @@ export default function LocationsPage() {
 
           <div className="mt-14 border-t-2 border-forest pt-6">
             <p className="font-body text-sm font-semibold uppercase tracking-widest text-terracotta">
-              Coming January 2027 &mdash; exact testing dates and locations to be announced
+              Mid-January through mid-April 2027
             </p>
             <h3 className="mt-2 font-display text-2xl uppercase tracking-wide text-forest md:text-3xl">
               Austin &middot; Central Texas
             </h3>
             <p className="mt-3 font-body text-lg text-ink/80">
-              Metabolic and VO₂ Max testing is coming to the Austin area, with appointments offered
+              Metabolic and VO₂ Max testing is in the Austin area from mid-January through mid-April
+              2027. Testing days start the week of January 18, 2027, with appointments offered
               through scheduled partner locations, mobile testing days, and private or group events.
+            </p>
+            <p className="mt-4">
+              <Link href="/austin/rmr-vo2-testing" className={detailsLinkClass}>
+                Testing details
+              </Link>
             </p>
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
               <a

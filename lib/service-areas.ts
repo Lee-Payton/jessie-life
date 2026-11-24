@@ -26,6 +26,11 @@ export type ServiceArea = {
   faqHeading: string;
   areaServed: ServiceAreaPlace[];
   faqs: ServiceAreaFaq[];
+  /**
+   * Direct booking URL for this city. Omitted when the city has no booking
+   * link yet; the page then keeps the /locations path.
+   */
+  bookingUrl?: string;
 };
 
 export const serviceAreas: ServiceArea[] = [
@@ -40,6 +45,8 @@ export const serviceAreas: ServiceArea[] = [
       'RMR and VO₂ testing in South Padre Island and the Rio Grande Valley, including Port Isabel, Brownsville, and Harlingen. Fitness and wellness assessments.',
     servingLine: 'Serving South Padre Island and the Rio Grande Valley',
     faqHeading: 'Questions about testing in South Padre Island',
+    bookingUrl:
+      'https://dotlifeoptimalhealth.practicebetter.io/#/61475f3a398033134419f352/bookings?r=6ab592a976690fd7c82cd881&step=services',
     areaServed: [
       { type: 'City', name: 'South Padre Island' },
       { type: 'AdministrativeArea', name: 'Rio Grande Valley' },
