@@ -2,17 +2,24 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { getServiceArea } from '@/lib/service-areas';
+import { getServiceArea, serviceAreas } from '@/lib/service-areas';
 
-const HIDDEN_PREFIXES = ['/locations', '/host'];
+// Testing offer pages only. Not /locations, /host, /host-guide, /audit,
+// /booking-policy, or /metabolism/next-steps.
+const TESTING_ROUTES = new Set([
+  '/metabolism',
+  '/metabolism/rmr-video',
+  '/metabolism/vo2-max-video',
+  ...serviceAreas.map((area) => area.path),
+]);
 
-function isHiddenRoute(pathname: string) {
-  return HIDDEN_PREFIXES.some((prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`));
+function isTestingRoute(pathname: string) {
+  return TESTING_ROUTES.has(pathname);
 }
 
 export default function StickyBookBar() {
   const pathname = usePathname() || '/';
-  const hiddenRoute = isHiddenRoute(pathname);
+  const hiddenRoute = !isTestingRoute(pathname);
   const [covered, setCovered] = useState(false);
   const spi = getServiceArea('south-padre-island');
   const href =
