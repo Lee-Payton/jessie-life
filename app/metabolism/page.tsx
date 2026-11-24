@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Section, CheckList, CtaButton, FinalCta } from '@/components/ui';
 import FitnessRiskChart from '@/components/FitnessRiskChart';
+import VerticalVimeo from '@/components/VerticalVimeo';
 
 const WHY_VO2_CARDS: [string, string][] = [
   [
@@ -155,8 +156,9 @@ export default function MetabolismPage() {
 
       {/* Section 4 — RMR */}
       <Section bg="creamDark">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto flow-root max-w-3xl">
           <h2 className="text-3xl md:text-4xl">Resting Metabolic Rate (RMR): $125</h2>
+          <VerticalVimeo videoId="1249500805" title="RMR testing explainer from Jessie" />
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p>
               Your resting metabolic rate is the amount of energy your body uses at rest before
@@ -201,8 +203,9 @@ export default function MetabolismPage() {
 
       {/* Section 5 — VO2 */}
       <Section>
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto flow-root max-w-3xl">
           <h2 className="text-3xl md:text-4xl">VO₂ Max Testing: $195</h2>
+          <VerticalVimeo videoId="1249501853" title="VO₂ max testing explainer from Jessie" />
           <div className="mt-6 space-y-4 font-body text-lg text-ink/80">
             <p className="font-display text-2xl text-ink md:text-3xl">
               Your fitness is a vital sign.
