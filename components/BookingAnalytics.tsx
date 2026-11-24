@@ -25,12 +25,18 @@ export default function BookingAnalytics() {
       } catch {
         return;
       }
-      if (!isOutboundBookingUrl(url)) return;
+      const placement = anchor.getAttribute('data-booking-placement');
+      const outbound = isOutboundBookingUrl(url);
+      if (!outbound && placement !== 'sticky_mobile') return;
       if (typeof window.gtag !== 'function') return;
 
-      const params = { link_url: url.href, page_path: window.location.pathname };
+      const params: Record<string, string> = {
+        link_url: url.href,
+        page_path: window.location.pathname,
+      };
+      if (placement) params.placement = placement;
       window.gtag('event', 'book_click', params);
-      if (isLeadFormUrl(url)) {
+      if (outbound && isLeadFormUrl(url)) {
         window.gtag('event', 'generate_lead', params);
       }
     }

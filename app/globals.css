@@ -20,6 +20,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Keeps footer links and end-of-page controls above the mobile booking bar. */
+@media (max-width: 767px) {
+  body:has(.sticky-book-bar:not(.hidden)) {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+}
+
 @layer base {
   h1, h2, h3, h4 {
     @apply font-display text-ink;
