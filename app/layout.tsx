@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BookingAnalytics from '@/components/BookingAnalytics';
+import StickyBookBar from '@/components/StickyBookBar';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 import { siteConfig } from '@/lib/site';
 
@@ -22,6 +23,10 @@ const dmSans = DM_Sans({
   weight: ['400', '500', '600', '700'],
   style: ['normal'],
 });
+
+export const viewport: Viewport = {
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: 'Jessie.Life: Functional Health Strategy for Midlife Women',
@@ -94,6 +99,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <StickyBookBar />
       </body>
     </html>
   );
