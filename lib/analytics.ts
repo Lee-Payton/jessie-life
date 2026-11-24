@@ -1,6 +1,5 @@
-// Leave empty until a GA4 measurement ID is ready. The loader renders only
-// when this string is set.
-export const GA_MEASUREMENT_ID = '';
+// GA4 loader renders only when this string is set.
+export const GA_MEASUREMENT_ID = 'G-SHT97BLMQC';
 
 const BOOKING_HOSTS = ['practicebetter.io', 'leadconnectorhq.com', 'msgsndr.com'];
 
