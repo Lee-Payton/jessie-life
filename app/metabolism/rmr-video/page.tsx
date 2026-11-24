@@ -16,7 +16,7 @@ export default function RmrVideoPage() {
       videoId="1249500805"
       videoTitle="RMR testing explainer from Jessie"
       ctaHref="/metabolism"
-      ctaLabel="Learn about RMR testing"
+      ctaLabel="Book testing"
     />
   );
 }

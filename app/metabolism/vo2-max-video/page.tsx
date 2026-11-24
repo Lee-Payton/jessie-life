@@ -16,7 +16,7 @@ export default function Vo2MaxVideoPage() {
       videoId="1249501853"
       videoTitle="VO₂ max testing explainer from Jessie"
       ctaHref="/metabolism"
-      ctaLabel="Learn about VO₂ max testing"
+      ctaLabel="Book testing"
     />
   );
 }
